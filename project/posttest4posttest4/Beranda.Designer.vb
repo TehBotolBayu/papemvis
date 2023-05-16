@@ -61,11 +61,12 @@ Partial Class Beranda
         '
         'Label3
         '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(246, 27)
+        Me.Label3.Location = New System.Drawing.Point(264, 27)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(290, 20)
         Me.Label3.TabIndex = 2
@@ -73,12 +74,13 @@ Partial Class Beranda
         '
         'Button1
         '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.BackColor = System.Drawing.Color.DarkViolet
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(250, 116)
+        Me.Button1.Location = New System.Drawing.Point(268, 116)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 4
@@ -87,11 +89,12 @@ Partial Class Beranda
         '
         'labelbmr
         '
+        Me.labelbmr.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.labelbmr.AutoSize = True
         Me.labelbmr.BackColor = System.Drawing.Color.Transparent
         Me.labelbmr.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelbmr.ForeColor = System.Drawing.Color.Black
-        Me.labelbmr.Location = New System.Drawing.Point(245, 64)
+        Me.labelbmr.Location = New System.Drawing.Point(263, 64)
         Me.labelbmr.Name = "labelbmr"
         Me.labelbmr.Size = New System.Drawing.Size(55, 29)
         Me.labelbmr.TabIndex = 7
@@ -144,9 +147,10 @@ Partial Class Beranda
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(-2, -5)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(231, 325)
+        Me.Panel1.Size = New System.Drawing.Size(231, 312)
         Me.Panel1.TabIndex = 24
         '
         'Beranda
@@ -154,7 +158,7 @@ Partial Class Beranda
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SeaShell
-        Me.ClientSize = New System.Drawing.Size(548, 277)
+        Me.ClientSize = New System.Drawing.Size(566, 312)
         Me.Controls.Add(Me.labelbmr)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)

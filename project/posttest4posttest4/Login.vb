@@ -2,24 +2,9 @@
 Imports System.Net
 
 Public Class Login
-    Public Shared Function CheckForInternetConnection() As Boolean
-        Try
-            Using client = New WebClient()
-                Using stream = client.OpenRead("http://www.google.com")
-                    Return True
-                End Using
-            End Using
-        Catch
-            Return False
-        End Try
-    End Function
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If CheckForInternetConnection() Then
-            MsgBox("bgs")
-        Else
-            MsgBox("tidak")
-        End If
+        Timer1.Enabled = True
         Call Kosong()
         Call koneksi()
     End Sub
@@ -45,7 +30,7 @@ Public Class Login
                 Dim status = RD(6).ToString()
                 If status = "admin" Then
                     RD.Close()
-                    Form1.Show()
+                    AdminForm.Show()
                     Me.Hide()
                     Exit Sub
                 End If
@@ -65,17 +50,14 @@ Public Class Login
                 End If
                 Profil.id = RD(0).ToString()
 
-                Beranda.username = username
-                Beranda.tgl = tgllahir
-                Beranda.kelamin = kelamin
-                Beranda.pass = txtpassword.Text
-                Beranda.email = txtnama.Text
-
-                Beranda.K = kal
+                UserForm.username = username
+                UserForm.tgl = tgllahir
+                UserForm.kelamin = kelamin
+                UserForm.K = kal
                 Diet.idakun = RD(0).ToString()
                 Cek.idakun = RD(0).ToString()
                 RD.Close()
-                Beranda.Show()
+                UserForm.Show()
 
                 ''SetDiet.Show()
 
@@ -94,5 +76,19 @@ Public Class Login
         End If
         RD.Close()
     End Sub
+
+    Private Sub txtpassword_TextChanged(sender As Object, e As EventArgs) Handles txtpassword.TextChanged
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If txtpassword.Location.X > 44 Then
+            txtpassword.Left = txtpassword.Left - 10
+        Else
+            Timer1.Enabled = False
+        End If
+
+    End Sub
+
 
 End Class

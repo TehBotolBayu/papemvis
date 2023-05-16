@@ -22,6 +22,16 @@ posttest4posttest4
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:posttest4posttest4.My.Resources.Resources._1_foods">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:posttest4posttest4.My.Resources.Resources._239502760_200782398771050_7689250105746486268_n">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:posttest4posttest4.My.Resources.Resources.akun">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -47,7 +57,27 @@ posttest4posttest4
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:posttest4posttest4.My.Resources.Resources.userpp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:posttest4posttest4.My.Resources.Resources.Vector">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:posttest4posttest4.My.Resources.Resources.y">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:posttest4posttest4.My.Resources.Resources.y1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:posttest4posttest4.My.Resources.Resources.y11">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

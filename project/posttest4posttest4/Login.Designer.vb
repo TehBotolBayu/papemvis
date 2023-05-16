@@ -22,6 +22,7 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtpassword = New System.Windows.Forms.TextBox()
@@ -32,6 +33,7 @@ Partial Class Login
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,7 +59,7 @@ Partial Class Login
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(44, 143)
+        Me.txtpassword.Location = New System.Drawing.Point(400, 143)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.Size = New System.Drawing.Size(287, 20)
         Me.txtpassword.TabIndex = 2
@@ -134,6 +136,9 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
+        'Timer1
+        '
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -167,4 +172,5 @@ Partial Class Login
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Timer1 As Timer
 End Class

@@ -2,6 +2,7 @@
 
 Public Class Registrasi
 
+
     Function cekKosong() As Integer
         If txtnama.Text = "" Then
             MessageBox.Show("Username belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)

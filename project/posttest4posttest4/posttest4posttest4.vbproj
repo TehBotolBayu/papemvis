@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm.Designer.vb">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Beranda.Designer.vb">
       <DependentUpon>Beranda.vb</DependentUpon>
     </Compile>
@@ -140,6 +146,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,8 +176,17 @@
     <Compile Include="SetDiet.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserForm.Designer.vb">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Beranda.resx">
       <DependentUpon>Beranda.vb</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +227,9 @@
     <EmbeddedResource Include="SetDiet.resx">
       <DependentUpon>SetDiet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="CrystalReport1.rpt" />
@@ -247,6 +266,24 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\239502760_200782398771050_7689250105746486268_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\y1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userpp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.foods.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

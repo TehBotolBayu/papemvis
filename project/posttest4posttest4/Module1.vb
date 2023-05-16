@@ -8,7 +8,7 @@ Module Module1
     Public RD As MySqlDataReader
     Public Sub koneksi()
         Try
-            CONN = New MySqlConnection("server=localhost;userid=root;password=;database=posttest4")
+            CONN = New MySqlConnection("server=localhost;userid=root;password=;database=papemvis")
             If CONN.State = ConnectionState.Closed Then
                 CONN.Open()
             End If

@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.Net
 
 Public Class Login
+    Public idLogin As String
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
@@ -54,6 +54,7 @@ Public Class Login
                 UserForm.tgl = tgllahir
                 UserForm.kelamin = kelamin
                 UserForm.K = kal
+                idLogin = RD(0).ToString()
                 Diet.idakun = RD(0).ToString()
                 Cek.idakun = RD(0).ToString()
                 RD.Close()

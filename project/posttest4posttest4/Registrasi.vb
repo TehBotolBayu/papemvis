@@ -1,5 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
-
+﻿Imports System.Text.RegularExpressions
+Imports System.Web.UI.WebControls
+Imports MySql.Data.MySqlClient
 Public Class Registrasi
 
 
@@ -36,6 +37,32 @@ Public Class Registrasi
 
     Private Sub btnregis_Click(sender As Object, e As EventArgs) Handles btnregis.Click
         If cekKosong() = 1 Then
+
+
+
+            Dim emailPattern As String = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+            Dim email As String = txtemail.Text
+
+            Try
+                If Regex.IsMatch(email, emailPattern) Then
+                    ' Email format is valid
+                    ' Lakukan tindakan yang diinginkan di sini
+                Else
+                    ' Email format is invalid
+                    MessageBox.Show("Format email tidak valid.")
+                    Return
+                End If
+            Catch ex As Exception
+                ' Exception handling
+                MessageBox.Show("Terjadi kesalahan: " & ex.Message)
+                Return
+            End Try
+
+
+
+
+
+
             If Not txtkonpassword.Text = txtpassword.Text Then
                 MsgBox("Konfirmasi Password tidak sama!", MsgBoxStyle.Information, "Perhatian")
                 txtkonpassword.Focus()
@@ -52,17 +79,19 @@ Public Class Registrasi
             End If
             RD.Close()
 
-            Dim Simpan As String = "insert into akun(nama, email, tanggal, password, kelamin, status) values('" & txtnama.Text & "', '" & txtemail.Text & "', '" & txttgllahir.Value.Year.ToString() & "-" & txttgllahir.Value.Month.ToString() & "-" & txttgllahir.Value.Day.ToString() & "', '" & txtpassword.Text & "', '" & kelamin.Text & "', 'user')"
+            Dim Simpan As String = "insert into akun(nama, email, tanggal, password, kelamin, status, tinggi, berat) values('" & txtnama.Text & "', '" & txtemail.Text & "', '" & txttgllahir.Value.Year.ToString() & "-" & txttgllahir.Value.Month.ToString() & "-" & txttgllahir.Value.Day.ToString() & "', '" & txtpassword.Text & "', '" & kelamin.Text & "', 'user', '" & txttinggi.Text & "', '" & txtberat.Text & "')"
             CMD = New MySqlCommand(Simpan, CONN)
             CMD.ExecuteNonQuery()
             MsgBox("Registrasi sukses!", MsgBoxStyle.Information, "Perhatian")
-            Beranda.username = txtnama.Text
-            Beranda.tgl = txttgllahir.Value
-            Beranda.kelamin = kelamin.Text
-            Beranda.email = txtemail.Text
-            Beranda.pass = txtpassword.Text
-            Beranda.status = "user"
-            Beranda.Show()
+
+            CMD = New MySqlCommand("select * from akun where email = '" & txtemail.Text & "'", CONN)
+            RD = CMD.ExecuteReader
+            RD.Read()
+
+            Login.idLogin = RD(0).ToString
+            RD.Close()
+
+            UserForm.Show()
             Me.Hide()
             If Not Application.OpenForms.OfType(Of Beranda).Any Then
                 Close()

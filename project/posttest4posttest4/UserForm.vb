@@ -1,4 +1,6 @@
-﻿Public Class UserForm
+﻿Imports MySql.Data.MySqlClient
+
+Public Class UserForm
     Public username As String
     Public email As String
     Public kelamin As String
@@ -13,6 +15,17 @@
     Dim kalori As Double
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        CMD = New MySqlCommand("select * from akun where id = '" & Login.idLogin & "'", CONN)
+        RD = CMD.ExecuteReader
+        RD.Read()
+        tNama.Text = RD(1).ToString()
+        tEmail.Text = RD(2).ToString()
+        tPw.Text = RD(4).ToString()
+        tJenis.Text = RD(5).ToString()
+        tDate.Text = RD(3).ToString()
+        tTinggi.Text = RD(8).ToString()
+        tBerat.Text = RD(9).ToString()
+        RD.Close()
         PanelProfil.Show()
         PanelAsupan.Hide()
         PanelDashboard.Hide()
@@ -31,7 +44,6 @@
         Panel3.Show()
         Panel1.Hide()
         Panel4.Hide()
-
     End Sub
 
     Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
@@ -65,6 +77,14 @@
     End Sub
 
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub Label25_Click(sender As Object, e As EventArgs) Handles tAktif.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

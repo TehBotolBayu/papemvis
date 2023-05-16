@@ -39,9 +39,11 @@ Partial Class Registrasi
         Me.kelamin = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txttinggi = New System.Windows.Forms.TextBox()
-        Me.txtbadan = New System.Windows.Forms.TextBox()
+        Me.txtberat = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -129,7 +131,7 @@ Partial Class Registrasi
         Me.btnregis.FlatAppearance.BorderSize = 0
         Me.btnregis.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnregis.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnregis.Location = New System.Drawing.Point(109, 301)
+        Me.btnregis.Location = New System.Drawing.Point(112, 348)
         Me.btnregis.Name = "btnregis"
         Me.btnregis.Size = New System.Drawing.Size(312, 23)
         Me.btnregis.TabIndex = 10
@@ -141,7 +143,7 @@ Partial Class Registrasi
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Pink
-        Me.Label6.Location = New System.Drawing.Point(297, 342)
+        Me.Label6.Location = New System.Drawing.Point(300, 389)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(38, 13)
         Me.Label6.TabIndex = 12
@@ -150,7 +152,7 @@ Partial Class Registrasi
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(190, 342)
+        Me.Label7.Location = New System.Drawing.Point(193, 389)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(103, 13)
         Me.Label7.TabIndex = 11
@@ -200,12 +202,12 @@ Partial Class Registrasi
         Me.txttinggi.Size = New System.Drawing.Size(221, 20)
         Me.txttinggi.TabIndex = 20
         '
-        'txtbadan
+        'txtberat
         '
-        Me.txtbadan.Location = New System.Drawing.Point(282, 103)
-        Me.txtbadan.Name = "txtbadan"
-        Me.txtbadan.Size = New System.Drawing.Size(221, 20)
-        Me.txtbadan.TabIndex = 19
+        Me.txtberat.Location = New System.Drawing.Point(282, 103)
+        Me.txtberat.Name = "txtberat"
+        Me.txtberat.Size = New System.Drawing.Size(221, 20)
+        Me.txtberat.TabIndex = 19
         '
         'Label10
         '
@@ -227,14 +229,35 @@ Partial Class Registrasi
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Berat Badan"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Santai", "Ringan", "Sedang", "Berat", "Ekstrem"})
+        Me.ComboBox1.Location = New System.Drawing.Point(163, 300)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(221, 21)
+        Me.ComboBox1.TabIndex = 22
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(160, 284)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(47, 13)
+        Me.Label12.TabIndex = 21
+        Me.Label12.Text = "Aktivitas"
+        '
         'Registrasi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkViolet
-        Me.ClientSize = New System.Drawing.Size(534, 390)
+        Me.ClientSize = New System.Drawing.Size(534, 419)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txttinggi)
-        Me.Controls.Add(Me.txtbadan)
+        Me.Controls.Add(Me.txtberat)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label9)
@@ -277,7 +300,9 @@ Partial Class Registrasi
     Friend WithEvents kelamin As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txttinggi As TextBox
-    Friend WithEvents txtbadan As TextBox
+    Friend WithEvents txtberat As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label12 As Label
 End Class

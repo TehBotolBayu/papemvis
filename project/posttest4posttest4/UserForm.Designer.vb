@@ -65,24 +65,26 @@ Partial Class UserForm
         Me.Label13 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PanelProfil = New System.Windows.Forms.Panel()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.tDate = New System.Windows.Forms.DateTimePicker()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.tBerat = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.tTinggi = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.tJenis = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.tPw = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.tEmail = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tNama = New System.Windows.Forms.TextBox()
+        Me.tAktif = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.sidenav.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.header.SuspendLayout()
@@ -581,45 +583,47 @@ Partial Class UserForm
         'PanelProfil
         '
         Me.PanelProfil.BackColor = System.Drawing.Color.LavenderBlush
-        Me.PanelProfil.Controls.Add(Me.DateTimePicker2)
+        Me.PanelProfil.Controls.Add(Me.ComboBox1)
+        Me.PanelProfil.Controls.Add(Me.tAktif)
+        Me.PanelProfil.Controls.Add(Me.tDate)
         Me.PanelProfil.Controls.Add(Me.Button6)
         Me.PanelProfil.Controls.Add(Me.Button3)
         Me.PanelProfil.Controls.Add(Me.Button2)
         Me.PanelProfil.Controls.Add(Me.Label24)
-        Me.PanelProfil.Controls.Add(Me.TextBox9)
+        Me.PanelProfil.Controls.Add(Me.tBerat)
         Me.PanelProfil.Controls.Add(Me.Label23)
-        Me.PanelProfil.Controls.Add(Me.TextBox8)
+        Me.PanelProfil.Controls.Add(Me.tTinggi)
         Me.PanelProfil.Controls.Add(Me.Label22)
         Me.PanelProfil.Controls.Add(Me.Label21)
-        Me.PanelProfil.Controls.Add(Me.TextBox6)
+        Me.PanelProfil.Controls.Add(Me.tJenis)
         Me.PanelProfil.Controls.Add(Me.PictureBox2)
         Me.PanelProfil.Controls.Add(Me.Label20)
-        Me.PanelProfil.Controls.Add(Me.TextBox5)
+        Me.PanelProfil.Controls.Add(Me.tPw)
         Me.PanelProfil.Controls.Add(Me.Label19)
-        Me.PanelProfil.Controls.Add(Me.TextBox4)
+        Me.PanelProfil.Controls.Add(Me.tEmail)
         Me.PanelProfil.Controls.Add(Me.Label11)
-        Me.PanelProfil.Controls.Add(Me.TextBox1)
+        Me.PanelProfil.Controls.Add(Me.tNama)
         Me.PanelProfil.Location = New System.Drawing.Point(171, 61)
         Me.PanelProfil.Name = "PanelProfil"
         Me.PanelProfil.Size = New System.Drawing.Size(564, 364)
         Me.PanelProfil.TabIndex = 17
         '
-        'DateTimePicker2
+        'tDate
         '
-        Me.DateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Transparent
-        Me.DateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.Transparent
-        Me.DateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.Transparent
-        Me.DateTimePicker2.Location = New System.Drawing.Point(306, 108)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(139, 20)
-        Me.DateTimePicker2.TabIndex = 2
+        Me.tDate.CalendarMonthBackground = System.Drawing.Color.Transparent
+        Me.tDate.CalendarTitleBackColor = System.Drawing.Color.Transparent
+        Me.tDate.CalendarTrailingForeColor = System.Drawing.Color.Transparent
+        Me.tDate.Location = New System.Drawing.Point(306, 108)
+        Me.tDate.Name = "tDate"
+        Me.tDate.Size = New System.Drawing.Size(139, 20)
+        Me.tDate.TabIndex = 2
         '
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.Color.Purple
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(351, 237)
+        Me.Button6.Location = New System.Drawing.Point(352, 269)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(93, 32)
         Me.Button6.TabIndex = 24
@@ -631,7 +635,7 @@ Partial Class UserForm
         Me.Button3.BackColor = System.Drawing.Color.Purple
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(44, 234)
+        Me.Button3.Location = New System.Drawing.Point(44, 260)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 32)
         Me.Button3.TabIndex = 21
@@ -660,12 +664,12 @@ Partial Class UserForm
         Me.Label24.TabIndex = 19
         Me.Label24.Text = "Berat Badan"
         '
-        'TextBox9
+        'tBerat
         '
-        Me.TextBox9.Location = New System.Drawing.Point(306, 188)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(139, 20)
-        Me.TextBox9.TabIndex = 18
+        Me.tBerat.Location = New System.Drawing.Point(306, 188)
+        Me.tBerat.Name = "tBerat"
+        Me.tBerat.Size = New System.Drawing.Size(139, 20)
+        Me.tBerat.TabIndex = 18
         '
         'Label23
         '
@@ -677,12 +681,12 @@ Partial Class UserForm
         Me.Label23.TabIndex = 17
         Me.Label23.Text = "Tinggi Badan"
         '
-        'TextBox8
+        'tTinggi
         '
-        Me.TextBox8.Location = New System.Drawing.Point(306, 148)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(139, 20)
-        Me.TextBox8.TabIndex = 16
+        Me.tTinggi.Location = New System.Drawing.Point(306, 148)
+        Me.tTinggi.Name = "tTinggi"
+        Me.tTinggi.Size = New System.Drawing.Size(139, 20)
+        Me.tTinggi.TabIndex = 16
         '
         'Label22
         '
@@ -698,18 +702,18 @@ Partial Class UserForm
         '
         Me.Label21.AutoSize = True
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(234, 67)
+        Me.Label21.Location = New System.Drawing.Point(234, 237)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(71, 13)
         Me.Label21.TabIndex = 13
         Me.Label21.Text = "Jenis Kelamin"
         '
-        'TextBox6
+        'tJenis
         '
-        Me.TextBox6.Location = New System.Drawing.Point(306, 64)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(139, 20)
-        Me.TextBox6.TabIndex = 12
+        Me.tJenis.Location = New System.Drawing.Point(306, 234)
+        Me.tJenis.Name = "tJenis"
+        Me.tJenis.Size = New System.Drawing.Size(139, 20)
+        Me.tJenis.TabIndex = 12
         '
         'PictureBox2
         '
@@ -731,12 +735,12 @@ Partial Class UserForm
         Me.Label20.TabIndex = 5
         Me.Label20.Text = "Password"
         '
-        'TextBox5
+        'tPw
         '
-        Me.TextBox5.Location = New System.Drawing.Point(98, 188)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox5.TabIndex = 4
+        Me.tPw.Location = New System.Drawing.Point(98, 188)
+        Me.tPw.Name = "tPw"
+        Me.tPw.Size = New System.Drawing.Size(122, 20)
+        Me.tPw.TabIndex = 4
         '
         'Label19
         '
@@ -748,12 +752,12 @@ Partial Class UserForm
         Me.Label19.TabIndex = 3
         Me.Label19.Text = "Email"
         '
-        'TextBox4
+        'tEmail
         '
-        Me.TextBox4.Location = New System.Drawing.Point(98, 148)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox4.TabIndex = 2
+        Me.tEmail.Location = New System.Drawing.Point(98, 148)
+        Me.tEmail.Name = "tEmail"
+        Me.tEmail.Size = New System.Drawing.Size(122, 20)
+        Me.tEmail.TabIndex = 2
         '
         'Label11
         '
@@ -765,12 +769,30 @@ Partial Class UserForm
         Me.Label11.TabIndex = 1
         Me.Label11.Text = "Nama"
         '
-        'TextBox1
+        'tNama
         '
-        Me.TextBox1.Location = New System.Drawing.Point(98, 108)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.tNama.Location = New System.Drawing.Point(98, 108)
+        Me.tNama.Name = "tNama"
+        Me.tNama.Size = New System.Drawing.Size(122, 20)
+        Me.tNama.TabIndex = 0
+        '
+        'tAktif
+        '
+        Me.tAktif.AutoSize = True
+        Me.tAktif.ForeColor = System.Drawing.Color.Black
+        Me.tAktif.Location = New System.Drawing.Point(44, 234)
+        Me.tAktif.Name = "tAktif"
+        Me.tAktif.Size = New System.Drawing.Size(47, 13)
+        Me.tAktif.TabIndex = 26
+        Me.tAktif.Text = "Aktivitas"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(98, 234)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 27
         '
         'UserForm
         '
@@ -778,10 +800,10 @@ Partial Class UserForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkViolet
         Me.ClientSize = New System.Drawing.Size(735, 425)
+        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.header)
         Me.Controls.Add(Me.sidenav)
         Me.Controls.Add(Me.PanelDashboard)
-        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.PanelAsupan)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "UserForm"
@@ -856,22 +878,24 @@ Partial Class UserForm
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label24 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents tBerat As TextBox
     Friend WithEvents Label23 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents tTinggi As TextBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents tJenis As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents tPw As TextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents tEmail As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents tNama As TextBox
+    Friend WithEvents tDate As DateTimePicker
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents ProgressBar4 As ProgressBar
     Friend WithEvents Label10 As Label
+    Friend WithEvents tAktif As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

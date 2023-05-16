@@ -59,7 +59,7 @@ Partial Class Login
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(400, 143)
+        Me.txtpassword.Location = New System.Drawing.Point(44, 143)
         Me.txtpassword.Name = "txtpassword"
         Me.txtpassword.Size = New System.Drawing.Size(287, 20)
         Me.txtpassword.TabIndex = 2

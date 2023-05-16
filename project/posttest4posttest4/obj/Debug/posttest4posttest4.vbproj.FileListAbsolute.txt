@@ -76,3 +76,4 @@ C:\Users\acer\Documents\Visual Studio 2012\New folder\project\posttest4posttest4
 C:\Users\acer\Documents\Visual Studio 2012\New folder\project\posttest4posttest4\obj\Debug\posttest4posttest4.Laporan.resources
 C:\Users\acer\Documents\Visual Studio 2012\New folder\project\posttest4posttest4\obj\Debug\posttest4posttest4.AdminForm.resources
 C:\Users\acer\Documents\Visual Studio 2012\New folder\project\posttest4posttest4\obj\Debug\posttest4posttest4.UserForm.resources
+C:\Users\acer\Documents\Visual Studio 2012\New folder\project\posttest4posttest4\obj\Debug\posttest4posttest4.vbproj.SuggestedBindingRedirects.cache

@@ -2,6 +2,7 @@
 
 Public Class Login
     Public idLogin As String
+    Public umur As Integer
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
@@ -57,6 +58,16 @@ Public Class Login
                 idLogin = RD(0).ToString()
                 Diet.idakun = RD(0).ToString()
                 Cek.idakun = RD(0).ToString()
+
+                Dim tgl As Date
+                Dim hariini As Date = Format(Date.Now(), "dd-MM-yyyy")
+                tgl = RD(3)
+
+                umur = Val(hariini.Year) - Val(tgl.Year)
+                If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
+                    umur = umur - 1
+                End If
+
                 RD.Close()
                 UserForm.Show()
 

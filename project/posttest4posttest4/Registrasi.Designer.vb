@@ -42,7 +42,7 @@ Partial Class Registrasi
         Me.txtberat = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.taktivitas = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -229,14 +229,14 @@ Partial Class Registrasi
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Berat Badan"
         '
-        'ComboBox1
+        'taktivitas
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Santai", "Ringan", "Sedang", "Berat", "Ekstrem"})
-        Me.ComboBox1.Location = New System.Drawing.Point(163, 300)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(221, 21)
-        Me.ComboBox1.TabIndex = 22
+        Me.taktivitas.FormattingEnabled = True
+        Me.taktivitas.Items.AddRange(New Object() {"Santai", "Ringan", "Sedang", "Berat", "Ekstrem"})
+        Me.taktivitas.Location = New System.Drawing.Point(163, 300)
+        Me.taktivitas.Name = "taktivitas"
+        Me.taktivitas.Size = New System.Drawing.Size(221, 21)
+        Me.taktivitas.TabIndex = 22
         '
         'Label12
         '
@@ -254,7 +254,7 @@ Partial Class Registrasi
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkViolet
         Me.ClientSize = New System.Drawing.Size(534, 419)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.taktivitas)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txttinggi)
         Me.Controls.Add(Me.txtberat)
@@ -303,6 +303,6 @@ Partial Class Registrasi
     Friend WithEvents txtberat As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents taktivitas As ComboBox
     Friend WithEvents Label12 As Label
 End Class

@@ -35,21 +35,21 @@ Partial Class UserForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelDashboard = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.LabelKarbo = New System.Windows.Forms.Label()
         Me.ProgressBar4 = New System.Windows.Forms.ProgressBar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.LabelLemak = New System.Windows.Forms.Label()
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LabelProtein = New System.Windows.Forms.Label()
         Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LabelKalori = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PanelAsupan = New System.Windows.Forms.Panel()
@@ -59,12 +59,13 @@ Partial Class UserForm
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tPorsi = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PanelProfil = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.tAktif = New System.Windows.Forms.Label()
         Me.tDate = New System.Windows.Forms.DateTimePicker()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -83,8 +84,9 @@ Partial Class UserForm
         Me.tEmail = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.tNama = New System.Windows.Forms.TextBox()
-        Me.tAktif = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dgvAsupan = New System.Windows.Forms.DataGridView()
         Me.sidenav.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.header.SuspendLayout()
@@ -96,9 +98,9 @@ Partial Class UserForm
         Me.Panel5.SuspendLayout()
         Me.PanelAsupan.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelProfil.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvAsupan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'sidenav
@@ -247,7 +249,7 @@ Partial Class UserForm
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.DarkViolet
-        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Controls.Add(Me.LabelKarbo)
         Me.Panel2.Controls.Add(Me.ProgressBar4)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(260, 153)
@@ -255,18 +257,18 @@ Partial Class UserForm
         Me.Panel2.Size = New System.Drawing.Size(171, 115)
         Me.Panel2.TabIndex = 15
         '
-        'Label9
+        'LabelKarbo
         '
-        Me.Label9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LabelKarbo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(11, 36)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(80, 21)
-        Me.Label9.TabIndex = 13
-        Me.Label9.Text = "123/2300"
+        Me.LabelKarbo.AutoSize = True
+        Me.LabelKarbo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.LabelKarbo.ForeColor = System.Drawing.Color.White
+        Me.LabelKarbo.Location = New System.Drawing.Point(11, 36)
+        Me.LabelKarbo.Name = "LabelKarbo"
+        Me.LabelKarbo.Size = New System.Drawing.Size(80, 21)
+        Me.LabelKarbo.TabIndex = 13
+        Me.LabelKarbo.Text = "123/2300"
         '
         'ProgressBar4
         '
@@ -314,7 +316,7 @@ Partial Class UserForm
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.DarkViolet
-        Me.Panel7.Controls.Add(Me.Label7)
+        Me.Panel7.Controls.Add(Me.LabelLemak)
         Me.Panel7.Controls.Add(Me.ProgressBar3)
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Location = New System.Drawing.Point(260, 23)
@@ -322,18 +324,18 @@ Partial Class UserForm
         Me.Panel7.Size = New System.Drawing.Size(171, 115)
         Me.Panel7.TabIndex = 14
         '
-        'Label7
+        'LabelLemak
         '
-        Me.Label7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LabelLemak.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(11, 36)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 21)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "123/2300"
+        Me.LabelLemak.AutoSize = True
+        Me.LabelLemak.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.LabelLemak.ForeColor = System.Drawing.Color.White
+        Me.LabelLemak.Location = New System.Drawing.Point(11, 36)
+        Me.LabelLemak.Name = "LabelLemak"
+        Me.LabelLemak.Size = New System.Drawing.Size(80, 21)
+        Me.LabelLemak.TabIndex = 13
+        Me.LabelLemak.Text = "123/2300"
         '
         'ProgressBar3
         '
@@ -357,7 +359,7 @@ Partial Class UserForm
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.DarkViolet
-        Me.Panel6.Controls.Add(Me.Label5)
+        Me.Panel6.Controls.Add(Me.LabelProtein)
         Me.Panel6.Controls.Add(Me.ProgressBar2)
         Me.Panel6.Controls.Add(Me.Label6)
         Me.Panel6.Location = New System.Drawing.Point(24, 153)
@@ -365,18 +367,18 @@ Partial Class UserForm
         Me.Panel6.Size = New System.Drawing.Size(171, 115)
         Me.Panel6.TabIndex = 14
         '
-        'Label5
+        'LabelProtein
         '
-        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LabelProtein.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(11, 36)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 21)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "123/2300"
+        Me.LabelProtein.AutoSize = True
+        Me.LabelProtein.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.LabelProtein.ForeColor = System.Drawing.Color.White
+        Me.LabelProtein.Location = New System.Drawing.Point(11, 36)
+        Me.LabelProtein.Name = "LabelProtein"
+        Me.LabelProtein.Size = New System.Drawing.Size(80, 21)
+        Me.LabelProtein.TabIndex = 13
+        Me.LabelProtein.Text = "123/2300"
         '
         'ProgressBar2
         '
@@ -400,7 +402,7 @@ Partial Class UserForm
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.DarkViolet
-        Me.Panel5.Controls.Add(Me.Label4)
+        Me.Panel5.Controls.Add(Me.LabelKalori)
         Me.Panel5.Controls.Add(Me.ProgressBar1)
         Me.Panel5.Controls.Add(Me.Label3)
         Me.Panel5.Location = New System.Drawing.Point(25, 23)
@@ -408,18 +410,18 @@ Partial Class UserForm
         Me.Panel5.Size = New System.Drawing.Size(171, 115)
         Me.Panel5.TabIndex = 0
         '
-        'Label4
+        'LabelKalori
         '
-        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.LabelKalori.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(11, 36)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(80, 21)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "123/2300"
+        Me.LabelKalori.AutoSize = True
+        Me.LabelKalori.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.LabelKalori.ForeColor = System.Drawing.Color.White
+        Me.LabelKalori.Location = New System.Drawing.Point(11, 36)
+        Me.LabelKalori.Name = "LabelKalori"
+        Me.LabelKalori.Size = New System.Drawing.Size(80, 21)
+        Me.LabelKalori.TabIndex = 13
+        Me.LabelKalori.Text = "123/2300"
         '
         'ProgressBar1
         '
@@ -442,9 +444,12 @@ Partial Class UserForm
         '
         'PanelAsupan
         '
+        Me.PanelAsupan.Controls.Add(Me.dgvAsupan)
+        Me.PanelAsupan.Controls.Add(Me.Label4)
+        Me.PanelAsupan.Controls.Add(Me.TextBox1)
         Me.PanelAsupan.Controls.Add(Me.Panel9)
-        Me.PanelAsupan.Controls.Add(Me.DataGridView1)
         Me.PanelAsupan.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelAsupan.ForeColor = System.Drawing.Color.Black
         Me.PanelAsupan.Location = New System.Drawing.Point(0, 0)
         Me.PanelAsupan.Name = "PanelAsupan"
         Me.PanelAsupan.Size = New System.Drawing.Size(735, 425)
@@ -458,7 +463,7 @@ Partial Class UserForm
         Me.Panel9.Controls.Add(Me.Label18)
         Me.Panel9.Controls.Add(Me.Label16)
         Me.Panel9.Controls.Add(Me.Label15)
-        Me.Panel9.Controls.Add(Me.TextBox3)
+        Me.Panel9.Controls.Add(Me.tPorsi)
         Me.Panel9.Controls.Add(Me.Label14)
         Me.Panel9.Controls.Add(Me.TextBox2)
         Me.Panel9.Controls.Add(Me.Label13)
@@ -527,14 +532,14 @@ Partial Class UserForm
         Me.Label15.TabIndex = 15
         Me.Label15.Text = "Nama Makanan"
         '
-        'TextBox3
+        'tPorsi
         '
-        Me.TextBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.tPorsi.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Location = New System.Drawing.Point(60, 211)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(137, 20)
-        Me.TextBox3.TabIndex = 14
+        Me.tPorsi.Location = New System.Drawing.Point(73, 211)
+        Me.tPorsi.Name = "tPorsi"
+        Me.tPorsi.Size = New System.Drawing.Size(124, 20)
+        Me.tPorsi.TabIndex = 14
         '
         'Label14
         '
@@ -567,19 +572,6 @@ Partial Class UserForm
         Me.Label13.TabIndex = 11
         Me.Label13.Text = "Cari"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 1)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(524, 421)
-        Me.DataGridView1.TabIndex = 0
-        '
         'PanelProfil
         '
         Me.PanelProfil.BackColor = System.Drawing.Color.LavenderBlush
@@ -607,6 +599,24 @@ Partial Class UserForm
         Me.PanelProfil.Name = "PanelProfil"
         Me.PanelProfil.Size = New System.Drawing.Size(564, 364)
         Me.PanelProfil.TabIndex = 17
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(98, 234)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 27
+        '
+        'tAktif
+        '
+        Me.tAktif.AutoSize = True
+        Me.tAktif.ForeColor = System.Drawing.Color.Black
+        Me.tAktif.Location = New System.Drawing.Point(44, 234)
+        Me.tAktif.Name = "tAktif"
+        Me.tAktif.Size = New System.Drawing.Size(47, 13)
+        Me.tAktif.TabIndex = 26
+        Me.tAktif.Text = "Aktivitas"
         '
         'tDate
         '
@@ -776,23 +786,34 @@ Partial Class UserForm
         Me.tNama.Size = New System.Drawing.Size(122, 20)
         Me.tNama.TabIndex = 0
         '
-        'tAktif
+        'TextBox1
         '
-        Me.tAktif.AutoSize = True
-        Me.tAktif.ForeColor = System.Drawing.Color.Black
-        Me.tAktif.Location = New System.Drawing.Point(44, 234)
-        Me.tAktif.Name = "tAktif"
-        Me.tAktif.Size = New System.Drawing.Size(47, 13)
-        Me.tAktif.TabIndex = 26
-        Me.tAktif.Text = "Aktivitas"
+        Me.TextBox1.Location = New System.Drawing.Point(218, 76)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(284, 20)
+        Me.TextBox1.TabIndex = 2
         '
-        'ComboBox1
+        'Label4
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(98, 234)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 27
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(184, 79)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(25, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Cari"
+        '
+        'dgvAsupan
+        '
+        Me.dgvAsupan.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvAsupan.BackgroundColor = System.Drawing.Color.LavenderBlush
+        Me.dgvAsupan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAsupan.Location = New System.Drawing.Point(171, 114)
+        Me.dgvAsupan.Name = "dgvAsupan"
+        Me.dgvAsupan.RowHeadersVisible = False
+        Me.dgvAsupan.Size = New System.Drawing.Size(362, 311)
+        Me.dgvAsupan.TabIndex = 4
         '
         'UserForm
         '
@@ -800,11 +821,11 @@ Partial Class UserForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkViolet
         Me.ClientSize = New System.Drawing.Size(735, 425)
-        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.header)
         Me.Controls.Add(Me.sidenav)
-        Me.Controls.Add(Me.PanelDashboard)
         Me.Controls.Add(Me.PanelAsupan)
+        Me.Controls.Add(Me.PanelProfil)
+        Me.Controls.Add(Me.PanelDashboard)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "UserForm"
         Me.Text = "User"
@@ -825,12 +846,13 @@ Partial Class UserForm
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.PanelAsupan.ResumeLayout(False)
+        Me.PanelAsupan.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelProfil.ResumeLayout(False)
         Me.PanelProfil.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvAsupan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -848,19 +870,18 @@ Partial Class UserForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents Label7 As Label
+    Friend WithEvents LabelLemak As Label
     Friend WithEvents ProgressBar3 As ProgressBar
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label5 As Label
+    Friend WithEvents LabelProtein As Label
     Friend WithEvents ProgressBar2 As ProgressBar
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents LabelKalori As Label
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label3 As Label
     Friend WithEvents PanelAsupan As Panel
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label12 As Label
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents Button1 As Button
@@ -868,7 +889,7 @@ Partial Class UserForm
     Friend WithEvents Label18 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tPorsi As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label13 As Label
@@ -893,9 +914,12 @@ Partial Class UserForm
     Friend WithEvents tNama As TextBox
     Friend WithEvents tDate As DateTimePicker
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents LabelKarbo As Label
     Friend WithEvents ProgressBar4 As ProgressBar
     Friend WithEvents Label10 As Label
     Friend WithEvents tAktif As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents dgvAsupan As DataGridView
 End Class

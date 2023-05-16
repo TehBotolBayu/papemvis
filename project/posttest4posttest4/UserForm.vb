@@ -14,7 +14,7 @@ Public Class UserForm
 
     Dim kalori As Double
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub ambilAkun()
         CMD = New MySqlCommand("select * from akun where id = '" & Login.idLogin & "'", CONN)
         RD = CMD.ExecuteReader
         RD.Read()
@@ -25,7 +25,30 @@ Public Class UserForm
         tDate.Text = RD(3).ToString()
         tTinggi.Text = RD(8).ToString()
         tBerat.Text = RD(9).ToString()
+        kalori = RD(7)
         RD.Close()
+    End Sub
+
+    Private Sub ambilAsupan()
+
+        DA = New MySqlDataAdapter("select * from makanan", CONN)
+        DS = New DataSet
+        DS.Clear()
+        DA.Fill(DS, "makanan")
+        dgvAsupan.DataSource = DS.Tables("makanan")
+        dgvAsupan.Refresh()
+
+        dgvAsupan.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        dgvAsupan.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        dgvAsupan.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        dgvAsupan.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        dgvAsupan.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        dgvAsupan.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        dgvAsupan.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        ambilAkun()
         PanelProfil.Show()
         PanelAsupan.Hide()
         PanelDashboard.Hide()
@@ -46,45 +69,44 @@ Public Class UserForm
         Panel4.Hide()
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
-
-    End Sub
-    Dim berat As Double = 10
-    Dim tinggi As Double = 10
-
-
-    Public Function bmr() As Double
-        If Beranda.kelamin = "Laki-Laki" Then
-            Return ((88.4 + (13.4 * berat)) + (4.8 * tinggi) - (5.68 * Beranda.umur))
-        Else
-            Return ((447.6 + (9.25 * berat)) + (3.1 * tinggi) - (4.33 * Beranda.umur))
+    Private Sub ceknutrisi()
+        MsgBox(Login.umur)
+        LabelKalori.Text = kalori
+        If Login.umur < 3 Then
+            LabelLemak.Text = (kalori * 35 / 100).ToString()
+            LabelKarbo.Text = (kalori * 50 / 100).ToString()
+            LabelProtein.Text = (kalori * 15 / 100).ToString()
+        ElseIf Login.umur < 18 Then
+            LabelLemak.Text = (kalori * 30 / 100).ToString()
+            LabelKarbo.Text = (kalori * 50 / 100).ToString()
+            LabelProtein.Text = (kalori * 20 / 100).ToString()
+        ElseIf Login.umur >= 18 Then
+            LabelLemak.Text = (kalori * 25 / 100).ToString()
+            LabelKarbo.Text = (kalori * 50 / 100).ToString()
+            LabelProtein.Text = (kalori * 25 / 100).ToString()
         End If
-    End Function
+    End Sub
 
     Private Sub UserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        umur = Val(hariini.Year) - Val(tgl.Year)
-        If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
-            umur = umur - 1
-        End If
+        ambilAkun()
+        ambilAsupan()
 
-        kalori = bmr()
+        ceknutrisi()
     End Sub
 
     Private Sub UserForm_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Login.Close()
         Registrasi.Close()
-
     End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
-    End Sub
-
-    Private Sub Label25_Click(sender As Object, e As EventArgs) Handles tAktif.Click
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
+    Dim selected As Integer
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If Not selected = Nothing Then
+            MsgBox("Pilih Makanan Terlebih Dahulu")
+            Return
+        ElseIf tPorsi.Text = "" Then
+            MsgBox("Masukan Porsi")
+            Return
+        End If
 
     End Sub
 End Class

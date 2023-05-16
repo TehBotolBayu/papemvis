@@ -2,7 +2,9 @@
 Imports System.Web.UI.WebControls
 Imports MySql.Data.MySqlClient
 Public Class Registrasi
-
+    Public tgl As Date
+    Public umur As Integer
+    Dim hariini As Date = Format(Date.Now(), "dd-MM-yyyy")
 
     Function cekKosong() As Integer
         If txtnama.Text = "" Then
@@ -31,6 +33,7 @@ Public Class Registrasi
     End Function
 
     Private Sub Registrasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         kelamin.SelectedIndex = 0
         Call koneksi()
     End Sub
@@ -58,11 +61,6 @@ Public Class Registrasi
                 Return
             End Try
 
-
-
-
-
-
             If Not txtkonpassword.Text = txtpassword.Text Then
                 MsgBox("Konfirmasi Password tidak sama!", MsgBoxStyle.Information, "Perhatian")
                 txtkonpassword.Focus()
@@ -79,7 +77,37 @@ Public Class Registrasi
             End If
             RD.Close()
 
-            Dim Simpan As String = "insert into akun(nama, email, tanggal, password, kelamin, status, tinggi, berat) values('" & txtnama.Text & "', '" & txtemail.Text & "', '" & txttgllahir.Value.Year.ToString() & "-" & txttgllahir.Value.Month.ToString() & "-" & txttgllahir.Value.Day.ToString() & "', '" & txtpassword.Text & "', '" & kelamin.Text & "', 'user', '" & txttinggi.Text & "', '" & txtberat.Text & "')"
+            tgl = txttgllahir.Value
+            umur = Val(hariini.Year) - Val(tgl.Year)
+            If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
+                umur = umur - 1
+            End If
+
+            Login.umur = umur
+
+            Dim kalori As Double
+            Dim aktivitas As Double
+
+            If taktivitas.SelectedIndex = 0 Then
+                aktivitas = 1.2
+            ElseIf taktivitas.SelectedIndex = 1 Then
+                aktivitas = 1.375
+            ElseIf taktivitas.SelectedIndex = 2 Then
+                aktivitas = 1.55
+            ElseIf taktivitas.SelectedIndex = 3 Then
+                aktivitas = 1.725
+            ElseIf taktivitas.SelectedIndex = 4 Then
+                aktivitas = 1.9
+            End If
+
+            If Beranda.kelamin = "Laki-Laki" Then
+                kalori = ((88.4 + (13.4 * Val(txtberat.Text))) + (4.8 * Val(txttinggi.Text)) - (5.68 * umur))
+            Else
+                kalori = ((447.6 + (9.25 * Val(txtberat.Text))) + (3.1 * Val(txttinggi.Text)) - (4.33 * umur))
+            End If
+            kalori = kalori * aktivitas
+
+            Dim Simpan As String = "insert into akun(nama, email, tanggal, password, kelamin, status, tinggi, berat, kalori) values('" & txtnama.Text & "', '" & txtemail.Text & "', '" & txttgllahir.Value.Year.ToString() & "-" & txttgllahir.Value.Month.ToString() & "-" & txttgllahir.Value.Day.ToString() & "', '" & txtpassword.Text & "', '" & kelamin.Text & "', 'user', '" & txttinggi.Text & "', '" & txtberat.Text & "', '" & kalori & "')"
             CMD = New MySqlCommand(Simpan, CONN)
             CMD.ExecuteNonQuery()
             MsgBox("Registrasi sukses!", MsgBoxStyle.Information, "Perhatian")
@@ -104,4 +132,6 @@ Public Class Registrasi
         Me.Hide()
         Login.Show()
     End Sub
+
+
 End Class

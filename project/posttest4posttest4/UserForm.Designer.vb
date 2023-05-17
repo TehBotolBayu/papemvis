@@ -977,11 +977,11 @@ Partial Class UserForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkViolet
         Me.ClientSize = New System.Drawing.Size(949, 525)
-        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.PanelDashboard)
         Me.Controls.Add(Me.header)
         Me.Controls.Add(Me.sidenav)
         Me.Controls.Add(Me.PanelAsupan)
+        Me.Controls.Add(Me.PanelProfil)
         Me.ForeColor = System.Drawing.Color.White
         Me.Name = "UserForm"
         Me.Text = "User"

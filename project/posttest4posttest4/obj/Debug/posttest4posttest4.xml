@@ -47,6 +47,21 @@ posttest4posttest4
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:posttest4posttest4.My.Resources.Resources.Rectangle_12">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:posttest4posttest4.My.Resources.Resources.Rectangle_5">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:posttest4posttest4.My.Resources.Resources.Rectangle1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:posttest4posttest4.My.Resources.Resources.search_interface_symbol">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -232,4 +232,8 @@ Public Class Form1
     Private Sub LaporanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanToolStripMenuItem.Click
         Laporan.Show()
     End Sub
+
+    Private Sub dgvAkun_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAkun.CellContentClick
+
+    End Sub
 End Class

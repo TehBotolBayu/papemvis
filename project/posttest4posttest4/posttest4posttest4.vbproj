@@ -286,6 +286,27 @@
   <ItemGroup>
     <None Include="Resources\1.foods.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectanglebig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

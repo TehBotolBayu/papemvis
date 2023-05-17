@@ -44,6 +44,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.msDataMakanan = New System.Windows.Forms.ToolStripMenuItem()
         Me.msDataUser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelDataMakanan = New System.Windows.Forms.Panel()
         Me.PanelDataAkun = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -51,7 +52,6 @@ Partial Class Form1
         Me.cariakun = New System.Windows.Forms.TextBox()
         Me.dgvAkun = New System.Windows.Forms.DataGridView()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgvMakanan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -275,6 +275,12 @@ Partial Class Form1
         Me.msDataUser.Size = New System.Drawing.Size(69, 20)
         Me.msDataUser.Text = "Data User"
         '
+        'LaporanToolStripMenuItem
+        '
+        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
+        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.LaporanToolStripMenuItem.Text = "Laporan"
+        '
         'PanelDataMakanan
         '
         Me.PanelDataMakanan.BackColor = System.Drawing.Color.DarkMagenta
@@ -368,12 +374,6 @@ Partial Class Form1
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox4.TabIndex = 15
         Me.PictureBox4.TabStop = False
-        '
-        'LaporanToolStripMenuItem
-        '
-        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.LaporanToolStripMenuItem.Text = "Laporan"
         '
         'Form1
         '

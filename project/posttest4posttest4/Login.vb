@@ -54,7 +54,6 @@ Public Class Login
                 UserForm.username = username
                 UserForm.tgl = tgllahir
                 UserForm.kelamin = kelamin
-                UserForm.K = kal
                 idLogin = RD(0).ToString()
                 Diet.idakun = RD(0).ToString()
                 Cek.idakun = RD(0).ToString()

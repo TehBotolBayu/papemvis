@@ -165,6 +165,15 @@
     <Compile Include="Profil.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RadiusBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RadiusCombo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RadiusDate.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Registrasi.Designer.vb">
       <DependentUpon>Registrasi.vb</DependentUpon>
     </Compile>
@@ -306,6 +315,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-interface-symbol1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardprofile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -44,15 +44,17 @@ Partial Class Registrasi
         Me.Label11 = New System.Windows.Forms.Label()
         Me.taktivitas = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.chkPassword = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(27, 78)
+        Me.Label1.Location = New System.Drawing.Point(40, 120)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.Size = New System.Drawing.Size(51, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nama"
         '
@@ -60,9 +62,10 @@ Partial Class Registrasi
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(27, 131)
+        Me.Label2.Location = New System.Drawing.Point(40, 202)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 13)
+        Me.Label2.Size = New System.Drawing.Size(48, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Email"
         '
@@ -70,9 +73,10 @@ Partial Class Registrasi
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(279, 182)
+        Me.Label3.Location = New System.Drawing.Point(418, 280)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.Size = New System.Drawing.Size(105, 20)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Tanggal Lahir"
         '
@@ -80,9 +84,10 @@ Partial Class Registrasi
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(26, 185)
+        Me.Label4.Location = New System.Drawing.Point(39, 285)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.Size = New System.Drawing.Size(78, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Password"
         '
@@ -90,38 +95,43 @@ Partial Class Registrasi
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(26, 238)
+        Me.Label5.Location = New System.Drawing.Point(39, 366)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(104, 13)
+        Me.Label5.Size = New System.Drawing.Size(156, 20)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Konfirmasi Password"
         '
         'txtnama
         '
-        Me.txtnama.Location = New System.Drawing.Point(30, 103)
+        Me.txtnama.Location = New System.Drawing.Point(45, 158)
+        Me.txtnama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtnama.Name = "txtnama"
-        Me.txtnama.Size = New System.Drawing.Size(221, 20)
+        Me.txtnama.Size = New System.Drawing.Size(330, 26)
         Me.txtnama.TabIndex = 6
         '
         'txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(30, 198)
+        Me.txtpassword.Location = New System.Drawing.Point(45, 305)
+        Me.txtpassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.Size = New System.Drawing.Size(221, 20)
+        Me.txtpassword.Size = New System.Drawing.Size(330, 26)
         Me.txtpassword.TabIndex = 5
         '
         'txtkonpassword
         '
-        Me.txtkonpassword.Location = New System.Drawing.Point(30, 254)
+        Me.txtkonpassword.Location = New System.Drawing.Point(45, 391)
+        Me.txtkonpassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtkonpassword.Name = "txtkonpassword"
-        Me.txtkonpassword.Size = New System.Drawing.Size(221, 20)
+        Me.txtkonpassword.Size = New System.Drawing.Size(330, 26)
         Me.txtkonpassword.TabIndex = 7
         '
         'txtemail
         '
-        Me.txtemail.Location = New System.Drawing.Point(30, 147)
+        Me.txtemail.Location = New System.Drawing.Point(45, 226)
+        Me.txtemail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtemail.Name = "txtemail"
-        Me.txtemail.Size = New System.Drawing.Size(221, 20)
+        Me.txtemail.Size = New System.Drawing.Size(330, 26)
         Me.txtemail.TabIndex = 9
         '
         'btnregis
@@ -131,9 +141,10 @@ Partial Class Registrasi
         Me.btnregis.FlatAppearance.BorderSize = 0
         Me.btnregis.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnregis.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnregis.Location = New System.Drawing.Point(112, 348)
+        Me.btnregis.Location = New System.Drawing.Point(168, 535)
+        Me.btnregis.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnregis.Name = "btnregis"
-        Me.btnregis.Size = New System.Drawing.Size(312, 23)
+        Me.btnregis.Size = New System.Drawing.Size(468, 35)
         Me.btnregis.TabIndex = 10
         Me.btnregis.Text = "Registrasi"
         Me.btnregis.UseVisualStyleBackColor = False
@@ -143,35 +154,39 @@ Partial Class Registrasi
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Pink
-        Me.Label6.Location = New System.Drawing.Point(300, 389)
+        Me.Label6.Location = New System.Drawing.Point(450, 598)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(38, 13)
+        Me.Label6.Size = New System.Drawing.Size(55, 20)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Login"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(193, 389)
+        Me.Label7.Location = New System.Drawing.Point(290, 598)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(103, 13)
+        Me.Label7.Size = New System.Drawing.Size(151, 20)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Sudah punya akun?"
         '
         'txttgllahir
         '
-        Me.txttgllahir.Location = New System.Drawing.Point(281, 198)
+        Me.txttgllahir.Location = New System.Drawing.Point(422, 305)
+        Me.txttgllahir.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txttgllahir.Name = "txttgllahir"
-        Me.txttgllahir.Size = New System.Drawing.Size(222, 20)
+        Me.txttgllahir.Size = New System.Drawing.Size(331, 26)
         Me.txttgllahir.TabIndex = 13
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(279, 238)
+        Me.Label8.Location = New System.Drawing.Point(418, 366)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(71, 13)
+        Me.Label8.Size = New System.Drawing.Size(106, 20)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Jenis Kelamin"
         '
@@ -179,9 +194,10 @@ Partial Class Registrasi
         '
         Me.kelamin.FormattingEnabled = True
         Me.kelamin.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
-        Me.kelamin.Location = New System.Drawing.Point(282, 254)
+        Me.kelamin.Location = New System.Drawing.Point(423, 391)
+        Me.kelamin.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.kelamin.Name = "kelamin"
-        Me.kelamin.Size = New System.Drawing.Size(221, 21)
+        Me.kelamin.Size = New System.Drawing.Size(330, 28)
         Me.kelamin.TabIndex = 15
         '
         'Label9
@@ -189,33 +205,37 @@ Partial Class Registrasi
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(222, 32)
+        Me.Label9.Location = New System.Drawing.Point(333, 49)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(90, 20)
+        Me.Label9.Size = New System.Drawing.Size(131, 29)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Registrasi"
         '
         'txttinggi
         '
-        Me.txttinggi.Location = New System.Drawing.Point(282, 147)
+        Me.txttinggi.Location = New System.Drawing.Point(423, 226)
+        Me.txttinggi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txttinggi.Name = "txttinggi"
-        Me.txttinggi.Size = New System.Drawing.Size(221, 20)
+        Me.txttinggi.Size = New System.Drawing.Size(330, 26)
         Me.txttinggi.TabIndex = 20
         '
         'txtberat
         '
-        Me.txtberat.Location = New System.Drawing.Point(282, 103)
+        Me.txtberat.Location = New System.Drawing.Point(423, 158)
+        Me.txtberat.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtberat.Name = "txtberat"
-        Me.txtberat.Size = New System.Drawing.Size(221, 20)
+        Me.txtberat.Size = New System.Drawing.Size(330, 26)
         Me.txtberat.TabIndex = 19
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(279, 131)
+        Me.Label10.Location = New System.Drawing.Point(418, 202)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(70, 13)
+        Me.Label10.Size = New System.Drawing.Size(102, 20)
         Me.Label10.TabIndex = 18
         Me.Label10.Text = "Tinggi Badan"
         '
@@ -223,9 +243,10 @@ Partial Class Registrasi
         '
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(279, 78)
+        Me.Label11.Location = New System.Drawing.Point(418, 120)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(66, 13)
+        Me.Label11.Size = New System.Drawing.Size(99, 20)
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Berat Badan"
         '
@@ -233,27 +254,41 @@ Partial Class Registrasi
         '
         Me.taktivitas.FormattingEnabled = True
         Me.taktivitas.Items.AddRange(New Object() {"Santai", "Ringan", "Sedang", "Berat", "Ekstrem"})
-        Me.taktivitas.Location = New System.Drawing.Point(163, 300)
+        Me.taktivitas.Location = New System.Drawing.Point(244, 462)
+        Me.taktivitas.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.taktivitas.Name = "taktivitas"
-        Me.taktivitas.Size = New System.Drawing.Size(221, 21)
+        Me.taktivitas.Size = New System.Drawing.Size(330, 28)
         Me.taktivitas.TabIndex = 22
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(160, 284)
+        Me.Label12.Location = New System.Drawing.Point(240, 437)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(47, 13)
+        Me.Label12.Size = New System.Drawing.Size(68, 20)
         Me.Label12.TabIndex = 21
         Me.Label12.Text = "Aktivitas"
         '
+        'chkPassword
+        '
+        Me.chkPassword.AutoSize = True
+        Me.chkPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.chkPassword.ForeColor = System.Drawing.Color.White
+        Me.chkPassword.Location = New System.Drawing.Point(348, 394)
+        Me.chkPassword.Name = "chkPassword"
+        Me.chkPassword.Size = New System.Drawing.Size(22, 21)
+        Me.chkPassword.TabIndex = 23
+        Me.chkPassword.UseVisualStyleBackColor = True
+        '
         'Registrasi
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkViolet
-        Me.ClientSize = New System.Drawing.Size(534, 419)
+        Me.ClientSize = New System.Drawing.Size(801, 645)
+        Me.Controls.Add(Me.chkPassword)
         Me.Controls.Add(Me.taktivitas)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txttinggi)
@@ -277,6 +312,7 @@ Partial Class Registrasi
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Registrasi"
         Me.Text = "Registrasi"
         Me.ResumeLayout(False)
@@ -305,4 +341,5 @@ Partial Class Registrasi
     Friend WithEvents Label11 As Label
     Friend WithEvents taktivitas As ComboBox
     Friend WithEvents Label12 As Label
+    Friend WithEvents chkPassword As CheckBox
 End Class

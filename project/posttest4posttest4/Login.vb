@@ -8,6 +8,7 @@ Public Class Login
         Timer1.Enabled = True
         Call Kosong()
         Call koneksi()
+        txtpassword.PasswordChar = "*"
     End Sub
 
     Sub Kosong()
@@ -101,5 +102,11 @@ Public Class Login
 
     End Sub
 
-
+    Private Sub chkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkPassword.CheckedChanged
+        If chkPassword.Checked = True Then
+            txtpassword.PasswordChar = ""
+        Else
+            txtpassword.PasswordChar = "*"
+        End If
+    End Sub
 End Class

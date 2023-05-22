@@ -4,10 +4,6 @@ Imports System.Web.Services.Description
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
 
 Public Class UserForm
-    Public username As String
-    Public email As String
-    Public kelamin As String
-    Public pass As String
 
     Public tgl As Date
     Dim hariini As Date = Format(Date.Now(), "dd-MM-yyyy")
@@ -45,6 +41,11 @@ Public Class UserForm
         CMD = New MySqlCommand("select * from akun where id = '" & Login.idLogin & "'", CONN)
         Module1.RD = CMD.ExecuteReader
         Module1.RD.Read()
+
+        namauser.Text = Module1.RD(1).ToString()
+        emailuser.Text = Module1.RD(2).ToString()
+        lahiruser.Text = Module1.RD(3).ToString()
+
         tNama.Text = Module1.RD(1).ToString()
         tEmail.Text = Module1.RD(2).ToString()
         tPw.Text = Module1.RD(4).ToString()
@@ -103,7 +104,7 @@ Public Class UserForm
         lemtotal = 0
         karbototal = 0
 
-        CMD = New MySqlCommand("select * from nutrisi where tanggal = '" & tglasupan & "'", CONN)
+        CMD = New MySqlCommand("select * from nutrisi where tanggal = '" & tglasupan & "' and idakun = '" & Login.idLogin & "'", CONN)
         Module1.RD = CMD.ExecuteReader
         If Module1.RD.HasRows Then
             While Module1.RD.Read
@@ -119,10 +120,26 @@ Public Class UserForm
         Else
         End If
         Module1.RD.Close()
-        progresskal = kaltotal / kalori
-        progresskar = karbototal / karbomax
-        progresslem = lemtotal / lemakmax
-        progresspro = prototal / proteinmax
+        progresskal = 1
+        progresskar = 1
+        progresslem = 1
+        progresspro = 1
+        If kaltotal < kalori Then
+            progresskal = kaltotal / kalori
+        End If
+        If karbototal < karbomax Then
+            progresskar = karbototal / karbomax
+        End If
+        If lemtotal < lemakmax Then
+            progresslem = lemtotal / lemakmax
+        End If
+        If prototal < proteinmax Then
+            progresspro = prototal / proteinmax
+        End If
+
+
+
+
 
         LabelKalori.Text = kaltotal.ToString & "/" & kalori.ToString
         LabelProtein.Text = prototal.ToString & "/" & proteinmax.ToString
@@ -134,6 +151,7 @@ Public Class UserForm
         Dim ii As Integer = 0
 
         If Module1.RD.HasRows Then
+
             While Module1.RD.Read
                 Panel1(ii) = New Panel()
                 id = New Label()
@@ -279,7 +297,7 @@ Public Class UserForm
 
                 Panel1(ii).Location = New Point(25, 30 + (120 * ii))
                 Panel1(ii).Name = "Panel" & ii
-                Panel1(ii).Size = New Size(730, 120)
+                Panel1(ii).Size = New Size(PanelDashboard.Width - 20, 120)
                 Panel1(ii).TabIndex = 1
 
                 AddHandler Panel1(ii).MouseClick, AddressOf tes
@@ -288,6 +306,7 @@ Public Class UserForm
                 ii = ii + 1
             End While
         Else
+
         End If
         Module1.RD.Close()
 
@@ -436,11 +455,10 @@ Public Class UserForm
                 Panel1(ii).Controls.Add(kl)
                 Panel1(ii).Controls.Add(pfood)
                 Panel1(ii).Controls.Add(nama)
-                Panel1(ii).Controls.Add(porsi)
 
                 Panel1(ii).Location = New Point(25, 30 + (120 * ii))
                 Panel1(ii).Name = "Panel" & ii
-                Panel1(ii).Size = New Size(750, 120)
+                Panel1(ii).Size = New Size(PanelAsupan.Width - 20, 120)
                 Panel1(ii).TabIndex = 1
 
                 AddHandler Panel1(ii).MouseClick, AddressOf addasupanku
@@ -453,6 +471,8 @@ Public Class UserForm
         RD.Close()
 
     End Sub
+
+
     Dim muncul As Boolean = False
     Private Sub addasupanku(sender As Object, e As EventArgs)
         Dim clickedPanel As Panel = CType(sender, Panel)
@@ -733,6 +753,11 @@ Public Class UserForm
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
         daftarmakanan.Controls.Clear()
         aturdaftar(rcari.Text)
+    End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        infoasupan.Hide()
+
     End Sub
 
     Private Sub PictureBox5_MouseClick(sender As Object, e As MouseEventArgs) Handles PictureBox5.MouseClick

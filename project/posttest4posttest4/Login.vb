@@ -4,6 +4,7 @@ Public Class Login
     Public idLogin As String
     Public umur As Integer
 
+
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
         Call Kosong()
@@ -39,8 +40,7 @@ Public Class Login
                 Dim tgllahir = RD(3).ToString()
                 Dim kelamin = RD(5).ToString()
                 Dim kal = RD(7).ToString()
-
-                Profil.txtemail.Text = RD(2).ToString()
+                Dim email = RD(2).ToString()
                 Profil.txtnama.Text = username
                 Profil.txtpassword.Text = RD(4).ToString()
                 Profil.txttgllahir.Text = tgllahir
@@ -51,9 +51,8 @@ Public Class Login
                 End If
                 Profil.id = RD(0).ToString()
 
-                UserForm.username = username
+
                 UserForm.tgl = tgllahir
-                UserForm.kelamin = kelamin
                 idLogin = RD(0).ToString()
                 Diet.idakun = RD(0).ToString()
                 Cek.idakun = RD(0).ToString()

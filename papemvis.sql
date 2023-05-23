@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2023 at 02:18 PM
+-- Generation Time: May 23, 2023 at 06:03 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -37,60 +37,50 @@ CREATE TABLE `akun` (
   `status` varchar(11) NOT NULL,
   `kalori` varchar(255) NOT NULL DEFAULT 'NA',
   `tinggi` double NOT NULL,
-  `berat` double NOT NULL
+  `berat` double NOT NULL,
+  `aktivitas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `akun`
 --
 
-INSERT INTO `akun` (`id`, `nama`, `email`, `tanggal`, `password`, `kelamin`, `status`, `kalori`, `tinggi`, `berat`) VALUES
-(16, 'admin', 'admin@yahoo.com', '2023-04-05', '123', 'Laki-Laki', 'admin', 'NA', 0, 0),
-(18, 'kjn', 'kjhj@y.com', '2005-04-03', '90', 'Perempuan', 'user', 'NA', 0, 0),
-(19, 'bayu', 'dasdasd', '2003-01-10', '123', 'Perempuan', 'user', '1288,5', 0, 0),
-(20, 'Fikri', 'dasasd', '2003-04-24', 'a', 'Laki-Laki', 'user', 'NA', 0, 0),
-(21, '12', '12', '2003-04-02', '12', 'Laki-Laki', 'user', '1639,4', 0, 0),
-(22, '11', '11', '2023-04-16', '11', 'Laki-Laki', 'user', 'NA', 0, 0),
-(23, 'Bayu Abdurrosyid', '123@g.com', '2022-12-20', '123', 'Laki-Laki', 'user', 'NA', 0, 0),
-(24, 'aaaaa', 'abd@h.com', '2013-02-01', '123', 'Laki-Laki', 'user', 'NA', 0, 0),
-(25, 'a', 'a', '2023-04-16', '123', 'Perempuan', 'user', 'NA', 0, 0),
-(26, 'qqq', 'q', '2023-04-16', 'q', 'Laki-Laki', 'user', '1478,4', 0, 0),
-(27, 'Bayuu', '123', '2023-04-21', '123', 'Laki-Laki', 'user', 'NA', 0, 0),
-(28, 'zz', 'zz', '2005-05-16', 'zz', 'Laki-Laki', 'user', 'NA', 0, 0),
-(29, 'baru', 'baru@gamil.com', '2023-05-16', '123', 'Laki-Laki', 'user', 'NA', 0, 0),
-(30, 's', 's@m.com', '2023-05-16', '1', 'Laki-Laki', 'user', 'NA', 0, 0),
-(31, '1', '1@g.com', '2023-05-16', '1', 'Laki-Laki', 'user', 'NA', 1, 1),
-(34, 'ilhammm', '1', '2003-05-16', '1', 'Laki-Laki', 'user', '2164,9625', 170, 55);
+INSERT INTO `akun` (`id`, `nama`, `email`, `tanggal`, `password`, `kelamin`, `status`, `kalori`, `tinggi`, `berat`, `aktivitas`) VALUES
+(16, 'admin', 'admin@yahoo.com', '2023-04-05', '123', 'Laki-Laki', 'admin', 'NA', 0, 0, 0),
+(18, 'kjn', 'kjhj@y.com', '2005-04-03', '90', 'Perempuan', 'user', 'NA', 0, 0, 0),
+(19, 'bayu', 'dasdasd', '2003-01-10', '123', 'Perempuan', 'user', '1288,5', 0, 0, 0),
+(20, 'Fikri', 'dasasd', '2003-04-24', 'a', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(21, '12', '12', '2003-04-02', '12', 'Laki-Laki', 'user', '1639,4', 0, 0, 0),
+(22, '11', '11', '2023-04-16', '11', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(23, 'Bayu Abdurrosyid', '123@g.com', '2022-12-20', '123', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(24, 'aaaaa', 'abd@h.com', '2013-02-01', '123', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(26, 'uwu', 'q', '2002-05-14', 'q', 'Laki-Laki', 'user', '1478,4', 170, 55, -1),
+(27, 'Bayuu', '123', '2023-04-21', '123', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(28, 'zz', 'zz', '2005-05-16', 'zz', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(29, 'baru', 'baru@gamil.com', '2023-05-16', '123', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(30, 's', 's@m.com', '2023-05-16', '1', 'Laki-Laki', 'user', 'NA', 0, 0, 0),
+(31, '1', '1@g.com', '2023-05-16', '1', 'Laki-Laki', 'user', 'NA', 1, 1, 0),
+(34, 'ilhammm', '1', '2003-05-16', '1', 'Laki-Laki', 'user', '2164,9625', 170, 55, 0),
+(35, 'a', 'a', '2013-05-15', 'a', 'Laki-Laki', 'admin', '1200', 140, 50, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diet`
+-- Table structure for table `catatan`
 --
 
-CREATE TABLE `diet` (
+CREATE TABLE `catatan` (
   `id` int(11) NOT NULL,
   `idakun` int(11) NOT NULL,
-  `idmakanan` int(11) NOT NULL,
-  `waktu` time NOT NULL,
-  `idsetdiet` text NOT NULL
+  `isi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `diet`
+-- Dumping data for table `catatan`
 --
 
-INSERT INTO `diet` (`id`, `idakun`, `idmakanan`, `waktu`, `idsetdiet`) VALUES
-(31, 21, 32, '03:00:00', '11'),
-(32, 21, 32, '03:00:00', '11'),
-(33, 21, 32, '03:00:00', '11'),
-(34, 21, 32, '03:00:00', '11'),
-(50, 21, 33, '16:30:00', '6'),
-(51, 21, 30, '11:30:00', '6'),
-(52, 21, 30, '23:30:00', '6'),
-(57, 26, 27, '22:00:00', '13'),
-(58, 26, 34, '22:00:00', '13'),
-(59, 26, 32, '22:00:00', '13');
+INSERT INTO `catatan` (`id`, `idakun`, `isi`) VALUES
+(1, 26, 'ubah catatan ku\r\nsekarang jadi barujnnmn m\r\nkjn');
 
 -- --------------------------------------------------------
 
@@ -113,7 +103,7 @@ CREATE TABLE `makanan` (
 --
 
 INSERT INTO `makanan` (`id`, `nama`, `kalori`, `lemak`, `protein`, `karbohidrat`, `berat`) VALUES
-(1, 'Nasi Goreng', 400, 15, 10, 50, 150),
+(1, 'Nasi Goreng ', 400, 15, 10, 50, 15000),
 (2, 'Ayam Goreng', 350, 20, 30, 5, 100),
 (3, 'Mie Goreng', 450, 18, 8, 60, 120),
 (4, 'Sate Ayam', 250, 12, 20, 8, 80),
@@ -132,7 +122,10 @@ INSERT INTO `makanan` (`id`, `nama`, `kalori`, `lemak`, `protein`, `karbohidrat`
 (17, 'Ikan Bakar', 300, 12, 25, 5, 180),
 (18, 'Sop Buntut', 450, 30, 20, 15, 250),
 (19, 'Kebab', 400, 15, 20, 30, 150),
-(20, 'Lontong Sayur', 350, 10, 8, 40, 200);
+(20, 'Lontong Sayur', 350, 10, 8, 40, 200),
+(21, 'Nasi Goreng ', 400, 15, 10, 0, 150),
+(22, 'Burger ', 400, 22, 18, 0, 120),
+(24, 'Nasi Goreng  ', 400, 15, 10, 50, 15000);
 
 -- --------------------------------------------------------
 
@@ -169,30 +162,9 @@ INSERT INTO `nutrisi` (`id`, `kalori`, `protein`, `lemak`, `karbohidrat`, `tangg
 (10, 6600, 240, 300, 720, '2023-05-18', '34', 2164, 541, 541, 1082, '13', 12),
 (11, 52850, 2265, 1812, 4530, '2023-05-18', '34', 2164, 541, 541, 1082, '7', 151),
 (14, 400, 10, 15, 50, '2023-05-20', '34', 2164, 541, 541, 1082, '1', 1),
-(15, 450, 8, 18, 60, '2023-05-20', '34', 2164, 541, 541, 1082, '3', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `setdiet`
---
-
-CREATE TABLE `setdiet` (
-  `id` int(11) NOT NULL,
-  `nama` text NOT NULL,
-  `idakun` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `setdiet`
---
-
-INSERT INTO `setdiet` (`id`, `nama`, `idakun`) VALUES
-(6, 'baru', '21'),
-(7, 'baru', '22'),
-(12, 'Senin', '24'),
-(13, 'Hari Senin', '26'),
-(15, 'Kamis', '');
+(15, 450, 8, 18, 60, '2023-05-20', '34', 2164, 541, 541, 1082, '3', 1),
+(16, 3200, 80, 120, 400, '2023-05-22', '34', 2164, 541, 541, 1082, '1', 8),
+(21, 400, 10, 15, 50, '2023-05-23', '26', 1478, 369, 369, 739, '1', 1);
 
 --
 -- Indexes for dumped tables
@@ -205,9 +177,9 @@ ALTER TABLE `akun`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `diet`
+-- Indexes for table `catatan`
 --
-ALTER TABLE `diet`
+ALTER TABLE `catatan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -223,12 +195,6 @@ ALTER TABLE `nutrisi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `setdiet`
---
-ALTER TABLE `setdiet`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -236,31 +202,25 @@ ALTER TABLE `setdiet`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `diet`
+-- AUTO_INCREMENT for table `catatan`
 --
-ALTER TABLE `diet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+ALTER TABLE `catatan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `makanan`
 --
 ALTER TABLE `makanan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `nutrisi`
 --
 ALTER TABLE `nutrisi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `setdiet`
---
-ALTER TABLE `setdiet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

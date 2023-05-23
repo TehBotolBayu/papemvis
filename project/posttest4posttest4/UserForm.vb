@@ -60,6 +60,16 @@ Public Class UserForm
         tBerat.Text = Module1.RD(9).ToString()
         kalori = Module1.RD(7)
         Module1.RD.Close()
+
+        CMD = New MySqlCommand("select * from catatan where idakun = '" & Login.idLogin & "'", CONN)
+        Module1.RD = CMD.ExecuteReader
+        Module1.RD.Read()
+        If RD.HasRows Then
+
+            catatan.Text = RD(2).ToString
+        End If
+        RD.Close()
+
     End Sub
 
     Private Sub ambilAsupan()
@@ -97,7 +107,7 @@ Public Class UserForm
         barlemak.Width = 0
         barprotein.Width = 0
 
-        Dim tglasupan As String = dt1.Value.Year.ToString & "-" & dt1.Value.Month.ToString & "-" & dt1.Value.Day.ToString
+        Dim tglasupan As String = dt1.Value.ToString("yy-MM-dd")
         Dim kaltotal, prototal, lemtotal, karbototal As Double
         kaltotal = 0
         prototal = 0
@@ -469,14 +479,11 @@ Public Class UserForm
         Else
         End If
         RD.Close()
-
     End Sub
-
 
     Dim muncul As Boolean = False
     Private Sub addasupanku(sender As Object, e As EventArgs)
         Dim clickedPanel As Panel = CType(sender, Panel)
-        '' MsgBox("tes" & clickedPanel.Controls(0).Text)
         selected = clickedPanel.Controls(0).Text
         Label15.Text = clickedPanel.Controls(10).Text
         lkalori.Text = clickedPanel.Controls(4).Text
@@ -487,13 +494,26 @@ Public Class UserForm
         If muncul = False Then
             Timer4.Enabled = True
         End If
-
     End Sub
 
     Private Sub hitungbmi()
         ''rumus bmi disini
-        nilaibmi.Text = "123"
-        statusbmi.Text = "bagus"
+        Dim bmi As Double
+
+        bmi = Val(tBerat.Text) / (Val(tTinggi.Text) / 100 * Val(tTinggi.Text) / 100)
+
+        nilaibmi.Text = bmi.ToString("0.00")
+
+        If bmi < 18.4 Then
+            statusbmi.Text = "Underweight"
+        ElseIf bmi < 24.9 And bmi >= 18.4 Then
+            statusbmi.Text = "Normal"
+        ElseIf bmi < 39.9 And bmi >= 24.9 Then
+            statusbmi.Text = "Overweight"
+        ElseIf bmi > 40 Then
+            statusbmi.Text = "Obese"
+        End If
+
     End Sub
 
     Private Sub makananfavorit()
@@ -503,9 +523,21 @@ Public Class UserForm
             RD.Read()
             fav1.Text = "#1 " & RD(0).ToString
             RD.Read()
+            If "#1 " & RD(0).ToString = fav1.Text Then
+                RD.Close()
+                Return
+            End If
             fav2.Text = "#2 " & RD(0).ToString
             RD.Read()
+            If "#2 " & RD(0).ToString = fav2.Text Then
+                RD.Close()
+                Return
+            End If
             fav3.Text = "#3 " & RD(0).ToString
+        Else
+            fav1.Text = "-"
+            fav2.Text = ""
+            fav3.Text = ""
         End If
         RD.Close()
 
@@ -529,6 +561,7 @@ Public Class UserForm
     Sub tes(sender As Object, e As EventArgs)
         Dim clickedPanel As Panel = CType(sender, Panel)
         '' MsgBox("tes" & clickedPanel.Controls(0).Text)
+        selected = clickedPanel.Controls(0).Text
         namanutrisi.Text = clickedPanel.Controls(10).Text
         kalorinutrisi.Text = clickedPanel.Controls(4).Text
         lemaknutrisi.Text = clickedPanel.Controls(3).Text
@@ -589,6 +622,8 @@ Public Class UserForm
         CMD.ExecuteNonQuery()
 
         aturDashboard()
+        makananfavorit()
+
     End Sub
 
 
@@ -757,6 +792,75 @@ Public Class UserForm
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         infoasupan.Hide()
+
+    End Sub
+
+    Private Sub bDashboard_Paint(sender As Object, e As PaintEventArgs) Handles bDashboard.Paint
+
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        Dim kaloribaru, lemakbaru, proteinbaru, karbobaru As Double
+        kaloribaru = Val(nutrisiporsi.Text) * Val(kalorinutrisi.Text)
+        lemakbaru = Val(nutrisiporsi.Text) * Val(lemaknutrisi.Text)
+        proteinbaru = Val(nutrisiporsi.Text) * Val(pronutrisi.Text)
+        karbobaru = Val(nutrisiporsi.Text) * Val(karbonutrisi.Text)
+        Dim ubah As String = "update nutrisi set porsi = '" & nutrisiporsi.Text & "', kalori = '" & kaloribaru & "', lemak = '" & lemakbaru & "', karbohidrat = '" & karbobaru & "', protein = '" & proteinbaru & "' where id = '" & selected.ToString & "'"
+        CMD = New MySqlCommand(ubah, CONN)
+        CMD.ExecuteNonQuery()
+        MsgBox("Data berhasil diubah!")
+        PanelDashboard.Controls.Clear()
+        infoasupan.Hide()
+        aturDashboard()
+        makananfavorit()
+
+    End Sub
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+        Dim hapus As String = "delete from nutrisi where id = '" & selected.ToString & "'"
+        CMD = New MySqlCommand(hapus, CONN)
+        CMD.ExecuteNonQuery()
+        MsgBox("Data berhasil dihapus!")
+        PanelDashboard.Controls.Clear()
+        infoasupan.Hide()
+        aturDashboard()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim d As String = tDate.Value.ToString("yy-MM-dd")
+        Dim ubah As String = "UPDATE AKUN SET nama = '" & tNama.Text & "', email = '" & tEmail.Text & "', password = '" & tPw.Text & "', tinggi = '" & tTinggi.Text & "', berat = '" & tBerat.Text & "', aktivitas = '" & tAktivity.SelectedIndex().ToString & "', kelamin = '" & tJenis.Text & "', tanggal = '" & d & "' WHERE id = '" & Login.idLogin & "'"
+        CMD = New MySqlCommand(ubah, CONN)
+        CMD.ExecuteNonQuery()
+        MsgBox("Akun anda berhasil diubah!")
+        ambilAkun()
+    End Sub
+
+    Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
+        CMD = New MySqlCommand("SELECT * from catatan where idakun = '" & Login.idLogin & "'", CONN)
+        RD = CMD.ExecuteReader
+        If Not RD.HasRows Then
+            RD.Close()
+            Dim sim As String = "INSERT INTO catatan(idakun, isi) VALUES('" & Login.idLogin & "', '" & catatan.Text & "')"
+            CMD = New MySqlCommand(sim, CONN)
+            CMD.ExecuteNonQuery()
+            Return
+        End If
+        RD.Close()
+
+        Dim ubah As String = "UPDATE catatan SET isi = '" & catatan.Text & "' WHERE idakun = '" & Login.idLogin & "'"
+            CMD = New MySqlCommand(ubah, CONN)
+        CMD.ExecuteNonQuery()
+
+        PictureBox12.Focus()
+
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Me.Dispose()
+        Login.txtnama.Text = ""
+        Login.txtpassword.Text = ""
+        Login.Show()
 
     End Sub
 

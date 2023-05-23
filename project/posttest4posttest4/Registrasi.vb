@@ -33,9 +33,17 @@ Public Class Registrasi
     End Function
 
     Private Sub Registrasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         kelamin.SelectedIndex = 0
         Call koneksi()
+        txtpassword.PasswordChar = "*"
+        txtkonpassword.PasswordChar = "*"
+    End Sub
+    Private Sub chkPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkPassword.CheckedChanged
+        If chkPassword.Checked = True Then
+            txtkonpassword.PasswordChar = ""
+        Else
+            txtkonpassword.PasswordChar = "*"
+        End If
     End Sub
 
     Private Sub btnregis_Click(sender As Object, e As EventArgs) Handles btnregis.Click

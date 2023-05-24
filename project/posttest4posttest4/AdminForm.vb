@@ -1,7 +1,9 @@
 ﻿Imports CrystalDecisions.CrystalReports.ViewerObjectModel
 Imports MySql.Data.MySqlClient
+Imports System.ComponentModel
 Imports System.Runtime.CompilerServices
 Imports System.Threading
+Imports System.Timers
 Imports System.Web.Services.Description
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
@@ -467,9 +469,80 @@ Public Class AdminForm
         infouser.Show()
 
     End Sub
+    Dim hariini As Date = Format(Date.Now(), "dd-MM-yyyy")
+
+    Function bmi(ByVal tinggi As Double, ByVal berat As Double) As Double
+        Dim nilai As Double = 0
+        If Not tinggi = 0 Then
+            nilai = berat / (tinggi / 100 * tinggi / 100)
+        End If
+        Return nilai
+    End Function
 
     Private Sub aturchart()
-        Chart1.Series("AGE").Points.AddXY("John", 33)
+
+        CMD = New MySqlCommand("SELECT * FROM akun WHERE status = 'user'", CONN)
+        RD = CMD.ExecuteReader
+
+        Dim tgl As Date
+        Dim umur As Integer
+        Dim satu, dua, tiga, empat, lima As Double
+
+        satu = 0
+        dua = 0
+        tiga = 0
+        empat = 0
+        lima = 0
+
+        Dim s, d, t, e, l As Double
+        s = 0
+        d = 0
+        t = 0
+        e = 0
+        l = 0
+
+        While RD.Read()
+
+            umur = 0
+            tgl = RD(3)
+            umur = Val(hariini.Year) - Val(tgl.Year)
+            If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
+                umur = umur - 1
+            End If
+
+            If umur <= 12 Then
+                satu = satu + bmi(RD(8), RD(9))
+                s = s + 1
+            ElseIf umur > 12 And umur <= 18 Then
+                dua = dua + bmi(RD(8), RD(9))
+                d = d + 1
+            ElseIf umur > 18 And umur <= 25 Then
+                tiga = tiga + bmi(RD(8), RD(9))
+                t = t + 1
+            ElseIf umur > 25 And umur <= 44 Then
+                empat = empat + bmi(RD(8), RD(9))
+                e = e + 1
+            ElseIf umur > 44 Then
+                lima = lima + bmi(RD(8), RD(9))
+                l = l + 1
+            End If
+
+        End While
+
+        RD.Close()
+
+        satu = satu / s
+        dua = dua / d
+        tiga = tiga / t
+        empat = empat / e
+        lima = lima / l
+
+        Chart1.Series("BMI").Points.AddXY("0-12", satu)
+        Chart1.Series("BMI").Points.AddXY("13-18", dua)
+        Chart1.Series("BMI").Points.AddXY("19-25", tiga)
+        Chart1.Series("BMI").Points.AddXY("26-44", empat)
+        Chart1.Series("BMI").Points.AddXY("<45", lima)
+
     End Sub
 
     Private Sub AdminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -481,9 +554,7 @@ Public Class AdminForm
         aturuser("")
         infouser.Hide()
         aturchart()
-    End Sub
-
-    Private Sub bDashboard_Paint(sender As Object, e As PaintEventArgs) Handles bDashboard.Paint
+        ambilAkun()
 
     End Sub
 
@@ -498,6 +569,7 @@ Public Class AdminForm
 
 
     Private Sub LabelHome_MouseClick(sender As Object, e As MouseEventArgs) Handles LabelHome.MouseClick
+        PanelProfil.Hide()
         PanelMakanan.Hide()
         PanelUser.Show()
         Paneldata.Hide()
@@ -510,6 +582,8 @@ Public Class AdminForm
     End Sub
 
     Private Sub bAsupanku_MouseClick(sender As Object, e As MouseEventArgs) Handles bAsupanku.MouseClick
+        PanelProfil.Hide()
+
         PanelMakanan.Show()
         PanelUser.Hide()
         Paneldata.Show()
@@ -546,12 +620,114 @@ Public Class AdminForm
         bAsupanku.BackColor = Color.FromArgb(191, 139, 255)
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+
+
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         infouser.Hide()
 
     End Sub
 
+    Private Sub keluar_MouseClick(sender As Object, e As MouseEventArgs) Handles keluar.MouseClick
+        Me.Close()
 
+    End Sub
+
+    Private Sub keluar_MouseEnter(sender As Object, e As EventArgs) Handles keluar.MouseEnter
+        keluar.BackColor = Color.FromArgb(191, 139, 255)
+    End Sub
+
+    Private Sub keluar_Mouseleave(sender As Object, e As EventArgs) Handles keluar.MouseLeave
+        keluar.BackColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Me.Dispose()
+        Login.txtnama.Text = ""
+        Login.txtpassword.Text = ""
+        Login.Show()
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Timer2.Enabled = True
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        If paneledit.Location.X > Me.Width - 530 Then
+            paneledit.Left = paneledit.Left - 30
+        Else
+            Timer2.Enabled = False
+        End If
+    End Sub
+
+    Private Sub PictureBox5_MouseClick(sender As Object, e As MouseEventArgs) Handles PictureBox5.MouseClick
+        Timer3.Enabled = True
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+        If paneledit.Location.X < PanelProfil.Width Then
+            paneledit.Left = paneledit.Left + 30
+        Else
+            Timer3.Enabled = False
+        End If
+    End Sub
+
+    Private Sub ambilAkun()
+
+
+        CMD = New MySqlCommand("select * from akun where id = '" & Login.idLogin & "'", CONN)
+        RD = CMD.ExecuteReader
+
+        If RD.HasRows Then
+
+            RD.Read()
+            Label1.Text = RD(1).ToString()
+
+            Label8.Text = RD(1).ToString()
+            ''MsgBox(RD(1).ToString())
+            Label7.Text = RD(2).ToString()
+            Dim lh As Date = RD(3)
+            lahiruser.Text = lh.ToString("yy/MM/dd")
+
+            tNama.Text = RD(1).ToString()
+            tEmail.Text = RD(2).ToString()
+            tPw.Text = RD(4).ToString()
+            If RD(5).ToString() = "Laki-Laki" Then
+                tJenis.SelectedIndex = 0
+            Else
+                tJenis.SelectedIndex = 1
+            End If
+
+            tDate.Text = RD(3).ToString()
+            tTinggi.Text = RD(8).ToString()
+            tBerat.Text = RD(9).ToString()
+            ''kalori = Module1.RD(7)
+            RD.Close()
+        End If
+        RD.Close()
+
+
+    End Sub
+
+    Private Sub Button4_MouseClick(sender As Object, e As MouseEventArgs) Handles Button4.MouseClick
+        Dim d As String = tDate.Value.ToString("yy-MM-dd")
+        Dim ubah As String = "UPDATE AKUN SET nama = '" & tNama.Text & "', email = '" & tEmail.Text & "', password = '" & tPw.Text & "', tinggi = '" & tTinggi.Text & "', berat = '" & tBerat.Text & "', aktivitas = '" & tAktivity.SelectedIndex().ToString & "', kelamin = '" & tJenis.Text & "', tanggal = '" & d & "' WHERE id = '" & Login.idLogin & "'"
+        CMD = New MySqlCommand(ubah, CONN)
+        CMD.ExecuteNonQuery()
+        MsgBox("Akun anda berhasil diubah!")
+        ambilAkun()
+    End Sub
+
+    Private Sub bDashboard_Paint(sender As Object, e As PaintEventArgs) Handles bDashboard.Paint
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        PanelProfil.Show()
+    End Sub
 
     Private Sub bAsupanku_Paint(sender As Object, e As PaintEventArgs)
 
@@ -577,6 +753,8 @@ Public Class AdminForm
     End Sub
     Dim panelnow = "user"
     Private Sub bDashboard_MouseClick(sender As Object, e As MouseEventArgs) Handles bDashboard.MouseClick
+        PanelProfil.Hide()
+
         PanelMakanan.Hide()
         PanelUser.Show()
         Paneldata.Hide()
@@ -590,6 +768,7 @@ Public Class AdminForm
 
 
     Private Sub LabelHome_Click(sender As Object, e As EventArgs) Handles LabelHome.Click
+        PanelProfil.Hide()
         PanelMakanan.Hide()
         PanelUser.Show()
         Paneldata.Hide()
@@ -621,4 +800,9 @@ Public Class AdminForm
         aturuser(rcari.Text)
     End Sub
 
+    Private Sub AdminForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Registrasi.Close()
+        Login.Close()
+
+    End Sub
 End Class

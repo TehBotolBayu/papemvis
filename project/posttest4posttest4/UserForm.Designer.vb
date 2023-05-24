@@ -25,6 +25,9 @@ Partial Class UserForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserForm))
         Me.sidenav = New System.Windows.Forms.Panel()
+        Me.keluar = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.bAsupanku = New System.Windows.Forms.Panel()
         Me.LabelAsupan = New System.Windows.Forms.Label()
         Me.bDashboard = New System.Windows.Forms.Panel()
@@ -35,10 +38,14 @@ Partial Class UserForm
         Me.PanelDashboard = New System.Windows.Forms.Panel()
         Me.PanelAsupan = New System.Windows.Forms.Panel()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.rcari = New posttest4posttest4.RadiusBox()
+        Me.RadiusBox6 = New posttest4posttest4.RadiusBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.paneltambah = New System.Windows.Forms.Panel()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.tPorsi = New posttest4posttest4.RadiusBox()
+        Me.rdate = New posttest4posttest4.RadiusDate()
         Me.lkarbo = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.llemak = New System.Windows.Forms.Label()
@@ -56,12 +63,20 @@ Partial Class UserForm
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
+        Me.tTinggi = New posttest4posttest4.RadiusBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.tDate = New posttest4posttest4.RadiusDate()
+        Me.tJenis = New posttest4posttest4.RadiusCombo()
+        Me.tAktivity = New posttest4posttest4.RadiusCombo()
+        Me.tBerat = New posttest4posttest4.RadiusBox()
+        Me.tPw = New posttest4posttest4.RadiusBox()
+        Me.tEmail = New posttest4posttest4.RadiusBox()
+        Me.tNama = New posttest4posttest4.RadiusBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
@@ -129,22 +144,12 @@ Partial Class UserForm
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.nutrisiporsi = New posttest4posttest4.RadiusBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.editasupan = New System.Windows.Forms.Label()
-        Me.tTinggi = New posttest4posttest4.RadiusBox()
-        Me.tDate = New posttest4posttest4.RadiusDate()
-        Me.tJenis = New posttest4posttest4.RadiusCombo()
-        Me.tAktivity = New posttest4posttest4.RadiusCombo()
-        Me.tBerat = New posttest4posttest4.RadiusBox()
-        Me.tPw = New posttest4posttest4.RadiusBox()
-        Me.tEmail = New posttest4posttest4.RadiusBox()
-        Me.tNama = New posttest4posttest4.RadiusBox()
-        Me.nutrisiporsi = New posttest4posttest4.RadiusBox()
-        Me.rcari = New posttest4posttest4.RadiusBox()
-        Me.RadiusBox6 = New posttest4posttest4.RadiusBox()
-        Me.tPorsi = New posttest4posttest4.RadiusBox()
-        Me.rdate = New posttest4posttest4.RadiusDate()
         Me.sidenav.SuspendLayout()
+        Me.keluar.SuspendLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.bAsupanku.SuspendLayout()
         Me.bDashboard.SuspendLayout()
         Me.header.SuspendLayout()
@@ -179,6 +184,8 @@ Partial Class UserForm
         'sidenav
         '
         Me.sidenav.BackColor = System.Drawing.Color.White
+        Me.sidenav.Controls.Add(Me.keluar)
+        Me.sidenav.Controls.Add(Me.PictureBox13)
         Me.sidenav.Controls.Add(Me.bAsupanku)
         Me.sidenav.Controls.Add(Me.bDashboard)
         Me.sidenav.Dock = System.Windows.Forms.DockStyle.Left
@@ -187,6 +194,35 @@ Partial Class UserForm
         Me.sidenav.Name = "sidenav"
         Me.sidenav.Size = New System.Drawing.Size(171, 525)
         Me.sidenav.TabIndex = 0
+        '
+        'keluar
+        '
+        Me.keluar.Controls.Add(Me.Label20)
+        Me.keluar.Location = New System.Drawing.Point(5, 202)
+        Me.keluar.Name = "keluar"
+        Me.keluar.Size = New System.Drawing.Size(166, 41)
+        Me.keluar.TabIndex = 7
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.DimGray
+        Me.Label20.Location = New System.Drawing.Point(99, 9)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(54, 20)
+        Me.Label20.TabIndex = 4
+        Me.Label20.Text = "Keluar"
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = Global.posttest4posttest4.My.Resources.Resources.icon
+        Me.PictureBox13.Location = New System.Drawing.Point(13, 13)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(141, 35)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox13.TabIndex = 7
+        Me.PictureBox13.TabStop = False
         '
         'bAsupanku
         '
@@ -232,11 +268,13 @@ Partial Class UserForm
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Label1.Location = New System.Drawing.Point(628, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(87, 21)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Username"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'header
         '
@@ -301,6 +339,24 @@ Partial Class UserForm
         Me.PictureBox11.TabIndex = 14
         Me.PictureBox11.TabStop = False
         '
+        'rcari
+        '
+        Me.rcari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rcari.Location = New System.Drawing.Point(25, 56)
+        Me.rcari.Name = "rcari"
+        Me.rcari.Size = New System.Drawing.Size(269, 26)
+        Me.rcari.TabIndex = 13
+        '
+        'RadiusBox6
+        '
+        Me.RadiusBox6.BackColor = System.Drawing.Color.DarkGray
+        Me.RadiusBox6.Enabled = False
+        Me.RadiusBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadiusBox6.Location = New System.Drawing.Point(30, 63)
+        Me.RadiusBox6.Name = "RadiusBox6"
+        Me.RadiusBox6.Size = New System.Drawing.Size(269, 26)
+        Me.RadiusBox6.TabIndex = 12
+        '
         'Label37
         '
         Me.Label37.AutoSize = True
@@ -359,6 +415,22 @@ Partial Class UserForm
         Me.Label13.Size = New System.Drawing.Size(26, 19)
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Tgl"
+        '
+        'tPorsi
+        '
+        Me.tPorsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tPorsi.Location = New System.Drawing.Point(73, 220)
+        Me.tPorsi.Name = "tPorsi"
+        Me.tPorsi.Size = New System.Drawing.Size(139, 26)
+        Me.tPorsi.TabIndex = 25
+        '
+        'rdate
+        '
+        Me.rdate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdate.Location = New System.Drawing.Point(73, 255)
+        Me.rdate.Name = "rdate"
+        Me.rdate.Size = New System.Drawing.Size(139, 20)
+        Me.rdate.TabIndex = 24
         '
         'lkarbo
         '
@@ -579,6 +651,14 @@ Partial Class UserForm
         Me.Label28.TabIndex = 15
         Me.Label28.Text = "Password"
         '
+        'tTinggi
+        '
+        Me.tTinggi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tTinggi.Location = New System.Drawing.Point(123, 196)
+        Me.tTinggi.Name = "tTinggi"
+        Me.tTinggi.Size = New System.Drawing.Size(192, 29)
+        Me.tTinggi.TabIndex = 4
+        '
         'Label27
         '
         Me.Label27.AutoSize = True
@@ -644,6 +724,66 @@ Partial Class UserForm
         Me.Label5.Size = New System.Drawing.Size(50, 15)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Aktivitas"
+        '
+        'tDate
+        '
+        Me.tDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tDate.Location = New System.Drawing.Point(123, 374)
+        Me.tDate.Name = "tDate"
+        Me.tDate.Size = New System.Drawing.Size(192, 27)
+        Me.tDate.TabIndex = 9
+        '
+        'tJenis
+        '
+        Me.tJenis.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tJenis.FormattingEnabled = True
+        Me.tJenis.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
+        Me.tJenis.Location = New System.Drawing.Point(123, 328)
+        Me.tJenis.Name = "tJenis"
+        Me.tJenis.Size = New System.Drawing.Size(192, 32)
+        Me.tJenis.TabIndex = 8
+        '
+        'tAktivity
+        '
+        Me.tAktivity.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tAktivity.FormattingEnabled = True
+        Me.tAktivity.Items.AddRange(New Object() {"Santai", "Ringan", "Sedang", "Berat", "Ekstrem"})
+        Me.tAktivity.Location = New System.Drawing.Point(123, 282)
+        Me.tAktivity.Name = "tAktivity"
+        Me.tAktivity.Size = New System.Drawing.Size(192, 32)
+        Me.tAktivity.TabIndex = 7
+        '
+        'tBerat
+        '
+        Me.tBerat.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tBerat.Location = New System.Drawing.Point(123, 239)
+        Me.tBerat.Name = "tBerat"
+        Me.tBerat.Size = New System.Drawing.Size(192, 29)
+        Me.tBerat.TabIndex = 5
+        '
+        'tPw
+        '
+        Me.tPw.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tPw.Location = New System.Drawing.Point(123, 153)
+        Me.tPw.Name = "tPw"
+        Me.tPw.Size = New System.Drawing.Size(192, 29)
+        Me.tPw.TabIndex = 3
+        '
+        'tEmail
+        '
+        Me.tEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tEmail.Location = New System.Drawing.Point(123, 110)
+        Me.tEmail.Name = "tEmail"
+        Me.tEmail.Size = New System.Drawing.Size(192, 29)
+        Me.tEmail.TabIndex = 2
+        '
+        'tNama
+        '
+        Me.tNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tNama.Location = New System.Drawing.Point(123, 67)
+        Me.tNama.Name = "tNama"
+        Me.tNama.Size = New System.Drawing.Size(192, 29)
+        Me.tNama.TabIndex = 1
         '
         'PictureBox5
         '
@@ -1402,6 +1542,14 @@ Partial Class UserForm
         Me.Label31.TabIndex = 20
         Me.Label31.Text = "Kalori"
         '
+        'nutrisiporsi
+        '
+        Me.nutrisiporsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nutrisiporsi.Location = New System.Drawing.Point(145, 261)
+        Me.nutrisiporsi.Name = "nutrisiporsi"
+        Me.nutrisiporsi.Size = New System.Drawing.Size(255, 26)
+        Me.nutrisiporsi.TabIndex = 19
+        '
         'PictureBox7
         '
         Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1423,125 +1571,16 @@ Partial Class UserForm
         Me.editasupan.TabIndex = 0
         Me.editasupan.Text = "Nama"
         '
-        'tTinggi
-        '
-        Me.tTinggi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tTinggi.Location = New System.Drawing.Point(123, 196)
-        Me.tTinggi.Name = "tTinggi"
-        Me.tTinggi.Size = New System.Drawing.Size(192, 29)
-        Me.tTinggi.TabIndex = 4
-        '
-        'tDate
-        '
-        Me.tDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tDate.Location = New System.Drawing.Point(123, 374)
-        Me.tDate.Name = "tDate"
-        Me.tDate.Size = New System.Drawing.Size(192, 27)
-        Me.tDate.TabIndex = 9
-        '
-        'tJenis
-        '
-        Me.tJenis.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tJenis.FormattingEnabled = True
-        Me.tJenis.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
-        Me.tJenis.Location = New System.Drawing.Point(123, 328)
-        Me.tJenis.Name = "tJenis"
-        Me.tJenis.Size = New System.Drawing.Size(192, 32)
-        Me.tJenis.TabIndex = 8
-        '
-        'tAktivity
-        '
-        Me.tAktivity.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tAktivity.FormattingEnabled = True
-        Me.tAktivity.Location = New System.Drawing.Point(123, 282)
-        Me.tAktivity.Name = "tAktivity"
-        Me.tAktivity.Size = New System.Drawing.Size(192, 32)
-        Me.tAktivity.TabIndex = 7
-        '
-        'tBerat
-        '
-        Me.tBerat.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tBerat.Location = New System.Drawing.Point(123, 239)
-        Me.tBerat.Name = "tBerat"
-        Me.tBerat.Size = New System.Drawing.Size(192, 29)
-        Me.tBerat.TabIndex = 5
-        '
-        'tPw
-        '
-        Me.tPw.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tPw.Location = New System.Drawing.Point(123, 153)
-        Me.tPw.Name = "tPw"
-        Me.tPw.Size = New System.Drawing.Size(192, 29)
-        Me.tPw.TabIndex = 3
-        '
-        'tEmail
-        '
-        Me.tEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tEmail.Location = New System.Drawing.Point(123, 110)
-        Me.tEmail.Name = "tEmail"
-        Me.tEmail.Size = New System.Drawing.Size(192, 29)
-        Me.tEmail.TabIndex = 2
-        '
-        'tNama
-        '
-        Me.tNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tNama.Location = New System.Drawing.Point(123, 67)
-        Me.tNama.Name = "tNama"
-        Me.tNama.Size = New System.Drawing.Size(192, 29)
-        Me.tNama.TabIndex = 1
-        '
-        'nutrisiporsi
-        '
-        Me.nutrisiporsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nutrisiporsi.Location = New System.Drawing.Point(145, 261)
-        Me.nutrisiporsi.Name = "nutrisiporsi"
-        Me.nutrisiporsi.Size = New System.Drawing.Size(255, 26)
-        Me.nutrisiporsi.TabIndex = 19
-        '
-        'rcari
-        '
-        Me.rcari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rcari.Location = New System.Drawing.Point(25, 56)
-        Me.rcari.Name = "rcari"
-        Me.rcari.Size = New System.Drawing.Size(269, 26)
-        Me.rcari.TabIndex = 13
-        '
-        'RadiusBox6
-        '
-        Me.RadiusBox6.BackColor = System.Drawing.Color.DarkGray
-        Me.RadiusBox6.Enabled = False
-        Me.RadiusBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadiusBox6.Location = New System.Drawing.Point(30, 63)
-        Me.RadiusBox6.Name = "RadiusBox6"
-        Me.RadiusBox6.Size = New System.Drawing.Size(269, 26)
-        Me.RadiusBox6.TabIndex = 12
-        '
-        'tPorsi
-        '
-        Me.tPorsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tPorsi.Location = New System.Drawing.Point(73, 220)
-        Me.tPorsi.Name = "tPorsi"
-        Me.tPorsi.Size = New System.Drawing.Size(139, 26)
-        Me.tPorsi.TabIndex = 25
-        '
-        'rdate
-        '
-        Me.rdate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdate.Location = New System.Drawing.Point(73, 255)
-        Me.rdate.Name = "rdate"
-        Me.rdate.Size = New System.Drawing.Size(139, 20)
-        Me.rdate.TabIndex = 24
-        '
         'UserForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(949, 525)
-        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.infoasupan)
         Me.Controls.Add(Me.PanelStat)
         Me.Controls.Add(Me.PanelDashboard)
+        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.header)
         Me.Controls.Add(Me.PanelAsupan)
         Me.Controls.Add(Me.sidenav)
@@ -1549,6 +1588,9 @@ Partial Class UserForm
         Me.Name = "UserForm"
         Me.Text = "User"
         Me.sidenav.ResumeLayout(False)
+        Me.keluar.ResumeLayout(False)
+        Me.keluar.PerformLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.bAsupanku.ResumeLayout(False)
         Me.bAsupanku.PerformLayout()
         Me.bDashboard.ResumeLayout(False)
@@ -1718,4 +1760,7 @@ Partial Class UserForm
     Friend WithEvents Button3 As Button
     Friend WithEvents catatan As TextBox
     Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents keluar As Panel
+    Friend WithEvents Label20 As Label
 End Class

@@ -32,6 +32,8 @@ Public Class Login
             If txtpassword.Text = pw Then
                 Dim status = RD(6).ToString()
                 If status = "admin" Then
+                    idLogin = RD(0).ToString
+
                     RD.Close()
                     AdminForm.Show()
                     Me.Hide()

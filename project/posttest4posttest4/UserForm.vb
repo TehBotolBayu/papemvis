@@ -42,9 +42,13 @@ Public Class UserForm
         Module1.RD = CMD.ExecuteReader
         Module1.RD.Read()
 
+        Label1.Text = RD(1).ToString()
+
         namauser.Text = Module1.RD(1).ToString()
         emailuser.Text = Module1.RD(2).ToString()
-        lahiruser.Text = Module1.RD(3).ToString()
+
+        Dim lh As Date = RD(3)
+        lahiruser.Text = lh.ToString("yy/MM/dd")
 
         tNama.Text = Module1.RD(1).ToString()
         tEmail.Text = Module1.RD(2).ToString()
@@ -115,7 +119,7 @@ Public Class UserForm
         karbototal = 0
 
         CMD = New MySqlCommand("select * from nutrisi where tanggal = '" & tglasupan & "' and idakun = '" & Login.idLogin & "'", CONN)
-        Module1.RD = CMD.ExecuteReader
+        RD = CMD.ExecuteReader
         If Module1.RD.HasRows Then
             While Module1.RD.Read
                 kalori = Module1.RD(7)
@@ -128,8 +132,9 @@ Public Class UserForm
                 karbototal = karbototal + Module1.RD(4)
             End While
         Else
+
         End If
-        Module1.RD.Close()
+        RD.Close()
         progresskal = 1
         progresskar = 1
         progresslem = 1
@@ -146,10 +151,6 @@ Public Class UserForm
         If prototal < proteinmax Then
             progresspro = prototal / proteinmax
         End If
-
-
-
-
 
         LabelKalori.Text = kaltotal.ToString & "/" & kalori.ToString
         LabelProtein.Text = prototal.ToString & "/" & proteinmax.ToString
@@ -229,7 +230,7 @@ Public Class UserForm
                 lkal.Name = "lkal"
                 lkal.Size = New Size(41, 15)
                 lkal.TabIndex = 6
-                lkal.Text = (Module1.RD(3) * Module1.RD(6)).ToString
+                lkal.Text = (Module1.RD(2) * Module1.RD(6)).ToString
                 ' 
                 ' k
                 ' 
@@ -540,7 +541,6 @@ Public Class UserForm
             fav3.Text = ""
         End If
         RD.Close()
-
     End Sub
 
     Private Sub UserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -800,11 +800,17 @@ Public Class UserForm
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+
+        CMD = New MySqlCommand("SELECT nutrisi.id, makanan.nama, makanan.kalori, makanan.lemak, makanan.protein, makanan.karbohidrat, nutrisi.porsi FROM nutrisi JOIN makanan WHERE nutrisi.id = '" & selected & "'", CONN)
+        Module1.RD = CMD.ExecuteReader
+        RD.Read()
         Dim kaloribaru, lemakbaru, proteinbaru, karbobaru As Double
-        kaloribaru = Val(nutrisiporsi.Text) * Val(kalorinutrisi.Text)
-        lemakbaru = Val(nutrisiporsi.Text) * Val(lemaknutrisi.Text)
-        proteinbaru = Val(nutrisiporsi.Text) * Val(pronutrisi.Text)
-        karbobaru = Val(nutrisiporsi.Text) * Val(karbonutrisi.Text)
+        kaloribaru = Val(nutrisiporsi.Text) * RD(2).ToString
+        lemakbaru = Val(nutrisiporsi.Text) * RD(3).ToString
+        proteinbaru = Val(nutrisiporsi.Text) * RD(4).ToString
+        karbobaru = Val(nutrisiporsi.Text) * RD(5).ToString
+        RD.Close()
+
         Dim ubah As String = "update nutrisi set porsi = '" & nutrisiporsi.Text & "', kalori = '" & kaloribaru & "', lemak = '" & lemakbaru & "', karbohidrat = '" & karbobaru & "', protein = '" & proteinbaru & "' where id = '" & selected.ToString & "'"
         CMD = New MySqlCommand(ubah, CONN)
         CMD.ExecuteNonQuery()
@@ -813,7 +819,6 @@ Public Class UserForm
         infoasupan.Hide()
         aturDashboard()
         makananfavorit()
-
     End Sub
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
@@ -848,12 +853,10 @@ Public Class UserForm
         RD.Close()
 
         Dim ubah As String = "UPDATE catatan SET isi = '" & catatan.Text & "' WHERE idakun = '" & Login.idLogin & "'"
-            CMD = New MySqlCommand(ubah, CONN)
+        CMD = New MySqlCommand(ubah, CONN)
         CMD.ExecuteNonQuery()
 
         PictureBox12.Focus()
-
-
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -861,6 +864,30 @@ Public Class UserForm
         Login.txtnama.Text = ""
         Login.txtpassword.Text = ""
         Login.Show()
+
+    End Sub
+
+    Private Sub keluar_MouseClick(sender As Object, e As MouseEventArgs) Handles keluar.MouseClick
+        Login.Close()
+        Registrasi.Close()
+
+        Me.Close()
+
+    End Sub
+
+    Private Sub keluar_MouseEnter(sender As Object, e As EventArgs) Handles keluar.MouseEnter
+        keluar.BackColor = Color.FromArgb(191, 139, 255)
+    End Sub
+
+    Private Sub keluar_MouseLeave(sender As Object, e As EventArgs) Handles keluar.MouseLeave
+        keluar.BackColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
 
     End Sub
 

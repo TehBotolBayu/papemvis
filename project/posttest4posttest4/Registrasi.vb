@@ -1,4 +1,5 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports System.ComponentModel
+Imports System.Text.RegularExpressions
 Imports System.Web.UI.WebControls
 Imports MySql.Data.MySqlClient
 Public Class Registrasi
@@ -16,7 +17,7 @@ Public Class Registrasi
             txtemail.Focus()
             Return 0
         ElseIf txtpassword.Text = "" Then
-            MessageBox.Show("Password Makanan belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Password belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtpassword.Focus()
             Return 0
         ElseIf txtkonpassword.Text = "" Then
@@ -115,7 +116,7 @@ Public Class Registrasi
             End If
             kalori = kalori * aktivitas
 
-            Dim Simpan As String = "insert into akun(nama, email, tanggal, password, kelamin, status, tinggi, berat, kalori) values('" & txtnama.Text & "', '" & txtemail.Text & "', '" & txttgllahir.Value.Year.ToString() & "-" & txttgllahir.Value.Month.ToString() & "-" & txttgllahir.Value.Day.ToString() & "', '" & txtpassword.Text & "', '" & kelamin.Text & "', 'user', '" & txttinggi.Text & "', '" & txtberat.Text & "', '" & kalori & "')"
+            Dim Simpan As String = "insert into akun(nama, email, tanggal, password, kelamin, status, tinggi, berat, kalori, aktivitas) values('" & txtnama.Text & "', '" & txtemail.Text & "', '" & txttgllahir.Value.Year.ToString() & "-" & txttgllahir.Value.Month.ToString() & "-" & txttgllahir.Value.Day.ToString() & "', '" & txtpassword.Text & "', '" & kelamin.Text & "', 'user', '" & txttinggi.Text & "', '" & txtberat.Text & "', '" & kalori & "', '" & taktivitas.SelectedIndex.ToString & "')"
             CMD = New MySqlCommand(Simpan, CONN)
             CMD.ExecuteNonQuery()
             MsgBox("Registrasi sukses!", MsgBoxStyle.Information, "Perhatian")
@@ -129,9 +130,8 @@ Public Class Registrasi
 
             UserForm.Show()
             Me.Hide()
-            If Not Application.OpenForms.OfType(Of Beranda).Any Then
+            If Not Application.OpenForms.OfType(Of UserForm).Any Then
                 Close()
-
             End If
         End If
     End Sub
@@ -141,5 +141,8 @@ Public Class Registrasi
         Login.Show()
     End Sub
 
+    Private Sub Registrasi_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Login.Close()
 
+    End Sub
 End Class

@@ -134,6 +134,7 @@ Partial Class UserForm
         Me.Label31 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.editasupan = New System.Windows.Forms.Label()
+        Me.nutrisiporsi = New posttest4posttest4.RadiusBox()
         Me.tTinggi = New posttest4posttest4.RadiusBox()
         Me.tDate = New posttest4posttest4.RadiusDate()
         Me.tJenis = New posttest4posttest4.RadiusCombo()
@@ -142,7 +143,6 @@ Partial Class UserForm
         Me.tPw = New posttest4posttest4.RadiusBox()
         Me.tEmail = New posttest4posttest4.RadiusBox()
         Me.tNama = New posttest4posttest4.RadiusBox()
-        Me.nutrisiporsi = New posttest4posttest4.RadiusBox()
         Me.rcari = New posttest4posttest4.RadiusBox()
         Me.RadiusBox6 = New posttest4posttest4.RadiusBox()
         Me.tPorsi = New posttest4posttest4.RadiusBox()
@@ -191,16 +191,18 @@ Partial Class UserForm
         Me.sidenav.Dock = System.Windows.Forms.DockStyle.Left
         Me.sidenav.ForeColor = System.Drawing.Color.Gray
         Me.sidenav.Location = New System.Drawing.Point(0, 0)
+        Me.sidenav.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.sidenav.Name = "sidenav"
-        Me.sidenav.Size = New System.Drawing.Size(171, 525)
+        Me.sidenav.Size = New System.Drawing.Size(256, 808)
         Me.sidenav.TabIndex = 0
         '
         'keluar
         '
         Me.keluar.Controls.Add(Me.Label20)
-        Me.keluar.Location = New System.Drawing.Point(5, 202)
+        Me.keluar.Location = New System.Drawing.Point(8, 311)
+        Me.keluar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.keluar.Name = "keluar"
-        Me.keluar.Size = New System.Drawing.Size(166, 41)
+        Me.keluar.Size = New System.Drawing.Size(249, 63)
         Me.keluar.TabIndex = 7
         '
         'Label20
@@ -208,18 +210,20 @@ Partial Class UserForm
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.DimGray
-        Me.Label20.Location = New System.Drawing.Point(99, 9)
+        Me.Label20.Location = New System.Drawing.Point(148, 14)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(54, 20)
+        Me.Label20.Size = New System.Drawing.Size(83, 29)
         Me.Label20.TabIndex = 4
         Me.Label20.Text = "Keluar"
         '
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.posttest4posttest4.My.Resources.Resources.icon
-        Me.PictureBox13.Location = New System.Drawing.Point(13, 13)
+        Me.PictureBox13.Location = New System.Drawing.Point(20, 20)
+        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(141, 35)
+        Me.PictureBox13.Size = New System.Drawing.Size(212, 54)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox13.TabIndex = 7
         Me.PictureBox13.TabStop = False
@@ -227,9 +231,10 @@ Partial Class UserForm
         'bAsupanku
         '
         Me.bAsupanku.Controls.Add(Me.LabelAsupan)
-        Me.bAsupanku.Location = New System.Drawing.Point(3, 148)
+        Me.bAsupanku.Location = New System.Drawing.Point(4, 228)
+        Me.bAsupanku.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.bAsupanku.Name = "bAsupanku"
-        Me.bAsupanku.Size = New System.Drawing.Size(166, 41)
+        Me.bAsupanku.Size = New System.Drawing.Size(249, 63)
         Me.bAsupanku.TabIndex = 6
         '
         'LabelAsupan
@@ -237,18 +242,20 @@ Partial Class UserForm
         Me.LabelAsupan.AutoSize = True
         Me.LabelAsupan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelAsupan.ForeColor = System.Drawing.Color.DimGray
-        Me.LabelAsupan.Location = New System.Drawing.Point(99, 9)
+        Me.LabelAsupan.Location = New System.Drawing.Point(148, 14)
+        Me.LabelAsupan.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelAsupan.Name = "LabelAsupan"
-        Me.LabelAsupan.Size = New System.Drawing.Size(64, 20)
+        Me.LabelAsupan.Size = New System.Drawing.Size(93, 29)
         Me.LabelAsupan.TabIndex = 4
         Me.LabelAsupan.Text = "Asupan"
         '
         'bDashboard
         '
         Me.bDashboard.Controls.Add(Me.LabelHome)
-        Me.bDashboard.Location = New System.Drawing.Point(3, 93)
+        Me.bDashboard.Location = New System.Drawing.Point(4, 143)
+        Me.bDashboard.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.bDashboard.Name = "bDashboard"
-        Me.bDashboard.Size = New System.Drawing.Size(166, 41)
+        Me.bDashboard.Size = New System.Drawing.Size(249, 63)
         Me.bDashboard.TabIndex = 5
         '
         'LabelHome
@@ -256,9 +263,10 @@ Partial Class UserForm
         Me.LabelHome.AutoSize = True
         Me.LabelHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelHome.ForeColor = System.Drawing.Color.DimGray
-        Me.LabelHome.Location = New System.Drawing.Point(99, 9)
+        Me.LabelHome.Location = New System.Drawing.Point(148, 14)
+        Me.LabelHome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelHome.Name = "LabelHome"
-        Me.LabelHome.Size = New System.Drawing.Size(52, 20)
+        Me.LabelHome.Size = New System.Drawing.Size(78, 29)
         Me.LabelHome.TabIndex = 4
         Me.LabelHome.Text = "Home"
         '
@@ -269,9 +277,10 @@ Partial Class UserForm
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label1.Location = New System.Drawing.Point(628, 24)
+        Me.Label1.Location = New System.Drawing.Point(943, 37)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 21)
+        Me.Label1.Size = New System.Drawing.Size(128, 32)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Username"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -283,18 +292,20 @@ Partial Class UserForm
         Me.header.Controls.Add(Me.Label1)
         Me.header.Dock = System.Windows.Forms.DockStyle.Top
         Me.header.ForeColor = System.Drawing.Color.Gray
-        Me.header.Location = New System.Drawing.Point(171, 0)
+        Me.header.Location = New System.Drawing.Point(256, 0)
+        Me.header.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.header.Name = "header"
-        Me.header.Size = New System.Drawing.Size(778, 66)
+        Me.header.Size = New System.Drawing.Size(1168, 102)
         Me.header.TabIndex = 1
         '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.posttest4posttest4.My.Resources.Resources.akun
-        Me.PictureBox1.Location = New System.Drawing.Point(732, 13)
+        Me.PictureBox1.Location = New System.Drawing.Point(1099, 20)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(34, 35)
+        Me.PictureBox1.Size = New System.Drawing.Size(51, 54)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
@@ -307,9 +318,10 @@ Partial Class UserForm
         Me.PanelDashboard.AutoScroll = True
         Me.PanelDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.PanelDashboard.ForeColor = System.Drawing.Color.Black
-        Me.PanelDashboard.Location = New System.Drawing.Point(171, 311)
+        Me.PanelDashboard.Location = New System.Drawing.Point(256, 478)
+        Me.PanelDashboard.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PanelDashboard.Name = "PanelDashboard"
-        Me.PanelDashboard.Size = New System.Drawing.Size(778, 214)
+        Me.PanelDashboard.Size = New System.Drawing.Size(1167, 329)
         Me.PanelDashboard.TabIndex = 2
         '
         'PanelAsupan
@@ -324,17 +336,19 @@ Partial Class UserForm
         Me.PanelAsupan.Controls.Add(Me.paneltambah)
         Me.PanelAsupan.Controls.Add(Me.daftarmakanan)
         Me.PanelAsupan.ForeColor = System.Drawing.Color.Black
-        Me.PanelAsupan.Location = New System.Drawing.Point(171, 66)
+        Me.PanelAsupan.Location = New System.Drawing.Point(256, 102)
+        Me.PanelAsupan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PanelAsupan.Name = "PanelAsupan"
-        Me.PanelAsupan.Size = New System.Drawing.Size(778, 459)
+        Me.PanelAsupan.Size = New System.Drawing.Size(1167, 706)
         Me.PanelAsupan.TabIndex = 16
         '
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.posttest4posttest4.My.Resources.Resources.search_interface_symbol1
-        Me.PictureBox11.Location = New System.Drawing.Point(306, 61)
+        Me.PictureBox11.Location = New System.Drawing.Point(459, 94)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox11.Size = New System.Drawing.Size(36, 37)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox11.TabIndex = 14
         Me.PictureBox11.TabStop = False
@@ -344,9 +358,10 @@ Partial Class UserForm
         Me.Label37.AutoSize = True
         Me.Label37.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label37.ForeColor = System.Drawing.Color.Black
-        Me.Label37.Location = New System.Drawing.Point(20, 21)
+        Me.Label37.Location = New System.Drawing.Point(30, 32)
+        Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(341, 30)
+        Me.Label37.Size = New System.Drawing.Size(517, 45)
         Me.Label37.TabIndex = 11
         Me.Label37.Text = "Apa yang sudah kamu konsumsi?"
         '
@@ -372,17 +387,19 @@ Partial Class UserForm
         Me.paneltambah.Controls.Add(Me.Label16)
         Me.paneltambah.Controls.Add(Me.Label15)
         Me.paneltambah.Controls.Add(Me.Label14)
-        Me.paneltambah.Location = New System.Drawing.Point(778, 0)
+        Me.paneltambah.Location = New System.Drawing.Point(1167, 0)
+        Me.paneltambah.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.paneltambah.Name = "paneltambah"
-        Me.paneltambah.Size = New System.Drawing.Size(237, 459)
+        Me.paneltambah.Size = New System.Drawing.Size(356, 706)
         Me.paneltambah.TabIndex = 1
         '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.posttest4posttest4.My.Resources.Resources._exit
-        Me.PictureBox10.Location = New System.Drawing.Point(193, 10)
+        Me.PictureBox10.Location = New System.Drawing.Point(290, 15)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox10.Size = New System.Drawing.Size(45, 46)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 27
         Me.PictureBox10.TabStop = False
@@ -392,9 +409,10 @@ Partial Class UserForm
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(15, 258)
+        Me.Label13.Location = New System.Drawing.Point(22, 397)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(26, 19)
+        Me.Label13.Size = New System.Drawing.Size(37, 28)
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Tgl"
         '
@@ -403,9 +421,10 @@ Partial Class UserForm
         Me.lkarbo.AutoSize = True
         Me.lkarbo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkarbo.ForeColor = System.Drawing.Color.White
-        Me.lkarbo.Location = New System.Drawing.Point(101, 177)
+        Me.lkarbo.Location = New System.Drawing.Point(152, 272)
+        Me.lkarbo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lkarbo.Name = "lkarbo"
-        Me.lkarbo.Size = New System.Drawing.Size(63, 20)
+        Me.lkarbo.Size = New System.Drawing.Size(92, 29)
         Me.lkarbo.TabIndex = 23
         Me.lkarbo.Text = "Label5"
         '
@@ -414,9 +433,10 @@ Partial Class UserForm
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(16, 180)
+        Me.Label7.Location = New System.Drawing.Point(24, 277)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 19)
+        Me.Label7.Size = New System.Drawing.Size(117, 28)
         Me.Label7.TabIndex = 22
         Me.Label7.Text = "Karbohidrat"
         '
@@ -425,9 +445,10 @@ Partial Class UserForm
         Me.llemak.AutoSize = True
         Me.llemak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llemak.ForeColor = System.Drawing.Color.White
-        Me.llemak.Location = New System.Drawing.Point(101, 146)
+        Me.llemak.Location = New System.Drawing.Point(152, 225)
+        Me.llemak.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.llemak.Name = "llemak"
-        Me.llemak.Size = New System.Drawing.Size(63, 20)
+        Me.llemak.Size = New System.Drawing.Size(92, 29)
         Me.llemak.TabIndex = 21
         Me.llemak.Text = "Label5"
         '
@@ -436,9 +457,10 @@ Partial Class UserForm
         Me.lprotein.AutoSize = True
         Me.lprotein.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lprotein.ForeColor = System.Drawing.Color.White
-        Me.lprotein.Location = New System.Drawing.Point(99, 113)
+        Me.lprotein.Location = New System.Drawing.Point(148, 174)
+        Me.lprotein.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lprotein.Name = "lprotein"
-        Me.lprotein.Size = New System.Drawing.Size(63, 20)
+        Me.lprotein.Size = New System.Drawing.Size(92, 29)
         Me.lprotein.TabIndex = 20
         Me.lprotein.Text = "Label5"
         '
@@ -447,9 +469,10 @@ Partial Class UserForm
         Me.lkalori.AutoSize = True
         Me.lkalori.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkalori.ForeColor = System.Drawing.Color.White
-        Me.lkalori.Location = New System.Drawing.Point(99, 82)
+        Me.lkalori.Location = New System.Drawing.Point(148, 126)
+        Me.lkalori.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lkalori.Name = "lkalori"
-        Me.lkalori.Size = New System.Drawing.Size(63, 20)
+        Me.lkalori.Size = New System.Drawing.Size(92, 29)
         Me.lkalori.TabIndex = 19
         Me.lkalori.Text = "Label5"
         '
@@ -460,9 +483,10 @@ Partial Class UserForm
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(20, 297)
+        Me.Button1.Location = New System.Drawing.Point(30, 457)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(203, 36)
+        Me.Button1.Size = New System.Drawing.Size(304, 55)
         Me.Button1.TabIndex = 11
         Me.Button1.Text = "Tambah"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -473,9 +497,10 @@ Partial Class UserForm
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(16, 149)
+        Me.Label17.Location = New System.Drawing.Point(24, 229)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(49, 19)
+        Me.Label17.Size = New System.Drawing.Size(68, 28)
         Me.Label17.TabIndex = 18
         Me.Label17.Text = "Lemak"
         '
@@ -484,9 +509,10 @@ Partial Class UserForm
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(16, 116)
+        Me.Label18.Location = New System.Drawing.Point(24, 178)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(53, 19)
+        Me.Label18.Size = New System.Drawing.Size(75, 28)
         Me.Label18.TabIndex = 17
         Me.Label18.Text = "Protein"
         '
@@ -495,9 +521,10 @@ Partial Class UserForm
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(16, 83)
+        Me.Label16.Location = New System.Drawing.Point(24, 128)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(43, 19)
+        Me.Label16.Size = New System.Drawing.Size(63, 28)
         Me.Label16.TabIndex = 16
         Me.Label16.Text = "Kalori"
         '
@@ -506,9 +533,10 @@ Partial Class UserForm
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(16, 50)
+        Me.Label15.Location = New System.Drawing.Point(24, 77)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(106, 19)
+        Me.Label15.Size = New System.Drawing.Size(149, 28)
         Me.Label15.TabIndex = 15
         Me.Label15.Text = "Nama Makanan"
         '
@@ -517,9 +545,10 @@ Partial Class UserForm
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(16, 224)
+        Me.Label14.Location = New System.Drawing.Point(24, 345)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(38, 19)
+        Me.Label14.Size = New System.Drawing.Size(54, 28)
         Me.Label14.TabIndex = 13
         Me.Label14.Text = "Porsi"
         '
@@ -529,9 +558,10 @@ Partial Class UserForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.daftarmakanan.AutoScroll = True
-        Me.daftarmakanan.Location = New System.Drawing.Point(0, 95)
+        Me.daftarmakanan.Location = New System.Drawing.Point(0, 146)
+        Me.daftarmakanan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.daftarmakanan.Name = "daftarmakanan"
-        Me.daftarmakanan.Size = New System.Drawing.Size(778, 364)
+        Me.daftarmakanan.Size = New System.Drawing.Size(1167, 560)
         Me.daftarmakanan.TabIndex = 5
         '
         'PanelProfil
@@ -545,9 +575,10 @@ Partial Class UserForm
         Me.PanelProfil.Controls.Add(Me.Panel9)
         Me.PanelProfil.Controls.Add(Me.Panel8)
         Me.PanelProfil.Controls.Add(Me.Panel3)
-        Me.PanelProfil.Location = New System.Drawing.Point(171, 61)
+        Me.PanelProfil.Location = New System.Drawing.Point(256, 94)
+        Me.PanelProfil.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PanelProfil.Name = "PanelProfil"
-        Me.PanelProfil.Size = New System.Drawing.Size(778, 464)
+        Me.PanelProfil.Size = New System.Drawing.Size(1167, 714)
         Me.PanelProfil.TabIndex = 17
         '
         'paneledit
@@ -576,9 +607,10 @@ Partial Class UserForm
         Me.paneledit.Controls.Add(Me.tNama)
         Me.paneledit.Controls.Add(Me.PictureBox5)
         Me.paneledit.ForeColor = System.Drawing.Color.White
-        Me.paneledit.Location = New System.Drawing.Point(778, 0)
+        Me.paneledit.Location = New System.Drawing.Point(1167, 0)
+        Me.paneledit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.paneledit.Name = "paneledit"
-        Me.paneledit.Size = New System.Drawing.Size(353, 464)
+        Me.paneledit.Size = New System.Drawing.Size(530, 714)
         Me.paneledit.TabIndex = 29
         '
         'Button3
@@ -586,9 +618,10 @@ Partial Class UserForm
         Me.Button3.BackColor = System.Drawing.Color.IndianRed
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(113, 419)
+        Me.Button3.Location = New System.Drawing.Point(170, 645)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(130, 30)
+        Me.Button3.Size = New System.Drawing.Size(195, 46)
         Me.Button3.TabIndex = 18
         Me.Button3.Text = "Simpan"
         Me.Button3.UseVisualStyleBackColor = False
@@ -599,9 +632,10 @@ Partial Class UserForm
         Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.White
-        Me.Label29.Location = New System.Drawing.Point(33, 121)
+        Me.Label29.Location = New System.Drawing.Point(50, 186)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(39, 15)
+        Me.Label29.Size = New System.Drawing.Size(54, 22)
         Me.Label29.TabIndex = 16
         Me.Label29.Text = "Email"
         '
@@ -611,9 +645,10 @@ Partial Class UserForm
         Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.White
-        Me.Label28.Location = New System.Drawing.Point(33, 164)
+        Me.Label28.Location = New System.Drawing.Point(50, 252)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(61, 15)
+        Me.Label28.Size = New System.Drawing.Size(89, 22)
         Me.Label28.TabIndex = 15
         Me.Label28.Text = "Password"
         '
@@ -623,9 +658,10 @@ Partial Class UserForm
         Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(33, 206)
+        Me.Label27.Location = New System.Drawing.Point(50, 317)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(80, 15)
+        Me.Label27.Size = New System.Drawing.Size(117, 22)
         Me.Label27.TabIndex = 14
         Me.Label27.Text = "Tinggi Badan"
         '
@@ -635,9 +671,10 @@ Partial Class UserForm
         Me.Label26.BackColor = System.Drawing.Color.Transparent
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.White
-        Me.Label26.Location = New System.Drawing.Point(33, 249)
+        Me.Label26.Location = New System.Drawing.Point(50, 383)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(75, 15)
+        Me.Label26.Size = New System.Drawing.Size(110, 22)
         Me.Label26.TabIndex = 13
         Me.Label26.Text = "Berat Badan"
         '
@@ -647,9 +684,10 @@ Partial Class UserForm
         Me.Label30.BackColor = System.Drawing.Color.Transparent
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label30.ForeColor = System.Drawing.Color.White
-        Me.Label30.Location = New System.Drawing.Point(33, 78)
+        Me.Label30.Location = New System.Drawing.Point(50, 120)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(41, 15)
+        Me.Label30.Size = New System.Drawing.Size(57, 22)
         Me.Label30.TabIndex = 17
         Me.Label30.Text = "Nama"
         '
@@ -657,9 +695,10 @@ Partial Class UserForm
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(33, 383)
+        Me.Label25.Location = New System.Drawing.Point(50, 589)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(60, 15)
+        Me.Label25.Size = New System.Drawing.Size(86, 22)
         Me.Label25.TabIndex = 12
         Me.Label25.Text = "Kelahiran"
         '
@@ -667,9 +706,10 @@ Partial Class UserForm
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(33, 338)
+        Me.Label9.Location = New System.Drawing.Point(50, 520)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(48, 15)
+        Me.Label9.Size = New System.Drawing.Size(70, 22)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Gender"
         '
@@ -677,9 +717,10 @@ Partial Class UserForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(33, 289)
+        Me.Label5.Location = New System.Drawing.Point(50, 445)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 15)
+        Me.Label5.Size = New System.Drawing.Size(77, 22)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Aktivitas"
         '
@@ -688,9 +729,10 @@ Partial Class UserForm
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox5.BackgroundImage = Global.posttest4posttest4.My.Resources.Resources._exit
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(307, 20)
+        Me.PictureBox5.Location = New System.Drawing.Point(460, 31)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(33, 34)
+        Me.PictureBox5.Size = New System.Drawing.Size(50, 52)
         Me.PictureBox5.TabIndex = 0
         Me.PictureBox5.TabStop = False
         '
@@ -704,28 +746,31 @@ Partial Class UserForm
         Me.Panel10.Controls.Add(Me.PictureBox12)
         Me.Panel10.Controls.Add(Me.catatan)
         Me.Panel10.Controls.Add(Me.Label19)
-        Me.Panel10.Location = New System.Drawing.Point(464, 236)
+        Me.Panel10.Location = New System.Drawing.Point(696, 363)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(283, 216)
+        Me.Panel10.Size = New System.Drawing.Size(424, 332)
         Me.Panel10.TabIndex = 32
         '
         'PictureBox12
         '
         Me.PictureBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox12.Image = Global.posttest4posttest4.My.Resources.Resources.diskette
-        Me.PictureBox12.Location = New System.Drawing.Point(212, 14)
+        Me.PictureBox12.Location = New System.Drawing.Point(318, 22)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(30, 32)
+        Me.PictureBox12.Size = New System.Drawing.Size(45, 49)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox12.TabIndex = 8
         Me.PictureBox12.TabStop = False
         '
         'catatan
         '
-        Me.catatan.Location = New System.Drawing.Point(23, 66)
+        Me.catatan.Location = New System.Drawing.Point(34, 102)
+        Me.catatan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.catatan.Multiline = True
         Me.catatan.Name = "catatan"
-        Me.catatan.Size = New System.Drawing.Size(228, 123)
+        Me.catatan.Size = New System.Drawing.Size(340, 187)
         Me.catatan.TabIndex = 7
         '
         'Label19
@@ -734,9 +779,10 @@ Partial Class UserForm
         Me.Label19.BackColor = System.Drawing.Color.White
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(19, 20)
+        Me.Label19.Location = New System.Drawing.Point(28, 31)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(79, 24)
+        Me.Label19.Size = New System.Drawing.Size(123, 33)
         Me.Label19.TabIndex = 2
         Me.Label19.Text = "Catatan"
         '
@@ -749,9 +795,10 @@ Partial Class UserForm
         Me.Panel9.Controls.Add(Me.fav2)
         Me.Panel9.Controls.Add(Me.fav1)
         Me.Panel9.Controls.Add(Me.Label11)
-        Me.Panel9.Location = New System.Drawing.Point(217, 236)
+        Me.Panel9.Location = New System.Drawing.Point(326, 363)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(231, 216)
+        Me.Panel9.Size = New System.Drawing.Size(346, 332)
         Me.Panel9.TabIndex = 31
         '
         'fav3
@@ -760,9 +807,10 @@ Partial Class UserForm
         Me.fav3.BackColor = System.Drawing.Color.White
         Me.fav3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fav3.ForeColor = System.Drawing.Color.Black
-        Me.fav3.Location = New System.Drawing.Point(8, 146)
+        Me.fav3.Location = New System.Drawing.Point(12, 225)
+        Me.fav3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fav3.Name = "fav3"
-        Me.fav3.Size = New System.Drawing.Size(13, 20)
+        Me.fav3.Size = New System.Drawing.Size(19, 29)
         Me.fav3.TabIndex = 5
         Me.fav3.Text = " "
         '
@@ -772,9 +820,10 @@ Partial Class UserForm
         Me.fav2.BackColor = System.Drawing.Color.White
         Me.fav2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fav2.ForeColor = System.Drawing.Color.Black
-        Me.fav2.Location = New System.Drawing.Point(8, 106)
+        Me.fav2.Location = New System.Drawing.Point(12, 163)
+        Me.fav2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fav2.Name = "fav2"
-        Me.fav2.Size = New System.Drawing.Size(13, 20)
+        Me.fav2.Size = New System.Drawing.Size(19, 29)
         Me.fav2.TabIndex = 4
         Me.fav2.Text = " "
         '
@@ -784,9 +833,10 @@ Partial Class UserForm
         Me.fav1.BackColor = System.Drawing.Color.White
         Me.fav1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.fav1.ForeColor = System.Drawing.Color.Black
-        Me.fav1.Location = New System.Drawing.Point(8, 66)
+        Me.fav1.Location = New System.Drawing.Point(12, 102)
+        Me.fav1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fav1.Name = "fav1"
-        Me.fav1.Size = New System.Drawing.Size(13, 20)
+        Me.fav1.Size = New System.Drawing.Size(19, 29)
         Me.fav1.TabIndex = 3
         Me.fav1.Text = " "
         '
@@ -796,9 +846,10 @@ Partial Class UserForm
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(8, 20)
+        Me.Label11.Location = New System.Drawing.Point(12, 31)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(163, 24)
+        Me.Label11.Size = New System.Drawing.Size(247, 33)
         Me.Label11.TabIndex = 1
         Me.Label11.Text = "Makanan Favorit"
         '
@@ -810,9 +861,10 @@ Partial Class UserForm
         Me.Panel8.Controls.Add(Me.statusbmi)
         Me.Panel8.Controls.Add(Me.nilaibmi)
         Me.Panel8.Controls.Add(Me.Label4)
-        Me.Panel8.Location = New System.Drawing.Point(25, 236)
+        Me.Panel8.Location = New System.Drawing.Point(38, 363)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(176, 216)
+        Me.Panel8.Size = New System.Drawing.Size(264, 332)
         Me.Panel8.TabIndex = 30
         '
         'statusbmi
@@ -821,9 +873,10 @@ Partial Class UserForm
         Me.statusbmi.BackColor = System.Drawing.Color.White
         Me.statusbmi.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.statusbmi.ForeColor = System.Drawing.Color.Black
-        Me.statusbmi.Location = New System.Drawing.Point(15, 118)
+        Me.statusbmi.Location = New System.Drawing.Point(22, 182)
+        Me.statusbmi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.statusbmi.Name = "statusbmi"
-        Me.statusbmi.Size = New System.Drawing.Size(55, 29)
+        Me.statusbmi.Size = New System.Drawing.Size(80, 40)
         Me.statusbmi.TabIndex = 2
         Me.statusbmi.Text = "BMI"
         '
@@ -833,9 +886,10 @@ Partial Class UserForm
         Me.nilaibmi.BackColor = System.Drawing.Color.White
         Me.nilaibmi.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nilaibmi.ForeColor = System.Drawing.Color.Black
-        Me.nilaibmi.Location = New System.Drawing.Point(15, 66)
+        Me.nilaibmi.Location = New System.Drawing.Point(22, 102)
+        Me.nilaibmi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.nilaibmi.Name = "nilaibmi"
-        Me.nilaibmi.Size = New System.Drawing.Size(55, 29)
+        Me.nilaibmi.Size = New System.Drawing.Size(80, 40)
         Me.nilaibmi.TabIndex = 1
         Me.nilaibmi.Text = "BMI"
         '
@@ -845,9 +899,10 @@ Partial Class UserForm
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(15, 19)
+        Me.Label4.Location = New System.Drawing.Point(22, 29)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 25)
+        Me.Label4.Size = New System.Drawing.Size(75, 37)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "BMI"
         '
@@ -865,9 +920,10 @@ Partial Class UserForm
         Me.Panel3.Controls.Add(Me.PictureBox2)
         Me.Panel3.Controls.Add(Me.Button6)
         Me.Panel3.Controls.Add(Me.Button2)
-        Me.Panel3.Location = New System.Drawing.Point(25, 28)
+        Me.Panel3.Location = New System.Drawing.Point(38, 43)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(723, 197)
+        Me.Panel3.Size = New System.Drawing.Size(1084, 303)
         Me.Panel3.TabIndex = 28
         '
         'PictureBox4
@@ -876,9 +932,10 @@ Partial Class UserForm
         Me.PictureBox4.BackgroundImage = Global.posttest4posttest4.My.Resources.Resources.edit
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox4.Image = Global.posttest4posttest4.My.Resources.Resources.edit1
-        Me.PictureBox4.Location = New System.Drawing.Point(638, 39)
+        Me.PictureBox4.Location = New System.Drawing.Point(957, 60)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox4.Size = New System.Drawing.Size(45, 46)
         Me.PictureBox4.TabIndex = 25
         Me.PictureBox4.TabStop = False
         '
@@ -887,9 +944,10 @@ Partial Class UserForm
         Me.lahiruser.AutoSize = True
         Me.lahiruser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lahiruser.ForeColor = System.Drawing.Color.Black
-        Me.lahiruser.Location = New System.Drawing.Point(162, 103)
+        Me.lahiruser.Location = New System.Drawing.Point(243, 158)
+        Me.lahiruser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lahiruser.Name = "lahiruser"
-        Me.lahiruser.Size = New System.Drawing.Size(122, 16)
+        Me.lahiruser.Size = New System.Drawing.Size(183, 25)
         Me.lahiruser.TabIndex = 22
         Me.lahiruser.Text = "12, November 2003"
         '
@@ -898,9 +956,10 @@ Partial Class UserForm
         Me.emailuser.AutoSize = True
         Me.emailuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.emailuser.ForeColor = System.Drawing.Color.Black
-        Me.emailuser.Location = New System.Drawing.Point(162, 73)
+        Me.emailuser.Location = New System.Drawing.Point(243, 112)
+        Me.emailuser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.emailuser.Name = "emailuser"
-        Me.emailuser.Size = New System.Drawing.Size(108, 16)
+        Me.emailuser.Size = New System.Drawing.Size(157, 25)
         Me.emailuser.TabIndex = 21
         Me.emailuser.Text = "udin@gmail.com"
         '
@@ -909,18 +968,20 @@ Partial Class UserForm
         Me.namauser.AutoSize = True
         Me.namauser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.namauser.ForeColor = System.Drawing.Color.Black
-        Me.namauser.Location = New System.Drawing.Point(161, 39)
+        Me.namauser.Location = New System.Drawing.Point(242, 60)
+        Me.namauser.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.namauser.Name = "namauser"
-        Me.namauser.Size = New System.Drawing.Size(94, 20)
+        Me.namauser.Size = New System.Drawing.Size(135, 29)
         Me.namauser.TabIndex = 5
         Me.namauser.Text = "Udin Petot"
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.posttest4posttest4.My.Resources.Resources.login
-        Me.PictureBox2.Location = New System.Drawing.Point(51, 39)
+        Me.PictureBox2.Location = New System.Drawing.Point(76, 60)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(80, 80)
+        Me.PictureBox2.Size = New System.Drawing.Size(120, 123)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 11
         Me.PictureBox2.TabStop = False
@@ -933,9 +994,10 @@ Partial Class UserForm
         Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(575, 134)
+        Me.Button6.Location = New System.Drawing.Point(862, 206)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(93, 32)
+        Me.Button6.Size = New System.Drawing.Size(140, 49)
         Me.Button6.TabIndex = 24
         Me.Button6.Text = "LogOut"
         Me.Button6.UseVisualStyleBackColor = False
@@ -947,9 +1009,10 @@ Partial Class UserForm
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(50, 134)
+        Me.Button2.Location = New System.Drawing.Point(75, 206)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(86, 29)
+        Me.Button2.Size = New System.Drawing.Size(129, 45)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Ubah Foto"
         Me.Button2.UseVisualStyleBackColor = False
@@ -982,9 +1045,10 @@ Partial Class UserForm
         Me.PanelStat.Controls.Add(Me.Panel7)
         Me.PanelStat.Controls.Add(Me.Panel6)
         Me.PanelStat.Controls.Add(Me.Panel5)
-        Me.PanelStat.Location = New System.Drawing.Point(171, 61)
+        Me.PanelStat.Location = New System.Drawing.Point(256, 106)
+        Me.PanelStat.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PanelStat.Name = "PanelStat"
-        Me.PanelStat.Size = New System.Drawing.Size(778, 262)
+        Me.PanelStat.Size = New System.Drawing.Size(1167, 403)
         Me.PanelStat.TabIndex = 18
         '
         'Panel4
@@ -992,9 +1056,10 @@ Partial Class UserForm
         Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.DarkGray
-        Me.Panel4.Location = New System.Drawing.Point(30, 250)
+        Me.Panel4.Location = New System.Drawing.Point(45, 385)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(723, 3)
+        Me.Panel4.Size = New System.Drawing.Size(1084, 5)
         Me.Panel4.TabIndex = 29
         '
         'tgltgl
@@ -1003,18 +1068,20 @@ Partial Class UserForm
         Me.tgltgl.BackColor = System.Drawing.Color.White
         Me.tgltgl.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.tgltgl.ForeColor = System.Drawing.Color.DimGray
-        Me.tgltgl.Location = New System.Drawing.Point(113, 33)
+        Me.tgltgl.Location = New System.Drawing.Point(170, 51)
+        Me.tgltgl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.tgltgl.Name = "tgltgl"
-        Me.tgltgl.Size = New System.Drawing.Size(63, 21)
+        Me.tgltgl.Size = New System.Drawing.Size(96, 32)
         Me.tgltgl.TabIndex = 28
         Me.tgltgl.Text = "Tanggal"
         '
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.posttest4posttest4.My.Resources.Resources.Calendar
-        Me.PictureBox6.Location = New System.Drawing.Point(311, 35)
+        Me.PictureBox6.Location = New System.Drawing.Point(466, 56)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(14, 13)
+        Me.PictureBox6.Size = New System.Drawing.Size(21, 20)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 27
         Me.PictureBox6.TabStop = False
@@ -1022,9 +1089,10 @@ Partial Class UserForm
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.posttest4posttest4.My.Resources.Resources.Rectangle_5
-        Me.PictureBox3.Location = New System.Drawing.Point(99, 28)
+        Me.PictureBox3.Location = New System.Drawing.Point(154, 45)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(237, 40)
+        Me.PictureBox3.Size = New System.Drawing.Size(356, 62)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 26
         Me.PictureBox3.TabStop = False
@@ -1035,9 +1103,10 @@ Partial Class UserForm
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(26, 28)
+        Me.Label2.Location = New System.Drawing.Point(50, 51)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 21)
+        Me.Label2.Size = New System.Drawing.Size(96, 32)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Tanggal"
         '
@@ -1046,9 +1115,10 @@ Partial Class UserForm
         Me.dt1.CalendarMonthBackground = System.Drawing.Color.Transparent
         Me.dt1.CalendarTitleBackColor = System.Drawing.Color.Transparent
         Me.dt1.CalendarTrailingForeColor = System.Drawing.Color.Transparent
-        Me.dt1.Location = New System.Drawing.Point(164, 45)
+        Me.dt1.Location = New System.Drawing.Point(169, 55)
+        Me.dt1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dt1.Name = "dt1"
-        Me.dt1.Size = New System.Drawing.Size(172, 20)
+        Me.dt1.Size = New System.Drawing.Size(326, 26)
         Me.dt1.TabIndex = 20
         Me.dt1.Visible = False
         '
@@ -1060,17 +1130,19 @@ Partial Class UserForm
         Me.Panel2.Controls.Add(Me.barkarbo)
         Me.Panel2.Controls.Add(Me.LabelKarbo)
         Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Location = New System.Drawing.Point(214, 90)
+        Me.Panel2.Location = New System.Drawing.Point(321, 138)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(171, 115)
+        Me.Panel2.Size = New System.Drawing.Size(256, 177)
         Me.Panel2.TabIndex = 25
         '
         'barkarbo
         '
         Me.barkarbo.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.barkarbo.Location = New System.Drawing.Point(15, 76)
+        Me.barkarbo.Location = New System.Drawing.Point(22, 117)
+        Me.barkarbo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.barkarbo.Name = "barkarbo"
-        Me.barkarbo.Size = New System.Drawing.Size(0, 20)
+        Me.barkarbo.Size = New System.Drawing.Size(0, 31)
         Me.barkarbo.TabIndex = 15
         '
         'LabelKarbo
@@ -1080,9 +1152,10 @@ Partial Class UserForm
         Me.LabelKarbo.AutoSize = True
         Me.LabelKarbo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.LabelKarbo.ForeColor = System.Drawing.Color.Black
-        Me.LabelKarbo.Location = New System.Drawing.Point(11, 36)
+        Me.LabelKarbo.Location = New System.Drawing.Point(16, 55)
+        Me.LabelKarbo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelKarbo.Name = "LabelKarbo"
-        Me.LabelKarbo.Size = New System.Drawing.Size(80, 21)
+        Me.LabelKarbo.Size = New System.Drawing.Size(123, 32)
         Me.LabelKarbo.TabIndex = 13
         Me.LabelKarbo.Text = "123/2300"
         '
@@ -1091,9 +1164,10 @@ Partial Class UserForm
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(11, 10)
+        Me.Label10.Location = New System.Drawing.Point(16, 15)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(101, 21)
+        Me.Label10.Size = New System.Drawing.Size(151, 32)
         Me.Label10.TabIndex = 11
         Me.Label10.Text = "Karbohidrat"
         '
@@ -1102,9 +1176,10 @@ Partial Class UserForm
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(26, 217)
+        Me.Label12.Location = New System.Drawing.Point(39, 334)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(127, 21)
+        Me.Label12.Size = New System.Drawing.Size(192, 32)
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Asupan Hari Ini"
         '
@@ -1116,17 +1191,19 @@ Partial Class UserForm
         Me.Panel7.Controls.Add(Me.barlemak)
         Me.Panel7.Controls.Add(Me.LabelLemak)
         Me.Panel7.Controls.Add(Me.Label8)
-        Me.Panel7.Location = New System.Drawing.Point(398, 90)
+        Me.Panel7.Location = New System.Drawing.Point(597, 138)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(171, 115)
+        Me.Panel7.Size = New System.Drawing.Size(256, 177)
         Me.Panel7.TabIndex = 23
         '
         'barlemak
         '
         Me.barlemak.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.barlemak.Location = New System.Drawing.Point(15, 76)
+        Me.barlemak.Location = New System.Drawing.Point(22, 117)
+        Me.barlemak.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.barlemak.Name = "barlemak"
-        Me.barlemak.Size = New System.Drawing.Size(0, 20)
+        Me.barlemak.Size = New System.Drawing.Size(0, 31)
         Me.barlemak.TabIndex = 16
         '
         'LabelLemak
@@ -1136,9 +1213,10 @@ Partial Class UserForm
         Me.LabelLemak.AutoSize = True
         Me.LabelLemak.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.LabelLemak.ForeColor = System.Drawing.Color.Black
-        Me.LabelLemak.Location = New System.Drawing.Point(11, 36)
+        Me.LabelLemak.Location = New System.Drawing.Point(16, 55)
+        Me.LabelLemak.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelLemak.Name = "LabelLemak"
-        Me.LabelLemak.Size = New System.Drawing.Size(80, 21)
+        Me.LabelLemak.Size = New System.Drawing.Size(123, 32)
         Me.LabelLemak.TabIndex = 13
         Me.LabelLemak.Text = "123/2300"
         '
@@ -1147,9 +1225,10 @@ Partial Class UserForm
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(11, 10)
+        Me.Label8.Location = New System.Drawing.Point(16, 15)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(60, 21)
+        Me.Label8.Size = New System.Drawing.Size(87, 32)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "Lemak"
         '
@@ -1161,17 +1240,19 @@ Partial Class UserForm
         Me.Panel6.Controls.Add(Me.barprotein)
         Me.Panel6.Controls.Add(Me.LabelProtein)
         Me.Panel6.Controls.Add(Me.Label6)
-        Me.Panel6.Location = New System.Drawing.Point(582, 90)
+        Me.Panel6.Location = New System.Drawing.Point(873, 138)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(171, 115)
+        Me.Panel6.Size = New System.Drawing.Size(256, 177)
         Me.Panel6.TabIndex = 24
         '
         'barprotein
         '
         Me.barprotein.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.barprotein.Location = New System.Drawing.Point(10, 76)
+        Me.barprotein.Location = New System.Drawing.Point(15, 117)
+        Me.barprotein.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.barprotein.Name = "barprotein"
-        Me.barprotein.Size = New System.Drawing.Size(0, 20)
+        Me.barprotein.Size = New System.Drawing.Size(0, 31)
         Me.barprotein.TabIndex = 17
         '
         'LabelProtein
@@ -1181,9 +1262,10 @@ Partial Class UserForm
         Me.LabelProtein.AutoSize = True
         Me.LabelProtein.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.LabelProtein.ForeColor = System.Drawing.Color.Black
-        Me.LabelProtein.Location = New System.Drawing.Point(11, 36)
+        Me.LabelProtein.Location = New System.Drawing.Point(16, 55)
+        Me.LabelProtein.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelProtein.Name = "LabelProtein"
-        Me.LabelProtein.Size = New System.Drawing.Size(80, 21)
+        Me.LabelProtein.Size = New System.Drawing.Size(123, 32)
         Me.LabelProtein.TabIndex = 13
         Me.LabelProtein.Text = "123/2300"
         '
@@ -1192,9 +1274,10 @@ Partial Class UserForm
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(11, 10)
+        Me.Label6.Location = New System.Drawing.Point(16, 15)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(66, 21)
+        Me.Label6.Size = New System.Drawing.Size(98, 32)
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Protein"
         '
@@ -1206,17 +1289,19 @@ Partial Class UserForm
         Me.Panel5.Controls.Add(Me.barkalori)
         Me.Panel5.Controls.Add(Me.LabelKalori)
         Me.Panel5.Controls.Add(Me.Label3)
-        Me.Panel5.Location = New System.Drawing.Point(30, 90)
+        Me.Panel5.Location = New System.Drawing.Point(45, 138)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(171, 115)
+        Me.Panel5.Size = New System.Drawing.Size(256, 177)
         Me.Panel5.TabIndex = 19
         '
         'barkalori
         '
         Me.barkalori.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.barkalori.Location = New System.Drawing.Point(15, 76)
+        Me.barkalori.Location = New System.Drawing.Point(22, 117)
+        Me.barkalori.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.barkalori.Name = "barkalori"
-        Me.barkalori.Size = New System.Drawing.Size(0, 20)
+        Me.barkalori.Size = New System.Drawing.Size(0, 31)
         Me.barkalori.TabIndex = 14
         '
         'LabelKalori
@@ -1226,9 +1311,10 @@ Partial Class UserForm
         Me.LabelKalori.AutoSize = True
         Me.LabelKalori.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.LabelKalori.ForeColor = System.Drawing.Color.Black
-        Me.LabelKalori.Location = New System.Drawing.Point(11, 36)
+        Me.LabelKalori.Location = New System.Drawing.Point(16, 55)
+        Me.LabelKalori.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LabelKalori.Name = "LabelKalori"
-        Me.LabelKalori.Size = New System.Drawing.Size(80, 21)
+        Me.LabelKalori.Size = New System.Drawing.Size(123, 32)
         Me.LabelKalori.TabIndex = 13
         Me.LabelKalori.Text = "123/2300"
         '
@@ -1237,9 +1323,10 @@ Partial Class UserForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(11, 10)
+        Me.Label3.Location = New System.Drawing.Point(16, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 21)
+        Me.Label3.Size = New System.Drawing.Size(82, 32)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Kalori"
         '
@@ -1275,18 +1362,20 @@ Partial Class UserForm
         Me.infoasupan.Controls.Add(Me.nutrisiporsi)
         Me.infoasupan.Controls.Add(Me.PictureBox7)
         Me.infoasupan.Controls.Add(Me.editasupan)
-        Me.infoasupan.Location = New System.Drawing.Point(247, 38)
+        Me.infoasupan.Location = New System.Drawing.Point(370, 58)
+        Me.infoasupan.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.infoasupan.Name = "infoasupan"
-        Me.infoasupan.Size = New System.Drawing.Size(450, 402)
+        Me.infoasupan.Size = New System.Drawing.Size(675, 618)
         Me.infoasupan.TabIndex = 19
         '
         'pronutrisi
         '
         Me.pronutrisi.AutoSize = True
         Me.pronutrisi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pronutrisi.Location = New System.Drawing.Point(141, 219)
+        Me.pronutrisi.Location = New System.Drawing.Point(212, 337)
+        Me.pronutrisi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.pronutrisi.Name = "pronutrisi"
-        Me.pronutrisi.Size = New System.Drawing.Size(52, 18)
+        Me.pronutrisi.Size = New System.Drawing.Size(81, 29)
         Me.pronutrisi.TabIndex = 34
         Me.pronutrisi.Text = "Nama"
         '
@@ -1294,9 +1383,10 @@ Partial Class UserForm
         '
         Me.Label38.AutoSize = True
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(36, 219)
+        Me.Label38.Location = New System.Drawing.Point(54, 337)
+        Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(62, 18)
+        Me.Label38.Size = New System.Drawing.Size(97, 29)
         Me.Label38.TabIndex = 33
         Me.Label38.Text = "Protein"
         '
@@ -1304,9 +1394,10 @@ Partial Class UserForm
         '
         Me.Label41.AutoSize = True
         Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(173, 21)
+        Me.Label41.Location = New System.Drawing.Point(260, 32)
+        Me.Label41.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(93, 24)
+        Me.Label41.Size = New System.Drawing.Size(143, 33)
         Me.Label41.TabIndex = 32
         Me.Label41.Text = "Edit Data"
         '
@@ -1314,9 +1405,10 @@ Partial Class UserForm
         '
         Me.karbonutrisi.AutoSize = True
         Me.karbonutrisi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.karbonutrisi.Location = New System.Drawing.Point(141, 191)
+        Me.karbonutrisi.Location = New System.Drawing.Point(212, 294)
+        Me.karbonutrisi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.karbonutrisi.Name = "karbonutrisi"
-        Me.karbonutrisi.Size = New System.Drawing.Size(52, 18)
+        Me.karbonutrisi.Size = New System.Drawing.Size(81, 29)
         Me.karbonutrisi.TabIndex = 31
         Me.karbonutrisi.Text = "Nama"
         '
@@ -1324,9 +1416,10 @@ Partial Class UserForm
         '
         Me.lemaknutrisi.AutoSize = True
         Me.lemaknutrisi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lemaknutrisi.Location = New System.Drawing.Point(141, 163)
+        Me.lemaknutrisi.Location = New System.Drawing.Point(212, 251)
+        Me.lemaknutrisi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lemaknutrisi.Name = "lemaknutrisi"
-        Me.lemaknutrisi.Size = New System.Drawing.Size(52, 18)
+        Me.lemaknutrisi.Size = New System.Drawing.Size(81, 29)
         Me.lemaknutrisi.TabIndex = 30
         Me.lemaknutrisi.Text = "Nama"
         '
@@ -1334,9 +1427,10 @@ Partial Class UserForm
         '
         Me.kalorinutrisi.AutoSize = True
         Me.kalorinutrisi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kalorinutrisi.Location = New System.Drawing.Point(141, 135)
+        Me.kalorinutrisi.Location = New System.Drawing.Point(212, 208)
+        Me.kalorinutrisi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.kalorinutrisi.Name = "kalorinutrisi"
-        Me.kalorinutrisi.Size = New System.Drawing.Size(52, 18)
+        Me.kalorinutrisi.Size = New System.Drawing.Size(81, 29)
         Me.kalorinutrisi.TabIndex = 29
         Me.kalorinutrisi.Text = "Nama"
         '
@@ -1344,9 +1438,10 @@ Partial Class UserForm
         '
         Me.namanutrisi.AutoSize = True
         Me.namanutrisi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.namanutrisi.Location = New System.Drawing.Point(140, 107)
+        Me.namanutrisi.Location = New System.Drawing.Point(210, 165)
+        Me.namanutrisi.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.namanutrisi.Name = "namanutrisi"
-        Me.namanutrisi.Size = New System.Drawing.Size(52, 18)
+        Me.namanutrisi.Size = New System.Drawing.Size(81, 29)
         Me.namanutrisi.TabIndex = 28
         Me.namanutrisi.Text = "Nama"
         '
@@ -1357,9 +1452,10 @@ Partial Class UserForm
         Me.Label36.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.ForeColor = System.Drawing.Color.DimGray
-        Me.Label36.Location = New System.Drawing.Point(327, 341)
+        Me.Label36.Location = New System.Drawing.Point(490, 525)
+        Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(56, 20)
+        Me.Label36.Size = New System.Drawing.Size(82, 29)
         Me.Label36.TabIndex = 27
         Me.Label36.Text = "Hapus"
         '
@@ -1368,9 +1464,10 @@ Partial Class UserForm
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox9.Image = Global.posttest4posttest4.My.Resources.Resources.Rectangle_12
-        Me.PictureBox9.Location = New System.Drawing.Point(274, 336)
+        Me.PictureBox9.Location = New System.Drawing.Point(411, 517)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(158, 35)
+        Me.PictureBox9.Size = New System.Drawing.Size(237, 54)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 26
         Me.PictureBox9.TabStop = False
@@ -1382,9 +1479,10 @@ Partial Class UserForm
         Me.Label35.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label35.ForeColor = System.Drawing.Color.DimGray
-        Me.Label35.Location = New System.Drawing.Point(94, 341)
+        Me.Label35.Location = New System.Drawing.Point(141, 525)
+        Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(48, 20)
+        Me.Label35.Size = New System.Drawing.Size(70, 29)
         Me.Label35.TabIndex = 25
         Me.Label35.Text = "Ubah"
         '
@@ -1393,9 +1491,10 @@ Partial Class UserForm
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox8.Image = Global.posttest4posttest4.My.Resources.Resources.Rectangle_12
-        Me.PictureBox8.Location = New System.Drawing.Point(41, 336)
+        Me.PictureBox8.Location = New System.Drawing.Point(62, 517)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(158, 35)
+        Me.PictureBox8.Size = New System.Drawing.Size(237, 54)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 24
         Me.PictureBox8.TabStop = False
@@ -1404,9 +1503,10 @@ Partial Class UserForm
         '
         Me.Label34.AutoSize = True
         Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(37, 259)
+        Me.Label34.Location = New System.Drawing.Point(56, 398)
+        Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(48, 18)
+        Me.Label34.Size = New System.Drawing.Size(74, 29)
         Me.Label34.TabIndex = 23
         Me.Label34.Text = "Porsi"
         '
@@ -1414,9 +1514,10 @@ Partial Class UserForm
         '
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(36, 191)
+        Me.Label33.Location = New System.Drawing.Point(54, 294)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(95, 18)
+        Me.Label33.Size = New System.Drawing.Size(149, 29)
         Me.Label33.TabIndex = 22
         Me.Label33.Text = "Karbohidrat"
         '
@@ -1424,9 +1525,10 @@ Partial Class UserForm
         '
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(37, 163)
+        Me.Label32.Location = New System.Drawing.Point(56, 251)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(58, 18)
+        Me.Label32.Size = New System.Drawing.Size(90, 29)
         Me.Label32.TabIndex = 21
         Me.Label32.Text = "Lemak"
         '
@@ -1434,9 +1536,10 @@ Partial Class UserForm
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(37, 135)
+        Me.Label31.Location = New System.Drawing.Point(56, 208)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(52, 18)
+        Me.Label31.Size = New System.Drawing.Size(82, 29)
         Me.Label31.TabIndex = 20
         Me.Label31.Text = "Kalori"
         '
@@ -1445,9 +1548,10 @@ Partial Class UserForm
         Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox7.BackgroundImage = Global.posttest4posttest4.My.Resources.Resources._exit
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(412, 11)
+        Me.PictureBox7.Location = New System.Drawing.Point(618, 17)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(33, 34)
+        Me.PictureBox7.Size = New System.Drawing.Size(50, 52)
         Me.PictureBox7.TabIndex = 18
         Me.PictureBox7.TabStop = False
         '
@@ -1455,26 +1559,38 @@ Partial Class UserForm
         '
         Me.editasupan.AutoSize = True
         Me.editasupan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.editasupan.Location = New System.Drawing.Point(36, 107)
+        Me.editasupan.Location = New System.Drawing.Point(54, 165)
+        Me.editasupan.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.editasupan.Name = "editasupan"
-        Me.editasupan.Size = New System.Drawing.Size(52, 18)
+        Me.editasupan.Size = New System.Drawing.Size(81, 29)
         Me.editasupan.TabIndex = 0
         Me.editasupan.Text = "Nama"
+        '
+        'nutrisiporsi
+        '
+        Me.nutrisiporsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nutrisiporsi.Location = New System.Drawing.Point(218, 402)
+        Me.nutrisiporsi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.nutrisiporsi.Name = "nutrisiporsi"
+        Me.nutrisiporsi.Size = New System.Drawing.Size(380, 35)
+        Me.nutrisiporsi.TabIndex = 19
         '
         'tTinggi
         '
         Me.tTinggi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tTinggi.Location = New System.Drawing.Point(123, 196)
+        Me.tTinggi.Location = New System.Drawing.Point(184, 302)
+        Me.tTinggi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tTinggi.Name = "tTinggi"
-        Me.tTinggi.Size = New System.Drawing.Size(192, 29)
+        Me.tTinggi.Size = New System.Drawing.Size(286, 40)
         Me.tTinggi.TabIndex = 4
         '
         'tDate
         '
         Me.tDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tDate.Location = New System.Drawing.Point(123, 374)
+        Me.tDate.Location = New System.Drawing.Point(184, 575)
+        Me.tDate.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tDate.Name = "tDate"
-        Me.tDate.Size = New System.Drawing.Size(192, 27)
+        Me.tDate.Size = New System.Drawing.Size(286, 36)
         Me.tDate.TabIndex = 9
         '
         'tJenis
@@ -1482,9 +1598,10 @@ Partial Class UserForm
         Me.tJenis.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tJenis.FormattingEnabled = True
         Me.tJenis.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
-        Me.tJenis.Location = New System.Drawing.Point(123, 328)
+        Me.tJenis.Location = New System.Drawing.Point(184, 505)
+        Me.tJenis.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tJenis.Name = "tJenis"
-        Me.tJenis.Size = New System.Drawing.Size(192, 32)
+        Me.tJenis.Size = New System.Drawing.Size(286, 41)
         Me.tJenis.TabIndex = 8
         '
         'tAktivity
@@ -1492,57 +1609,55 @@ Partial Class UserForm
         Me.tAktivity.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tAktivity.FormattingEnabled = True
         Me.tAktivity.Items.AddRange(New Object() {"Santai", "Ringan", "Sedang", "Berat", "Ekstrem"})
-        Me.tAktivity.Location = New System.Drawing.Point(123, 282)
+        Me.tAktivity.Location = New System.Drawing.Point(184, 434)
+        Me.tAktivity.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tAktivity.Name = "tAktivity"
-        Me.tAktivity.Size = New System.Drawing.Size(192, 32)
+        Me.tAktivity.Size = New System.Drawing.Size(286, 41)
         Me.tAktivity.TabIndex = 7
         '
         'tBerat
         '
         Me.tBerat.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tBerat.Location = New System.Drawing.Point(123, 239)
+        Me.tBerat.Location = New System.Drawing.Point(184, 368)
+        Me.tBerat.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tBerat.Name = "tBerat"
-        Me.tBerat.Size = New System.Drawing.Size(192, 29)
+        Me.tBerat.Size = New System.Drawing.Size(286, 40)
         Me.tBerat.TabIndex = 5
         '
         'tPw
         '
         Me.tPw.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tPw.Location = New System.Drawing.Point(123, 153)
+        Me.tPw.Location = New System.Drawing.Point(184, 235)
+        Me.tPw.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tPw.Name = "tPw"
-        Me.tPw.Size = New System.Drawing.Size(192, 29)
+        Me.tPw.Size = New System.Drawing.Size(286, 40)
         Me.tPw.TabIndex = 3
         '
         'tEmail
         '
         Me.tEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tEmail.Location = New System.Drawing.Point(123, 110)
+        Me.tEmail.Location = New System.Drawing.Point(184, 169)
+        Me.tEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tEmail.Name = "tEmail"
-        Me.tEmail.Size = New System.Drawing.Size(192, 29)
+        Me.tEmail.Size = New System.Drawing.Size(286, 40)
         Me.tEmail.TabIndex = 2
         '
         'tNama
         '
         Me.tNama.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tNama.Location = New System.Drawing.Point(123, 67)
+        Me.tNama.Location = New System.Drawing.Point(184, 103)
+        Me.tNama.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tNama.Name = "tNama"
-        Me.tNama.Size = New System.Drawing.Size(192, 29)
+        Me.tNama.Size = New System.Drawing.Size(286, 40)
         Me.tNama.TabIndex = 1
-        '
-        'nutrisiporsi
-        '
-        Me.nutrisiporsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nutrisiporsi.Location = New System.Drawing.Point(145, 261)
-        Me.nutrisiporsi.Name = "nutrisiporsi"
-        Me.nutrisiporsi.Size = New System.Drawing.Size(255, 26)
-        Me.nutrisiporsi.TabIndex = 19
         '
         'rcari
         '
         Me.rcari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rcari.Location = New System.Drawing.Point(25, 56)
+        Me.rcari.Location = New System.Drawing.Point(38, 86)
+        Me.rcari.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rcari.Name = "rcari"
-        Me.rcari.Size = New System.Drawing.Size(269, 26)
+        Me.rcari.Size = New System.Drawing.Size(402, 35)
         Me.rcari.TabIndex = 13
         '
         'RadiusBox6
@@ -1550,33 +1665,36 @@ Partial Class UserForm
         Me.RadiusBox6.BackColor = System.Drawing.Color.DarkGray
         Me.RadiusBox6.Enabled = False
         Me.RadiusBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadiusBox6.Location = New System.Drawing.Point(30, 63)
+        Me.RadiusBox6.Location = New System.Drawing.Point(45, 97)
+        Me.RadiusBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadiusBox6.Name = "RadiusBox6"
-        Me.RadiusBox6.Size = New System.Drawing.Size(269, 26)
+        Me.RadiusBox6.Size = New System.Drawing.Size(402, 35)
         Me.RadiusBox6.TabIndex = 12
         '
         'tPorsi
         '
         Me.tPorsi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tPorsi.Location = New System.Drawing.Point(73, 220)
+        Me.tPorsi.Location = New System.Drawing.Point(110, 338)
+        Me.tPorsi.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tPorsi.Name = "tPorsi"
-        Me.tPorsi.Size = New System.Drawing.Size(139, 26)
+        Me.tPorsi.Size = New System.Drawing.Size(206, 35)
         Me.tPorsi.TabIndex = 25
         '
         'rdate
         '
         Me.rdate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rdate.Location = New System.Drawing.Point(73, 255)
+        Me.rdate.Location = New System.Drawing.Point(110, 392)
+        Me.rdate.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.rdate.Name = "rdate"
-        Me.rdate.Size = New System.Drawing.Size(139, 20)
+        Me.rdate.Size = New System.Drawing.Size(206, 26)
         Me.rdate.TabIndex = 24
         '
         'UserForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(949, 525)
+        Me.ClientSize = New System.Drawing.Size(1424, 808)
         Me.Controls.Add(Me.PanelDashboard)
         Me.Controls.Add(Me.PanelStat)
         Me.Controls.Add(Me.infoasupan)
@@ -1585,6 +1703,7 @@ Partial Class UserForm
         Me.Controls.Add(Me.PanelAsupan)
         Me.Controls.Add(Me.sidenav)
         Me.ForeColor = System.Drawing.Color.White
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "UserForm"
         Me.Text = "User"
         Me.sidenav.ResumeLayout(False)

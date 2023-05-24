@@ -558,6 +558,7 @@ Public Class UserForm
         aturdaftar("")
         hitungbmi()
         makananfavorit()
+
     End Sub
 
     Sub tes(sender As Object, e As EventArgs)
@@ -598,6 +599,11 @@ Public Class UserForm
         PanelDashboard.Controls.Clear()
         ceknutrisi()
         aturDashboard()
+        If tgltgl.Text = hariini Then
+            Label12.Text = "Daftar Asupan Hari Ini"
+        Else
+            Label12.Text = "Daftar Asupan " & tgltgl.Text
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -782,18 +788,6 @@ Public Class UserForm
         End If
     End Sub
 
-    Private Sub PanelAsupan_Paint(sender As Object, e As PaintEventArgs) Handles PanelAsupan.Paint
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As MouseEventArgs) Handles PictureBox3.MouseClick
-
-    End Sub
-
-    Private Sub RadiusBox7_TextChanged(sender As Object, e As EventArgs) Handles rcari.TextChanged
-
-    End Sub
-
     Private Sub PictureBox11_Click(sender As Object, e As EventArgs) Handles PictureBox11.Click
         daftarmakanan.Controls.Clear()
         aturdaftar(rcari.Text)
@@ -801,10 +795,6 @@ Public Class UserForm
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         infoasupan.Hide()
-
-    End Sub
-
-    Private Sub bDashboard_Paint(sender As Object, e As PaintEventArgs) Handles bDashboard.Paint
 
     End Sub
 
@@ -1015,6 +1005,14 @@ Public Class UserForm
         If Not (IsNumeric(e.KeyChar) Or e.KeyChar = vbBack) Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As MouseEventArgs) Handles PictureBox3.MouseClick
+
     End Sub
 
     Private Sub bAsupanku_Click(sender As Object, e As EventArgs) Handles bAsupanku.Click

@@ -713,17 +713,7 @@ Public Class AdminForm
 
     End Sub
 
-    Private Sub aturpie()
 
-        pie.Series(0).Points.Clear()
-        pie.Series(0).Points.AddXY("Slice 1", 25)
-        pie.Series(0).Points.AddXY("Slice 2", 35)
-        pie.Series(0).Points.AddXY("Slice 3", 40)
-
-        pie.Series(0)("PieLabelStyle") = "Outside"
-        pie.Series(0).Label = "#VALX: #VALY%"
-
-    End Sub
 
     Private Sub AdminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         bDashboard.BackColor = Color.FromArgb(191, 139, 255)
@@ -735,9 +725,7 @@ Public Class AdminForm
         infouser.Hide()
         aturchart()
         aturchart2()
-        aturpie()
         ambilAkun()
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

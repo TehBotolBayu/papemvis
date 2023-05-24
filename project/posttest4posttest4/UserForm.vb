@@ -1,5 +1,6 @@
 ﻿Imports CrystalDecisions.CrystalReports.ViewerObjectModel
 Imports MySql.Data.MySqlClient
+Imports System.Text.RegularExpressions
 Imports System.Web.Services.Description
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
 
@@ -59,6 +60,7 @@ Public Class UserForm
             tJenis.SelectedIndex = 1
         End If
 
+        tAktivity.SelectedIndex = RD(10)
         tDate.Text = Module1.RD(3).ToString()
         tTinggi.Text = Module1.RD(8).ToString()
         tBerat.Text = Module1.RD(9).ToString()
@@ -117,12 +119,12 @@ Public Class UserForm
         prototal = 0
         lemtotal = 0
         karbototal = 0
-
+        Dim kini As Double = kalori
         CMD = New MySqlCommand("select * from nutrisi where tanggal = '" & tglasupan & "' and idakun = '" & Login.idLogin & "'", CONN)
         RD = CMD.ExecuteReader
         If Module1.RD.HasRows Then
             While Module1.RD.Read
-                kalori = Module1.RD(7)
+                kini = Module1.RD(7)
                 lemakmax = Module1.RD(8)
                 proteinmax = Module1.RD(9)
                 karbomax = Module1.RD(10)
@@ -139,8 +141,8 @@ Public Class UserForm
         progresskar = 1
         progresslem = 1
         progresspro = 1
-        If kaltotal < kalori Then
-            progresskal = kaltotal / kalori
+        If kaltotal < kini Then
+            progresskal = kaltotal / kini
         End If
         If karbototal < karbomax Then
             progresskar = karbototal / karbomax
@@ -152,7 +154,7 @@ Public Class UserForm
             progresspro = prototal / proteinmax
         End If
 
-        LabelKalori.Text = kaltotal.ToString & "/" & kalori.ToString
+        LabelKalori.Text = kaltotal.ToString & "/" & kini.ToString
         LabelProtein.Text = prototal.ToString & "/" & proteinmax.ToString
         LabelLemak.Text = lemtotal.ToString & "/" & lemakmax.ToString
         LabelKarbo.Text = karbototal.ToString & "/" & karbomax.ToString
@@ -599,6 +601,12 @@ Public Class UserForm
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If tPorsi.Text = "" Then
+            MsgBox("Masukkan jumlah porsi terlebih dahulu")
+            tPorsi.Focus()
+            Return
+        End If
+
         MsgBox("Berhasil Ditambahkan!")
         If selected = -1 Then
             MsgBox("Pilih makanan terlebih dahulu")
@@ -732,6 +740,7 @@ Public Class UserForm
 
 
     Private Sub nutrisiporsi_TextChanged(sender As Object, e As EventArgs) Handles nutrisiporsi.TextChanged
+
     End Sub
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
@@ -800,6 +809,11 @@ Public Class UserForm
     End Sub
 
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        If nutrisiporsi.Text = "" Then
+            MsgBox("Masukkan porsi terlebih dahulu")
+            nutrisiporsi.Focus()
+            Return
+        End If
 
         CMD = New MySqlCommand("SELECT nutrisi.id, makanan.nama, makanan.kalori, makanan.lemak, makanan.protein, makanan.karbohidrat, nutrisi.porsi FROM nutrisi JOIN makanan WHERE nutrisi.id = '" & selected & "'", CONN)
         Module1.RD = CMD.ExecuteReader
@@ -831,13 +845,103 @@ Public Class UserForm
         aturDashboard()
     End Sub
 
+    Function cekkosongedit() As Integer
+        If tNama.Text = "" Then
+            MessageBox.Show("Nama belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            tNama.Focus()
+            Return 0
+        ElseIf tEmail.Text = "" Then
+            MessageBox.Show("Email belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            tEmail.Focus()
+            Return 0
+        ElseIf tPw.Text = "" Then
+            MessageBox.Show("Password belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            tPw.Focus()
+            Return 0
+        ElseIf tTinggi.Text = "" Then
+            MessageBox.Show("Tinggi badan belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            tTinggi.Focus()
+            Return 0
+        ElseIf tBerat.Text = "" Then
+            MessageBox.Show("Berat badan belum terisi", "Konfirmasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            tBerat.Focus()
+            Return 0
+        Else
+            Return 1
+        End If
+    End Function
+
+    Private Sub hitungkalori()
+        Dim tgl As Date
+
+        tgl = tDate.Value
+        umur = Val(hariini.Year) - Val(tgl.Year)
+        If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
+            umur = umur - 1
+        End If
+
+        Login.umur = umur
+
+        Dim aktivitas As Double
+
+        If tAktivity.SelectedIndex = 0 Then
+            aktivitas = 1.2
+        ElseIf tAktivity.SelectedIndex = 1 Then
+            aktivitas = 1.375
+        ElseIf tAktivity.SelectedIndex = 2 Then
+            aktivitas = 1.55
+        ElseIf tAktivity.SelectedIndex = 3 Then
+            aktivitas = 1.725
+        ElseIf tAktivity.SelectedIndex = 4 Then
+            aktivitas = 1.9
+        End If
+
+        If Beranda.kelamin = "Laki-Laki" Then
+            kalori = ((88.4 + (13.4 * Val(tBerat.Text))) + (4.8 * Val(tTinggi.Text)) - (5.68 * umur))
+        Else
+            kalori = ((447.6 + (9.25 * Val(tBerat.Text))) + (3.1 * Val(tTinggi.Text)) - (4.33 * umur))
+        End If
+        kalori = kalori * aktivitas
+
+        Dim ubah As String = "UPDATE AKUN SET kalori = '" & kalori & "' WHERE id = '" & Login.idLogin & "'"
+        CMD = New MySqlCommand(ubah, CONN)
+        CMD.ExecuteNonQuery()
+
+    End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If cekkosongedit() = 0 Then
+            Return
+        End If
+
+        Dim emailPattern As String = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+        Dim email As String = tEmail.Text
+
+        Try
+            If Regex.IsMatch(email, emailPattern) Then
+                ' Email format is valid
+                ' Lakukan tindakan yang diinginkan di sini
+            Else
+                ' Email format is invalid
+                MessageBox.Show("Format email tidak valid.")
+                Return
+            End If
+        Catch ex As Exception
+            ' Exception handling
+            MessageBox.Show("Terjadi kesalahan: " & ex.Message)
+            Return
+        End Try
+
         Dim d As String = tDate.Value.ToString("yy-MM-dd")
         Dim ubah As String = "UPDATE AKUN SET nama = '" & tNama.Text & "', email = '" & tEmail.Text & "', password = '" & tPw.Text & "', tinggi = '" & tTinggi.Text & "', berat = '" & tBerat.Text & "', aktivitas = '" & tAktivity.SelectedIndex().ToString & "', kelamin = '" & tJenis.Text & "', tanggal = '" & d & "' WHERE id = '" & Login.idLogin & "'"
         CMD = New MySqlCommand(ubah, CONN)
         CMD.ExecuteNonQuery()
-        MsgBox("Akun anda berhasil diubah!")
+
+        hitungkalori()
         ambilAkun()
+        aturDashboard()
+
+        MsgBox("Akun anda berhasil diubah!")
     End Sub
 
     Private Sub PictureBox12_Click(sender As Object, e As EventArgs) Handles PictureBox12.Click
@@ -895,9 +999,32 @@ Public Class UserForm
         Timer3.Enabled = True
     End Sub
 
+    Private Sub tPorsi_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles tPorsi.KeyPress
+        If Not (IsNumeric(e.KeyChar) Or e.KeyChar = vbBack) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub tTinggi_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tTinggi.KeyPress
+        If Not (IsNumeric(e.KeyChar) Or e.KeyChar = vbBack) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub tBerat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tBerat.KeyPress
+        If Not (IsNumeric(e.KeyChar) Or e.KeyChar = vbBack) Then
+            e.Handled = True
+        End If
+    End Sub
+
     Private Sub bAsupanku_Click(sender As Object, e As EventArgs) Handles bAsupanku.Click
         PanelStat.Hide()
         infoasupan.Hide()
     End Sub
 
+    Private Sub nutrisiporsi_KeyPress(sender As Object, e As KeyPressEventArgs) Handles nutrisiporsi.KeyPress
+        If Not (IsNumeric(e.KeyChar) Or e.KeyChar = vbBack) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class

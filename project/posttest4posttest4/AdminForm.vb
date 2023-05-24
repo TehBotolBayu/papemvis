@@ -601,6 +601,130 @@ Public Class AdminForm
 
     End Sub
 
+    Private Sub aturchart2()
+
+        CMD = New MySqlCommand("SELECT * FROM akun WHERE status = 'user'", CONN)
+        RD = CMD.ExecuteReader
+
+        Dim tgl As Date
+        Dim umur As Integer
+
+        Dim satu, dua, tiga, empat, lima As Double
+
+        satu = 0
+        dua = 0
+        tiga = 0
+        empat = 0
+        lima = 0
+
+        Dim s, d, t, e, l As Double
+        s = 0
+        d = 0
+        t = 0
+        e = 0
+        l = 0
+
+        Dim psatu, pdua, ptiga, pempat, plima As Double
+
+        psatu = 0
+        pdua = 0
+        ptiga = 0
+        pempat = 0
+        plima = 0
+
+        Dim ps, pd, pt, pe, pl As Double
+        ps = 0
+        pd = 0
+        pt = 0
+        pe = 0
+        pl = 0
+
+        While RD.Read()
+
+            umur = 0
+            tgl = RD(3)
+            umur = Val(hariini.Year) - Val(tgl.Year)
+            If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
+                umur = umur - 1
+            End If
+            If RD(5).ToString = "Laki-Laki" Then
+
+                If umur <= 12 Then
+                    satu = satu + RD(7)
+                    s = s + 1
+                ElseIf umur > 12 And umur <= 18 Then
+                    dua = dua + RD(7)
+                    d = d + 1
+                ElseIf umur > 18 And umur <= 25 Then
+                    tiga = tiga + RD(7)
+                    t = t + 1
+                ElseIf umur > 25 And umur <= 44 Then
+                    empat = empat + RD(7)
+                    e = e + 1
+                ElseIf umur > 44 Then
+                    lima = lima + RD(7)
+                    l = l + 1
+                End If
+            Else
+                If umur <= 12 Then
+                    psatu = psatu + RD(7)
+                    ps = ps + 1
+                ElseIf umur > 12 And umur <= 18 Then
+                    pdua = pdua + RD(7)
+                    pd = pd + 1
+                ElseIf umur > 18 And umur <= 25 Then
+                    ptiga = ptiga + RD(7)
+                    pt = pt + 1
+                ElseIf umur > 25 And umur <= 44 Then
+                    pempat = pempat + RD(7)
+                    pe = pe + 1
+                ElseIf umur > 44 Then
+                    plima = plima + RD(7)
+                    pl = pl + 1
+                End If
+            End If
+
+        End While
+
+        RD.Close()
+
+        satu = satu / s
+        dua = dua / d
+        tiga = tiga / t
+        empat = empat / e
+        lima = lima / l
+
+        psatu = psatu / ps
+        pdua = pdua / pd
+        ptiga = ptiga / pt
+        pempat = pempat / pe
+        plima = plima / pl
+
+        Chart2.Series("Laki-Laki").Points.AddXY("0-12", satu)
+        Chart2.Series("Perempuan").Points.AddXY("0-12", psatu)
+        Chart2.Series("Laki-Laki").Points.AddXY("13-18", dua)
+        Chart2.Series("Perempuan").Points.AddXY("13-18", pdua)
+        Chart2.Series("Laki-Laki").Points.AddXY("19-25", tiga)
+        Chart2.Series("Perempuan").Points.AddXY("19-25", ptiga)
+        Chart2.Series("Laki-Laki").Points.AddXY("26-44", empat)
+        Chart2.Series("Perempuan").Points.AddXY("26-44", pempat)
+        Chart2.Series("Laki-Laki").Points.AddXY("<45", lima)
+        Chart2.Series("Perempuan").Points.AddXY("<45", plima)
+
+    End Sub
+
+    Private Sub aturpie()
+
+        pie.Series(0).Points.Clear()
+        pie.Series(0).Points.AddXY("Slice 1", 25)
+        pie.Series(0).Points.AddXY("Slice 2", 35)
+        pie.Series(0).Points.AddXY("Slice 3", 40)
+
+        pie.Series(0)("PieLabelStyle") = "Outside"
+        pie.Series(0).Label = "#VALX: #VALY%"
+
+    End Sub
+
     Private Sub AdminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         bDashboard.BackColor = Color.FromArgb(191, 139, 255)
         bAsupanku.BackColor = Color.FromArgb(255, 255, 255)
@@ -610,6 +734,8 @@ Public Class AdminForm
         aturuser("")
         infouser.Hide()
         aturchart()
+        aturchart2()
+        aturpie()
         ambilAkun()
 
     End Sub

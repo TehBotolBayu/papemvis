@@ -665,9 +665,19 @@ Public Class UserForm
 
     End Sub
 
-    Private Sub tgltgl_Click(sender As Object, e As EventArgs)
-
+    Private Sub LabelAsupan_Click(sender As Object, e As EventArgs) Handles LabelAsupan.Click
+        PanelAsupan.Show()
+        PanelDashboard.Hide()
+        PanelStat.Hide()
+        PanelProfil.Hide()
+        infoasupan.Hide()
+        bAsupanku.BackColor = Color.FromArgb(191, 139, 255)
+        bDashboard.BackColor = Color.FromArgb(255, 255, 255)
+        LabelAsupan.ForeColor = Color.White
+        LabelHome.ForeColor = Color.DimGray
+        panelnow = "as"
     End Sub
+
 
     Private Sub bAsupanku_MouseClick(sender As Object, e As MouseEventArgs) Handles bAsupanku.MouseClick
         PanelAsupan.Show()
@@ -680,6 +690,18 @@ Public Class UserForm
         LabelAsupan.ForeColor = Color.White
         LabelHome.ForeColor = Color.DimGray
         panelnow = "as"
+    End Sub
+
+    Private Sub LabelHome_Click(sender As Object, e As EventArgs) Handles LabelHome.Click
+        PanelAsupan.Hide()
+        PanelDashboard.Show()
+        PanelProfil.Hide()
+        PanelStat.Show()
+        bDashboard.BackColor = Color.FromArgb(191, 139, 255)
+        bAsupanku.BackColor = Color.FromArgb(255, 255, 255)
+        LabelHome.ForeColor = Color.White
+        LabelAsupan.ForeColor = Color.DimGray
+        panelnow = "db"
     End Sub
 
     Private Sub bDashboard_MouseClick(sender As Object, e As MouseEventArgs) Handles bDashboard.MouseClick
@@ -702,10 +724,17 @@ Public Class UserForm
         bDashboard.BackColor = Color.FromArgb(191, 139, 255)
     End Sub
 
-    Private Sub bAsupanku_MouseEnter(sender As Object, e As EventArgs) Handles bAsupanku.MouseEnter
+    Private Sub LabelAsupan_MouseEnter(sender As Object, e As EventArgs) Handles LabelAsupan.MouseEnter
         bAsupanku.BackColor = Color.FromArgb(191, 139, 255)
     End Sub
 
+    Private Sub LabelHome_MouseEnter(sender As Object, e As EventArgs) Handles LabelHome.MouseEnter
+        bAsupanku.BackColor = Color.FromArgb(191, 139, 255)
+    End Sub
+
+    Private Sub bAsupanku_MouseEnter(sender As Object, e As EventArgs) Handles bAsupanku.MouseEnter
+        bAsupanku.BackColor = Color.FromArgb(191, 139, 255)
+    End Sub
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles paneledit.Paint
 
     End Sub
@@ -728,6 +757,12 @@ Public Class UserForm
         End If
     End Sub
 
+    Private Sub LabelAsupan_MouseLeave(sender As Object, e As EventArgs) Handles LabelAsupan.MouseLeave
+        If Not panelnow = "as" Then
+            bAsupanku.BackColor = Color.FromArgb(255, 255, 255)
+        End If
+    End Sub
+
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
         If paneledit.Location.X < PanelProfil.Width Then
             paneledit.Left = paneledit.Left + 30
@@ -737,11 +772,16 @@ Public Class UserForm
     End Sub
 
 
+    Private Sub LabelHome_MouseLeave(sender As Object, e As EventArgs) Handles LabelHome.MouseLeave
+        If Not panelnow = "db" Then
+            bDashboard.BackColor = Color.FromArgb(255, 255, 255)
+        End If
+    End Sub
+
     Private Sub bDashboard_MouseLeave(sender As Object, e As EventArgs) Handles bDashboard.MouseLeave
         If Not panelnow = "db" Then
             bDashboard.BackColor = Color.FromArgb(255, 255, 255)
         End If
-
     End Sub
 
 
@@ -961,12 +1001,23 @@ Public Class UserForm
 
     End Sub
 
-    Private Sub keluar_MouseClick(sender As Object, e As MouseEventArgs) Handles keluar.MouseClick
+    Private Sub Label20_ClicK(sender As Object, e As EventArgs) Handles Label20.MouseClick
         Login.Close()
         Registrasi.Close()
 
         Me.Close()
+    End Sub
 
+    Private Sub Label20_MouseEnterk(sender As Object, e As EventArgs) Handles Label20.MouseEnter
+        keluar.BackColor = Color.FromArgb(191, 139, 255)
+    End Sub
+
+    Private Sub Label20_MouseLeave(sender As Object, e As EventArgs) Handles Label20.MouseLeave
+        keluar.BackColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub keluar_MouseClick(sender As Object, e As MouseEventArgs) Handles keluar.MouseClick
+        keluar.BackColor = Color.FromArgb(255, 255, 255)
     End Sub
 
     Private Sub keluar_MouseEnter(sender As Object, e As EventArgs) Handles keluar.MouseEnter
@@ -1015,6 +1066,10 @@ Public Class UserForm
 
     End Sub
 
+    Private Sub bDashboard_Paint(sender As Object, e As PaintEventArgs) Handles bDashboard.Paint
+
+    End Sub
+
     Private Sub bAsupanku_Click(sender As Object, e As EventArgs) Handles bAsupanku.Click
         PanelStat.Hide()
         infoasupan.Hide()
@@ -1024,5 +1079,9 @@ Public Class UserForm
         If Not (IsNumeric(e.KeyChar) Or e.KeyChar = vbBack) Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub bDashboard_HelpRequested(sender As Object, hlpevent As HelpEventArgs) Handles bDashboard.HelpRequested
+
     End Sub
 End Class

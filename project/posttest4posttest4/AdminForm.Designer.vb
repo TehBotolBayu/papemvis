@@ -23,13 +23,14 @@ Partial Class AdminForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminForm))
         Me.PanelMakanan = New System.Windows.Forms.Panel()
         Me.Paneldata = New System.Windows.Forms.Panel()
@@ -111,6 +112,10 @@ Partial Class AdminForm
         Me.tNama = New posttest4posttest4.RadiusBox()
         Me.rcari = New posttest4posttest4.RadiusBox()
         Me.RadiusBox6 = New posttest4posttest4.RadiusBox()
+        Me.tgluser = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.aktivitasuser = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Paneldata.SuspendLayout()
         Me.header.SuspendLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -494,21 +499,21 @@ Partial Class AdminForm
         '
         'Chart2
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend3)
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend1)
         Me.Chart2.Location = New System.Drawing.Point(415, 19)
         Me.Chart2.Name = "Chart2"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.Chart2.Series.Add(Series3)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart2.Series.Add(Series1)
         Me.Chart2.Size = New System.Drawing.Size(300, 140)
         Me.Chart2.TabIndex = 3
         Me.Chart2.Text = "Chart2"
-        Title2.Name = "BMI"
-        Me.Chart2.Titles.Add(Title2)
+        Title1.Name = "BMI"
+        Me.Chart2.Titles.Add(Title1)
         '
         'Label4
         '
@@ -521,16 +526,21 @@ Partial Class AdminForm
         '
         'Chart1
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend4)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         Me.Chart1.Location = New System.Drawing.Point(82, 19)
         Me.Chart1.Name = "Chart1"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "BMI"
-        Me.Chart1.Series.Add(Series4)
+        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Laki-Laki"
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Perempuan"
+        Me.Chart1.Series.Add(Series2)
+        Me.Chart1.Series.Add(Series3)
         Me.Chart1.Size = New System.Drawing.Size(300, 151)
         Me.Chart1.TabIndex = 1
         Me.Chart1.Text = "Chart1"
@@ -552,6 +562,10 @@ Partial Class AdminForm
         Me.infouser.BackColor = System.Drawing.Color.Transparent
         Me.infouser.BackgroundImage = Global.posttest4posttest4.My.Resources.Resources.editmenu
         Me.infouser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.infouser.Controls.Add(Me.aktivitasuser)
+        Me.infouser.Controls.Add(Me.Label11)
+        Me.infouser.Controls.Add(Me.tgluser)
+        Me.infouser.Controls.Add(Me.Label10)
         Me.infouser.Controls.Add(Me.beratuser)
         Me.infouser.Controls.Add(Me.Label38)
         Me.infouser.Controls.Add(Me.Label41)
@@ -574,7 +588,7 @@ Partial Class AdminForm
         Me.beratuser.AutoSize = True
         Me.beratuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.beratuser.ForeColor = System.Drawing.Color.White
-        Me.beratuser.Location = New System.Drawing.Point(276, 235)
+        Me.beratuser.Location = New System.Drawing.Point(279, 198)
         Me.beratuser.Name = "beratuser"
         Me.beratuser.Size = New System.Drawing.Size(52, 18)
         Me.beratuser.TabIndex = 34
@@ -585,7 +599,7 @@ Partial Class AdminForm
         Me.Label38.AutoSize = True
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label38.ForeColor = System.Drawing.Color.White
-        Me.Label38.Location = New System.Drawing.Point(111, 235)
+        Me.Label38.Location = New System.Drawing.Point(114, 198)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(100, 18)
         Me.Label38.TabIndex = 33
@@ -607,7 +621,7 @@ Partial Class AdminForm
         Me.tinggiuser.AutoSize = True
         Me.tinggiuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tinggiuser.ForeColor = System.Drawing.Color.White
-        Me.tinggiuser.Location = New System.Drawing.Point(276, 207)
+        Me.tinggiuser.Location = New System.Drawing.Point(279, 170)
         Me.tinggiuser.Name = "tinggiuser"
         Me.tinggiuser.Size = New System.Drawing.Size(52, 18)
         Me.tinggiuser.TabIndex = 31
@@ -618,7 +632,7 @@ Partial Class AdminForm
         Me.kelaminuser.AutoSize = True
         Me.kelaminuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.kelaminuser.ForeColor = System.Drawing.Color.White
-        Me.kelaminuser.Location = New System.Drawing.Point(276, 179)
+        Me.kelaminuser.Location = New System.Drawing.Point(279, 142)
         Me.kelaminuser.Name = "kelaminuser"
         Me.kelaminuser.Size = New System.Drawing.Size(52, 18)
         Me.kelaminuser.TabIndex = 30
@@ -629,7 +643,7 @@ Partial Class AdminForm
         Me.emailuser.AutoSize = True
         Me.emailuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.emailuser.ForeColor = System.Drawing.Color.White
-        Me.emailuser.Location = New System.Drawing.Point(276, 151)
+        Me.emailuser.Location = New System.Drawing.Point(279, 114)
         Me.emailuser.Name = "emailuser"
         Me.emailuser.Size = New System.Drawing.Size(52, 18)
         Me.emailuser.TabIndex = 29
@@ -640,7 +654,7 @@ Partial Class AdminForm
         Me.namauser.AutoSize = True
         Me.namauser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.namauser.ForeColor = System.Drawing.Color.White
-        Me.namauser.Location = New System.Drawing.Point(275, 123)
+        Me.namauser.Location = New System.Drawing.Point(278, 86)
         Me.namauser.Name = "namauser"
         Me.namauser.Size = New System.Drawing.Size(52, 18)
         Me.namauser.TabIndex = 28
@@ -651,7 +665,7 @@ Partial Class AdminForm
         Me.Label33.AutoSize = True
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.ForeColor = System.Drawing.Color.White
-        Me.Label33.Location = New System.Drawing.Point(111, 207)
+        Me.Label33.Location = New System.Drawing.Point(114, 170)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(105, 18)
         Me.Label33.TabIndex = 22
@@ -662,7 +676,7 @@ Partial Class AdminForm
         Me.Label32.AutoSize = True
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label32.ForeColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(112, 179)
+        Me.Label32.Location = New System.Drawing.Point(115, 142)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(113, 18)
         Me.Label32.TabIndex = 21
@@ -673,7 +687,7 @@ Partial Class AdminForm
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.White
-        Me.Label31.Location = New System.Drawing.Point(112, 151)
+        Me.Label31.Location = New System.Drawing.Point(115, 114)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(50, 18)
         Me.Label31.TabIndex = 20
@@ -695,7 +709,7 @@ Partial Class AdminForm
         Me.editasupan.AutoSize = True
         Me.editasupan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.editasupan.ForeColor = System.Drawing.Color.White
-        Me.editasupan.Location = New System.Drawing.Point(111, 123)
+        Me.editasupan.Location = New System.Drawing.Point(114, 86)
         Me.editasupan.Name = "editasupan"
         Me.editasupan.Size = New System.Drawing.Size(52, 18)
         Me.editasupan.TabIndex = 0
@@ -1056,15 +1070,59 @@ Partial Class AdminForm
         Me.RadiusBox6.Size = New System.Drawing.Size(269, 26)
         Me.RadiusBox6.TabIndex = 21
         '
+        'tgluser
+        '
+        Me.tgluser.AutoSize = True
+        Me.tgluser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tgluser.ForeColor = System.Drawing.Color.White
+        Me.tgluser.Location = New System.Drawing.Point(279, 230)
+        Me.tgluser.Name = "tgluser"
+        Me.tgluser.Size = New System.Drawing.Size(52, 18)
+        Me.tgluser.TabIndex = 36
+        Me.tgluser.Text = "Nama"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(114, 230)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(109, 18)
+        Me.Label10.TabIndex = 35
+        Me.Label10.Text = "Tanggal Lahir"
+        '
+        'aktivitasuser
+        '
+        Me.aktivitasuser.AutoSize = True
+        Me.aktivitasuser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.aktivitasuser.ForeColor = System.Drawing.Color.White
+        Me.aktivitasuser.Location = New System.Drawing.Point(279, 262)
+        Me.aktivitasuser.Name = "aktivitasuser"
+        Me.aktivitasuser.Size = New System.Drawing.Size(52, 18)
+        Me.aktivitasuser.TabIndex = 38
+        Me.aktivitasuser.Text = "Nama"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(114, 262)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(71, 18)
+        Me.Label11.TabIndex = 37
+        Me.Label11.Text = "Aktivitas"
+        '
         'AdminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(949, 525)
-        Me.Controls.Add(Me.PanelProfil)
-        Me.Controls.Add(Me.infouser)
-        Me.Controls.Add(Me.panelchart)
         Me.Controls.Add(Me.PanelUser)
+        Me.Controls.Add(Me.panelchart)
+        Me.Controls.Add(Me.infouser)
+        Me.Controls.Add(Me.PanelProfil)
         Me.Controls.Add(Me.Paneldata)
         Me.Controls.Add(Me.PanelMakanan)
         Me.Controls.Add(Me.header)
@@ -1183,4 +1241,8 @@ Partial Class AdminForm
     Friend WithEvents Button5 As Button
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer
+    Friend WithEvents aktivitasuser As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents tgluser As Label
+    Friend WithEvents Label10 As Label
 End Class

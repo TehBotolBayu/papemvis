@@ -272,7 +272,7 @@ Public Class AdminForm
         If s = Nothing Then
             s = ""
         End If
-        CMD = New MySqlCommand("SELECT * FROM akun WHERE nama LIKE '%" & s & "%'", CONN)
+        CMD = New MySqlCommand("SELECT * FROM akun WHERE nama LIKE '%" & s & "%' AND status = 'user'", CONN)
         RD = CMD.ExecuteReader
         Dim ii As Integer = 0
 
@@ -388,13 +388,11 @@ Public Class AdminForm
 
                 PanelUser.Controls.Add(user2)
 
-
                 RD.Read()
                 If RD(0).ToString = id2.Text Then
                     RD.Close()
                     Return
                 End If
-
                 ' 
                 ' user3
                 ' 
@@ -443,8 +441,6 @@ Public Class AdminForm
                 ' 
                 PanelUser.Controls.Add(user3)
 
-
-
                 index = index + 1
             End While
         Else
@@ -465,6 +461,20 @@ Public Class AdminForm
         kelaminuser.Text = RD(5).ToString
         tinggiuser.Text = RD(8).ToString
         beratuser.Text = RD(9).ToString
+        If RD(10) = 0 Then
+            aktivitasuser.Text = "Santai"
+        ElseIf RD(10) = 1 Then
+            aktivitasuser.Text = "Ringan"
+        ElseIf RD(10) = 2 Then
+            aktivitasuser.Text = "Sedang"
+        ElseIf RD(10) = 3 Then
+            aktivitasuser.Text = "Berat"
+        ElseIf RD(10) = 4 Then
+            aktivitasuser.Text = "Ekstrem"
+        End If
+        Dim x As Date = RD(3)
+
+        tgluser.Text = x.ToString("yyyy-MM-dd")
         RD.Close()
         infouser.Show()
 
@@ -486,6 +496,7 @@ Public Class AdminForm
 
         Dim tgl As Date
         Dim umur As Integer
+
         Dim satu, dua, tiga, empat, lima As Double
 
         satu = 0
@@ -501,6 +512,21 @@ Public Class AdminForm
         e = 0
         l = 0
 
+        Dim psatu, pdua, ptiga, pempat, plima As Double
+
+        psatu = 0
+        pdua = 0
+        ptiga = 0
+        pempat = 0
+        plima = 0
+
+        Dim ps, pd, pt, pe, pl As Double
+        ps = 0
+        pd = 0
+        pt = 0
+        pe = 0
+        pl = 0
+
         While RD.Read()
 
             umur = 0
@@ -509,22 +535,41 @@ Public Class AdminForm
             If Val(hariini.Month) < Val(tgl.Month) And Val(hariini.Day) < Val(tgl.Day) Then
                 umur = umur - 1
             End If
+            If RD(5).ToString = "Laki-Laki" Then
 
-            If umur <= 12 Then
-                satu = satu + bmi(RD(8), RD(9))
-                s = s + 1
-            ElseIf umur > 12 And umur <= 18 Then
-                dua = dua + bmi(RD(8), RD(9))
-                d = d + 1
-            ElseIf umur > 18 And umur <= 25 Then
-                tiga = tiga + bmi(RD(8), RD(9))
-                t = t + 1
-            ElseIf umur > 25 And umur <= 44 Then
-                empat = empat + bmi(RD(8), RD(9))
-                e = e + 1
-            ElseIf umur > 44 Then
-                lima = lima + bmi(RD(8), RD(9))
-                l = l + 1
+                If umur <= 12 Then
+                    satu = satu + bmi(RD(8), RD(9))
+                    s = s + 1
+                ElseIf umur > 12 And umur <= 18 Then
+                    dua = dua + bmi(RD(8), RD(9))
+                    d = d + 1
+                ElseIf umur > 18 And umur <= 25 Then
+                    tiga = tiga + bmi(RD(8), RD(9))
+                    t = t + 1
+                ElseIf umur > 25 And umur <= 44 Then
+                    empat = empat + bmi(RD(8), RD(9))
+                    e = e + 1
+                ElseIf umur > 44 Then
+                    lima = lima + bmi(RD(8), RD(9))
+                    l = l + 1
+                End If
+            Else
+                If umur <= 12 Then
+                    psatu = psatu + bmi(RD(8), RD(9))
+                    ps = ps + 1
+                ElseIf umur > 12 And umur <= 18 Then
+                    pdua = pdua + bmi(RD(8), RD(9))
+                    pd = pd + 1
+                ElseIf umur > 18 And umur <= 25 Then
+                    ptiga = ptiga + bmi(RD(8), RD(9))
+                    pt = pt + 1
+                ElseIf umur > 25 And umur <= 44 Then
+                    pempat = pempat + bmi(RD(8), RD(9))
+                    pe = pe + 1
+                ElseIf umur > 44 Then
+                    plima = plima + bmi(RD(8), RD(9))
+                    pl = pl + 1
+                End If
             End If
 
         End While
@@ -537,11 +582,22 @@ Public Class AdminForm
         empat = empat / e
         lima = lima / l
 
-        Chart1.Series("BMI").Points.AddXY("0-12", satu)
-        Chart1.Series("BMI").Points.AddXY("13-18", dua)
-        Chart1.Series("BMI").Points.AddXY("19-25", tiga)
-        Chart1.Series("BMI").Points.AddXY("26-44", empat)
-        Chart1.Series("BMI").Points.AddXY("<45", lima)
+        psatu = psatu / ps
+        pdua = pdua / pd
+        ptiga = ptiga / pt
+        pempat = pempat / pe
+        plima = plima / pl
+
+        Chart1.Series("Laki-Laki").Points.AddXY("0-12", satu)
+        Chart1.Series("Perempuan").Points.AddXY("0-12", psatu)
+        Chart1.Series("Laki-Laki").Points.AddXY("13-18", dua)
+        Chart1.Series("Perempuan").Points.AddXY("13-18", pdua)
+        Chart1.Series("Laki-Laki").Points.AddXY("19-25", tiga)
+        Chart1.Series("Perempuan").Points.AddXY("19-25", ptiga)
+        Chart1.Series("Laki-Laki").Points.AddXY("26-44", empat)
+        Chart1.Series("Perempuan").Points.AddXY("26-44", pempat)
+        Chart1.Series("Laki-Laki").Points.AddXY("<45", lima)
+        Chart1.Series("Perempuan").Points.AddXY("<45", plima)
 
     End Sub
 
